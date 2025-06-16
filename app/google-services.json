@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "913919038125",
+    "project_id": "techquizzer-65f27",
+    "storage_bucket": "techquizzer-65f27.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:913919038125:android:2bb4b71dabe82a2fdf6c24",
+        "android_client_info": {
+          "package_name": "com.devaiq.quizapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD34TxTYwsJfzx57ydPI7vhf0aITYrF6g8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
