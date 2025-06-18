@@ -5,18 +5,19 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
+import androidx.navigation.compose.rememberNavController
+import com.devaiq.quizapp.presentation.auth.ForgetPasswordScreen
+import com.devaiq.quizapp.presentation.auth.LogInScreen
+import com.devaiq.quizapp.presentation.auth.RegisterScreen
+import com.devaiq.quizapp.utils.SplashScreen
 
 @Composable
-fun AppNavGraph(navController: NavHostController) {
-    NavHost(navController = navController, startDestination = "subject") {
-        composable("subject") {
-            // TODO: Call SubjectScreen() here
-        }
-
-        composable("level") {
-            // TODO: Call LevelScreen() here
-        }
-
-        // Add more screens/routes here as needed
+fun AppNavigation(navController: NavHostController = rememberNavController()) {
+    NavHost(navController = navController, startDestination = "splash") {
+        composable("splash") { SplashScreen(navController) }
+        composable("register") { RegisterScreen(navController) }
+        composable("login") { LogInScreen(navController) }
+        composable("forget") { ForgetPasswordScreen(navController) }
+//        composable("landing") { LandingScreen(navController) }
     }
 }

@@ -1,9 +1,9 @@
 package com.devaiq.quizapp.presentation.auth
 
+import android.widget.Toast
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material3.*
@@ -13,19 +13,19 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.input.KeyboardType
-import androidx.compose.ui.text.input.PasswordVisualTransformation
-import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
 
 @Composable
-fun RegisterScreen(
+fun LogInScreen(
     navController: NavController,
-    viewModel: AuthViewModel = hiltViewModel()
+    viewModel: LoginViewModel = hiltViewModel()
 ) {
     val context = LocalContext.current
+    val isLoading = viewModel.isLoading
+    val loginError = viewModel.loginError
 
     Column(
         modifier = Modifier
@@ -53,7 +53,7 @@ fun RegisterScreen(
             }
 
             Text(
-                text = "Create Account",
+                text = "Log In",
                 color = Color.White,
                 fontSize = 20.sp,
                 modifier = Modifier.align(Alignment.Center)
@@ -65,14 +65,6 @@ fun RegisterScreen(
 
         Spacer(modifier = Modifier.height(24.dp))
 
-        // Name Field
-        CustomTextField(
-            value = viewModel.name,
-            onValueChange = { viewModel.name = it },
-            placeholder = "Name"
-        )
-
-        Spacer(modifier = Modifier.height(16.dp))
 
         // Email Field
         CustomTextField(
@@ -93,18 +85,36 @@ fun RegisterScreen(
             isPassword = true
         )
 
-        Spacer(modifier = Modifier.height(24.dp))
+
+        Box(
+            modifier = Modifier
+                .fillMaxWidth(),
+            contentAlignment = Alignment.TopStart
+        ){
+            TextButton(onClick = {
+                navController.navigate("forget")
+            }) {
+            Text("Forget Password?", color = Color.White)
+            }
+        }
+
+       // Spacer(modifier = Modifier.height(12.dp))
 
         // Submit Button
         Button(
             onClick = {
-                viewModel.registerUser {
-                    navController.navigate("home") {
-                        popUpTo("register") { inclusive = true }
+                viewModel.login(
+                    onSuccess = {
+                        navController.navigate("landing") {
+                            popUpTo("login") { inclusive = true }
+                        }
+                    },
+                    onFailure = { error ->
+                        Toast.makeText(context, error, Toast.LENGTH_LONG).show()
                     }
-                }
+                )
             },
-            enabled = !viewModel.loading,
+            enabled = !isLoading,
             modifier = Modifier
                 .fillMaxWidth()
                 .height(56.dp),
@@ -113,63 +123,30 @@ fun RegisterScreen(
                 containerColor = Color(0xFFDDE9F8),
                 contentColor = Color.Black
             )
+
         ) {
-            Text("Create Account", fontSize = 16.sp)
+            Text(if (isLoading) "Logging in..." else "Login")
+        }
+
+        loginError?.let {
+            Text(it, color = Color.Red, modifier = Modifier.padding(top = 8.dp))
         }
 
         Spacer(modifier = Modifier.height(24.dp))
 
-        // Login link
         Box(
             modifier = Modifier
                 .fillMaxWidth(),
             contentAlignment = Alignment.Center
         ) {
             TextButton(onClick = {
-                navController.navigate("login") {
-                    popUpTo("register") { inclusive = true }
+                navController.navigate("register") {
+                    popUpTo("login") { inclusive = true }
                 }
             }) {
-                Text("Already have an account? Sign in", color = Color.White)
+                Text("New User Sign Up", color = Color.White)
             }
-        }
-
-        // Error message
-        viewModel.errorMessage?.let {
-            Spacer(modifier = Modifier.height(8.dp))
-            Text(it, color = Color.Red)
         }
     }
 }
 
-@Composable
-fun CustomTextField(
-    value: String,
-    onValueChange: (String) -> Unit,
-    placeholder: String,
-    keyboardType: KeyboardType = KeyboardType.Text,
-    isPassword: Boolean = false
-) {
-    TextField(
-        value = value,
-        onValueChange = onValueChange,
-        placeholder = { Text(placeholder, color = Color.LightGray) },
-        visualTransformation = if (isPassword) PasswordVisualTransformation() else VisualTransformation.None,
-        keyboardOptions = KeyboardOptions.Default.copy(keyboardType = keyboardType),
-        colors = TextFieldDefaults.colors(
-            focusedTextColor = Color.White,
-            unfocusedTextColor = Color.White,
-            focusedContainerColor = Color(0xFF2C2C2E),
-            unfocusedContainerColor = Color(0xFF2C2C2E),
-            cursorColor = Color.White,
-            focusedIndicatorColor = Color.Transparent,
-            unfocusedIndicatorColor = Color.Transparent,
-            focusedPlaceholderColor = Color.LightGray,
-            unfocusedPlaceholderColor = Color.LightGray
-        ),
-        shape = RoundedCornerShape(12.dp),
-        modifier = Modifier
-            .fillMaxWidth()
-            .height(56.dp)
-    )
-}
