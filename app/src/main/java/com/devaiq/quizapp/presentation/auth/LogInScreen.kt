@@ -105,7 +105,7 @@ fun LogInScreen(
             onClick = {
                 viewModel.login(
                     onSuccess = {
-                        navController.navigate("landing") {
+                        navController.navigate("home") {
                             popUpTo("login") { inclusive = true }
                         }
                     },

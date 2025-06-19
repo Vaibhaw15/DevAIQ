@@ -9,6 +9,7 @@ import androidx.navigation.compose.rememberNavController
 import com.devaiq.quizapp.presentation.auth.ForgetPasswordScreen
 import com.devaiq.quizapp.presentation.auth.LogInScreen
 import com.devaiq.quizapp.presentation.auth.RegisterScreen
+import com.devaiq.quizapp.presentation.home.HomeScreen
 import com.devaiq.quizapp.utils.SplashScreen
 
 @Composable
@@ -18,6 +19,6 @@ fun AppNavigation(navController: NavHostController = rememberNavController()) {
         composable("register") { RegisterScreen(navController) }
         composable("login") { LogInScreen(navController) }
         composable("forget") { ForgetPasswordScreen(navController) }
-//        composable("landing") { LandingScreen(navController) }
+        composable("home") { HomeScreen(navController) }
     }
 }
