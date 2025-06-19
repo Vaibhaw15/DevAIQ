@@ -4,15 +4,17 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
-import com.google.firebase.auth.FirebaseAuth
+import androidx.lifecycle.viewModelScope
+import com.devaiq.quizapp.domain.repository.AuthRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
 class LoginViewModel @Inject constructor(
-    private val auth: FirebaseAuth
+    private val authRepository: AuthRepository
 ) : ViewModel() {
 
     var email by mutableStateOf("")
@@ -28,7 +30,9 @@ class LoginViewModel @Inject constructor(
     }
 
     private fun checkUser() {
-        _isUserLoggedIn.value = auth.currentUser != null
+        // TODO: Replace with actual implementation if needed
+        // For now, just set to false or use authRepository if it provides user state
+        _isUserLoggedIn.value = false
     }
 
     fun login(onSuccess: () -> Unit, onFailure: (String) -> Unit) {
@@ -40,16 +44,19 @@ class LoginViewModel @Inject constructor(
         isLoading = true
         loginError = null
 
-        auth.signInWithEmailAndPassword(email, password)
-            .addOnCompleteListener { task ->
+        viewModelScope.launch {
+            val result = try {
+                authRepository.login(email, password)
+            } catch (e: Exception) {
                 isLoading = false
-                if (task.isSuccessful) {
-                    _isUserLoggedIn.value = true
-                    onSuccess()
-                } else {
-                    loginError = task.exception?.message
-                    onFailure(task.exception?.message ?: "Login failed")
-                }
+                onFailure(e.message ?: "Unknown error")
+                return@launch
             }
+            isLoading = false
+            result.fold(
+                onSuccess = { onSuccess() },
+                onFailure = { onFailure(it.message ?: "Login failed") }
+            )
+        }
     }
 }

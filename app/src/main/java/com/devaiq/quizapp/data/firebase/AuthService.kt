@@ -1,4 +1,3 @@
-
 package com.devaiq.quizapp.data.firebase
 
 import com.devaiq.quizapp.data.model.UserModel
@@ -31,6 +30,24 @@ class AuthService(private val auth: FirebaseAuth) {
                     .await()
             }
 
+            Result.success(Unit)
+        } catch (e: Exception) {
+            Result.failure(e)
+        }
+    }
+
+
+    suspend fun sendResetLink(email: String): Result<Unit> {
+        return try {
+            auth.sendPasswordResetEmail(email.trim()).await()
+            Result.success(Unit)
+        } catch (e: Exception) {
+            Result.failure(e)
+        }
+    }
+    suspend fun login(email: String, password: String): Result<Unit> {
+        return try {
+            auth.signInWithEmailAndPassword(email.trim(), password.trim()).await()
             Result.success(Unit)
         } catch (e: Exception) {
             Result.failure(e)
