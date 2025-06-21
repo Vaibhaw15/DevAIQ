@@ -5,8 +5,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.material3.Surface
 import androidx.navigation.compose.rememberNavController
-import com.devaiq.quizapp.presentation.auth.RegisterScreen
-import com.devaiq.quizapp.presentation.navigation.AppNavigation
+import com.devaiq.quizapp.presentation.navigation.RootNavGraph
 import com.devaiq.quizapp.ui.theme.DevAIQTheme
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -18,8 +17,7 @@ class MainActivity : ComponentActivity() {
             DevAIQTheme {
                 val navController = rememberNavController()
                 Surface {
-//                    RegisterScreen(navController = navController)
-                    AppNavigation(navController = navController)
+                    RootNavGraph(navController = navController)
                 }
             }
         }

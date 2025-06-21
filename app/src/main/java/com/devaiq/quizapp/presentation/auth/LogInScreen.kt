@@ -17,6 +17,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
+import com.devaiq.quizapp.presentation.navigation.Screen
 
 @Composable
 fun LogInScreen(
@@ -105,8 +106,8 @@ fun LogInScreen(
             onClick = {
                 viewModel.login(
                     onSuccess = {
-                        navController.navigate("home") {
-                            popUpTo("login") { inclusive = true }
+                        navController.navigate(Screen.Main.route) {
+                            popUpTo(Screen.Login.route) { inclusive = true }
                         }
                     },
                     onFailure = { error ->
