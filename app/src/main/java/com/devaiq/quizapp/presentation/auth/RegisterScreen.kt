@@ -106,8 +106,8 @@ fun RegisterScreen(
         Button(
             onClick = {
                 viewModel.registerUser {
-                    navController.navigate("home") {
-                        popUpTo("register") { inclusive = true }
+                    navController.navigate("login") {
+                        popUpTo(0) { inclusive = true }
                     }
                 }
             },
@@ -121,7 +121,17 @@ fun RegisterScreen(
                 contentColor = Color.Black
             )
         ) {
-            Text("Create Account", fontSize = 16.sp)
+            if (viewModel.loading) {
+                CircularProgressIndicator(
+                    color = Color.Black,
+                    strokeWidth = 2.dp,
+                    modifier = Modifier
+                        .size(24.dp)
+                )
+            } else {
+                Text("Create Account", fontSize = 16.sp)
+            }
+
         }
 
         Spacer(modifier = Modifier.height(24.dp))

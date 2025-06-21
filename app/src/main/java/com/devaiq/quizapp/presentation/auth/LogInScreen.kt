@@ -132,9 +132,17 @@ fun LogInScreen(
                 containerColor = Color(0xFFDDE9F8),
                 contentColor = Color.Black
             )
-
         ) {
-            Text(if (isLoading) "Logging in..." else "Login")
+            if (isLoading) {
+                CircularProgressIndicator(
+                    color = Color.Black,
+                    strokeWidth = 2.dp,
+                    modifier = Modifier
+                        .size(24.dp)
+                )
+            } else {
+                Text("Login")
+            }
         }
 
         loginError?.let {

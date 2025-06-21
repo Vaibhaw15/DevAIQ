@@ -29,7 +29,7 @@ class AuthService(private val auth: FirebaseAuth) {
                     .set(user)
                     .await()
             }
-
+            FirebaseAuth.getInstance().signOut()
             Result.success(Unit)
         } catch (e: Exception) {
             Result.failure(e)
