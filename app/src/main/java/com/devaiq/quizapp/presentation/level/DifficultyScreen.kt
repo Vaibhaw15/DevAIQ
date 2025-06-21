@@ -44,47 +44,40 @@ fun DifficultyScreen(
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .background(Color.Black)
-            .padding(horizontal = 24.dp, vertical = 32.dp),
-        horizontalAlignment = Alignment.Start
+            .padding(horizontal = 16.dp)
+
     ) {
-        // 🔙 Top Bar
+        // Back Button + Title
         Row(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(bottom = 24.dp, top = 12.dp),
+                .padding( vertical = 8.dp),
             verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.SpaceBetween
+            horizontalArrangement = Arrangement.Start
         ) {
             Box(
                 modifier = Modifier
-                    .size(40.dp)
-                    .clip(CircleShape)
-                    .background(Color.White.copy(alpha = 0.1f))
                     .clickable { navController.popBackStack() },
                 contentAlignment = Alignment.Center
             ) {
-                IconButton(
-                    onClick = { navController.popBackStack() },
-                    modifier = Modifier.align(Alignment.CenterStart)
-                ) {
-                    Icon(
-                        imageVector = Icons.Default.ArrowBack,
-                        contentDescription = "Back",
-                        tint = Color.White
-                    )
-                }
+                Icon(
+                    imageVector = Icons.Default.ArrowBack,
+                    contentDescription = "Back",
+                    tint = Color.White
+                )
             }
 
             Text(
                 text = "Choose Difficulty",
                 color = Color.White,
-                fontSize = 18.sp,
-                modifier = Modifier.weight(2f),
+                fontSize = 20.sp,
+                modifier = Modifier
+                    .weight(4f)
+                    .padding(start = 12.dp),
                 textAlign = TextAlign.Center
             )
+            Spacer(modifier = Modifier.weight(0.5f))
 
-            Spacer(modifier = Modifier.size(40.dp)) // To balance back button space
         }
 
 

@@ -1,6 +1,7 @@
 package com.devaiq.quizapp.presentation.auth
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardOptions
@@ -15,6 +16,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.text.input.VisualTransformation
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
@@ -26,24 +28,24 @@ fun RegisterScreen(
     viewModel: AuthViewModel = hiltViewModel()
 ) {
     val context = LocalContext.current
-
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .background(Color.Black)
-            .padding(horizontal = 24.dp, vertical = 32.dp), // top padding
-        horizontalAlignment = Alignment.Start
-    ) {
+            .padding(horizontal = 16.dp, vertical = 40.dp)
 
-        Box(
+    ) {
+        // Back Button + Title
+        Row(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(bottom = 24.dp)
+                .padding( vertical = 8.dp),
+            verticalAlignment = Alignment.CenterVertically,
+            horizontalArrangement = Arrangement.Start
         ) {
-
-            IconButton(
-                onClick = { navController.popBackStack() },
-                modifier = Modifier.align(Alignment.CenterStart)
+            Box(
+                modifier = Modifier
+                    .clickable { navController.popBackStack() },
+                contentAlignment = Alignment.Center
             ) {
                 Icon(
                     imageVector = Icons.Default.ArrowBack,
@@ -56,8 +58,13 @@ fun RegisterScreen(
                 text = "Create Account",
                 color = Color.White,
                 fontSize = 20.sp,
-                modifier = Modifier.align(Alignment.Center)
+                modifier = Modifier
+                    .weight(4f)
+                    .padding(start = 12.dp),
+                textAlign = TextAlign.Center
             )
+            Spacer(modifier = Modifier.weight(0.5f))
+
         }
 
 

@@ -43,29 +43,23 @@ import com.devaiq.quizapp.domain.model.Subject
 fun HomeScreen(
     navController: NavController,
     viewModel: HomeScreenViewModel = hiltViewModel()
-    ) {
+) {
     val subjects = viewModel.subjects
 
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .background(Color.Black)
-            .padding(horizontal = 24.dp, vertical = 32.dp),
-        horizontalAlignment = Alignment.Start
     ) {
+        // Back Button + Title
         Row(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(bottom = 24.dp, top = 12.dp),
+                .padding(horizontal = 12.dp, vertical = 8.dp),
             verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.SpaceBetween
+            horizontalArrangement = Arrangement.Start
         ) {
-
             Box(
                 modifier = Modifier
-                    .size(40.dp)
-                    .clip(CircleShape)
-                    .background(Color.White.copy(alpha = 0.1f))
                     .clickable { navController.popBackStack() },
                 contentAlignment = Alignment.Center
             ) {
@@ -79,38 +73,49 @@ fun HomeScreen(
             Text(
                 text = "Programming Languages",
                 color = Color.White,
-                fontSize = 18.sp,
-                modifier = Modifier.weight(2f),
+                fontSize = 20.sp,
+                modifier = Modifier
+                    .weight(4f)
+                    .padding(start = 12.dp),
                 textAlign = TextAlign.Center
             )
 
-            Spacer(modifier = Modifier.size(40.dp))
         }
 
-        Spacer(modifier = Modifier.height(12.dp))
+        // Content with 12.dp horizontal padding
+        Column(modifier = Modifier.padding(horizontal = 12.dp)) {
 
-        Text("Popular Languages", color = Color.White, fontSize = 22.sp)
+            Spacer(modifier = Modifier.height(12.dp))
 
-        Spacer(modifier = Modifier.height(12.dp))
+            Text(
+                text = "Popular Languages",
+                color = Color.White,
+                fontSize = 22.sp
+            )
 
-        if (viewModel.isLoading) {
-                Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
+            Spacer(modifier = Modifier.height(12.dp))
+
+            if (viewModel.isLoading) {
+                Box(
+                    modifier = Modifier
+                        .fillMaxSize(),
+                    contentAlignment = Alignment.Center
+                ) {
                     CircularProgressIndicator(color = Color.White)
                 }
-        } else {
-            LazyVerticalGrid(columns = GridCells.Fixed(2)) {
-                items(subjects.size) { index ->
-                    val subject = subjects[index]
-                    SubjectCard(subject = subject, onClick = {
-                        navController.navigate("difficulty_screen/${subject.id}")
-                    })
+            } else {
+                LazyVerticalGrid(columns = GridCells.Fixed(2)) {
+                    items(subjects.size) { index ->
+                        val subject = subjects[index]
+                        SubjectCard(subject = subject, onClick = {
+                            navController.navigate("difficulty_screen/${subject.id}")
+                        })
+                    }
                 }
             }
         }
-
     }
 }
-
 
 @Composable
 fun SubjectCard(subject: Subject, onClick: () -> Unit) {
@@ -150,3 +155,4 @@ fun SubjectCard(subject: Subject, onClick: () -> Unit) {
         }
     }
 }
+

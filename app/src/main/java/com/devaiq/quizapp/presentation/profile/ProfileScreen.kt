@@ -55,20 +55,21 @@ fun ProfileScreen(
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .background(Color.Black)
-            .padding(horizontal = 24.dp, vertical = 32.dp),
-        horizontalAlignment = Alignment.Start
-    ) {
+            .padding(horizontal = 16.dp,)
 
-        // 🔙 Back bar
-        Box(
+    ) {
+        // Back Button + Title
+        Row(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(bottom = 24.dp)
+                .padding(vertical = 8.dp),
+            verticalAlignment = Alignment.CenterVertically,
+            horizontalArrangement = Arrangement.Start
         ) {
-            IconButton(
-                onClick = { navController.popBackStack() },
-                modifier = Modifier.align(Alignment.CenterStart)
+            Box(
+                modifier = Modifier
+                    .clickable { navController.popBackStack() },
+                contentAlignment = Alignment.Center
             ) {
                 Icon(
                     imageVector = Icons.Default.ArrowBack,
@@ -81,9 +82,15 @@ fun ProfileScreen(
                 text = "Profile",
                 color = Color.White,
                 fontSize = 20.sp,
-                modifier = Modifier.align(Alignment.Center)
+                modifier = Modifier
+                    .weight(4f)
+                    .padding(start = 12.dp),
+                textAlign = TextAlign.Center
             )
+            Spacer(modifier = Modifier.weight(0.5f))
+
         }
+        Spacer(modifier = Modifier.height(16.dp))
 
         if (isLoading) {
             LinearProgressIndicator(
