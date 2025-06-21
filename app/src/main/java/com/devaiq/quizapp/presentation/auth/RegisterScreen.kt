@@ -141,14 +141,14 @@ fun RegisterScreen(
         }
     }
 }
-
 @Composable
 fun CustomTextField(
     value: String,
     onValueChange: (String) -> Unit,
     placeholder: String,
     keyboardType: KeyboardType = KeyboardType.Text,
-    isPassword: Boolean = false
+    isPassword: Boolean = false,
+    enabled: Boolean = true
 ) {
     TextField(
         value = value,
@@ -156,6 +156,7 @@ fun CustomTextField(
         placeholder = { Text(placeholder, color = Color.LightGray) },
         visualTransformation = if (isPassword) PasswordVisualTransformation() else VisualTransformation.None,
         keyboardOptions = KeyboardOptions.Default.copy(keyboardType = keyboardType),
+        enabled = enabled,
         colors = TextFieldDefaults.colors(
             focusedTextColor = Color.White,
             unfocusedTextColor = Color.White,

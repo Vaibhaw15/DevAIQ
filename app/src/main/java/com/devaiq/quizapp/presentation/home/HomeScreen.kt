@@ -84,7 +84,7 @@ fun HomeScreen(
                 textAlign = TextAlign.Center
             )
 
-            Spacer(modifier = Modifier.size(40.dp)) 
+            Spacer(modifier = Modifier.size(40.dp))
         }
 
         Spacer(modifier = Modifier.height(12.dp))

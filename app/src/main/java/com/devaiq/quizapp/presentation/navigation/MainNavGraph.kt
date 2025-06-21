@@ -1,6 +1,7 @@
 package com.devaiq.quizapp.presentation.navigation
 
 
+import ProfileScreen
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.NavHostController
 import androidx.navigation.NavType
@@ -18,7 +19,7 @@ fun NavGraphBuilder.mainGraph(navController: NavHostController) {
        // ProgressScreen()
     }
     composable(Screen.Profile.route) {
-        //ProfileScreen()
+        ProfileScreen(navController)
     }
 
 
