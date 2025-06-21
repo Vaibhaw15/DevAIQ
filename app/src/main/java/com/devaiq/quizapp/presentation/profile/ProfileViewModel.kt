@@ -76,5 +76,10 @@ class ProfileViewModel @Inject constructor(
             }
         }
     }
+
+    fun logout(onLogout: () -> Unit) {
+        profileRepository.logout()
+        onLogout()
+    }
 }
 

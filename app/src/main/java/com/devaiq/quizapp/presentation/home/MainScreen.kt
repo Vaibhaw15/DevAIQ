@@ -5,13 +5,16 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.rememberNavController
 import com.devaiq.quizapp.presentation.navigation.*
 import com.devaiq.quizapp.utils.BottomBar
 
 @Composable
-fun MainScreen() {
+fun MainScreen(
+    rootNavController: NavHostController
+) {
     val bottomNavController = rememberNavController()
 
     Scaffold(
@@ -24,7 +27,7 @@ fun MainScreen() {
             startDestination = Screen.Home.route,
             modifier = Modifier.padding(innerPadding)
         ) {
-            mainGraph(bottomNavController)
+            mainGraph(bottomNavController, rootNavController)
         }
     }
 }

@@ -33,12 +33,15 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
+import androidx.navigation.NavHostController
 import com.devaiq.quizapp.presentation.auth.CustomTextField
+import com.devaiq.quizapp.presentation.navigation.Screen
 import com.devaiq.quizapp.presentation.profile.ProfileViewModel
 
 @Composable
 fun ProfileScreen(
     navController: NavController,
+    rootNavController: NavController,
     viewModel: ProfileViewModel = hiltViewModel()
 ) {
     val context = LocalContext.current
@@ -143,6 +146,31 @@ fun ProfileScreen(
         ) {
             Text(if (isLoading) "Updating..." else "Update Profile")
         }
+
+        Spacer(modifier = Modifier.height(32.dp))
+
+        Button(
+            onClick = {
+                viewModel.logout {
+                    rootNavController.navigate(Screen.Splash.route) {
+                        popUpTo(0) {
+                            inclusive = true
+                        }
+                    }
+                }
+            },
+            modifier = Modifier
+                .fillMaxWidth()
+                .height(56.dp),
+            shape = RoundedCornerShape(28.dp),
+            colors = ButtonDefaults.buttonColors(
+                containerColor = Color.Red,
+                contentColor = Color.White
+            )
+        ) {
+            Text("Logout")
+        }
+
 
         message?.let {
             Spacer(modifier = Modifier.height(16.dp))

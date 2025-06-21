@@ -11,7 +11,10 @@ import com.devaiq.quizapp.presentation.home.HomeScreen
 import com.devaiq.quizapp.presentation.level.DifficultyScreen
 
 
-fun NavGraphBuilder.mainGraph(navController: NavHostController) {
+fun NavGraphBuilder.mainGraph(
+    navController: NavHostController,
+    rootNavController: NavHostController
+) {
     composable(Screen.Home.route) {
         HomeScreen(navController)
     }
@@ -19,7 +22,9 @@ fun NavGraphBuilder.mainGraph(navController: NavHostController) {
        // ProgressScreen()
     }
     composable(Screen.Profile.route) {
-        ProfileScreen(navController)
+        ProfileScreen(
+            navController = navController,
+            rootNavController = rootNavController)
     }
 
 

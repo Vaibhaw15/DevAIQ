@@ -21,10 +21,9 @@ fun RootNavGraph(navController: NavHostController) {
         // Auth Flow
         authGraph(navController)
 
-        mainGraph(navController)
 
         composable(Screen.Main.route) {
-            MainScreen()
+            MainScreen(rootNavController = navController)
         }
     }
 }

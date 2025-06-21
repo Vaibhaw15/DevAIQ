@@ -12,21 +12,23 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
 import kotlinx.coroutines.delay
 import com.devaiq.quizapp.presentation.auth.LoginViewModel
+import com.devaiq.quizapp.presentation.navigation.Screen
+import com.google.firebase.auth.FirebaseAuth
 
 
 @Composable
 fun SplashScreen(navController: NavController, viewModel: LoginViewModel = hiltViewModel()) {
-    val isUserLoggedIn by viewModel.isUserLoggedIn.collectAsState(initial = false)
 
-    LaunchedEffect(key1 = isUserLoggedIn) {
-        delay(2000)
-        if (isUserLoggedIn) {
-            navController.navigate("landing") {
-                popUpTo("splash") { inclusive = true }
+    LaunchedEffect(Unit) {
+        delay(1000)
+        val user = FirebaseAuth.getInstance().currentUser
+        if (user != null) {
+            navController.navigate(Screen.Main.route) {
+                popUpTo(Screen.Splash.route) { inclusive = true }
             }
         } else {
-            navController.navigate("login") {
-                popUpTo("splash") { inclusive = true }
+            navController.navigate(Screen.Login.route) {
+                popUpTo(Screen.Splash.route) { inclusive = true }
             }
         }
     }

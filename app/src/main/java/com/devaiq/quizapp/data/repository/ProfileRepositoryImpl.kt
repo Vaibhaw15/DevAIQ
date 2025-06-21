@@ -64,4 +64,8 @@ class ProfileRepositoryImpl @Inject constructor(
                 onResult(false, "Re-authentication failed: ${e.message}")
             }
     }
+
+    override fun logout() {
+        auth.signOut()
+    }
 }

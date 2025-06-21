@@ -15,4 +15,6 @@ interface ProfileRepository {
         newPassword: String,
         onResult: (Boolean, String?) -> Unit
     )
+
+    fun logout()
 }
