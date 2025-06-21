@@ -84,7 +84,7 @@ fun HomeScreen(
                 textAlign = TextAlign.Center
             )
 
-            Spacer(modifier = Modifier.size(40.dp)) // To balance the Row
+            Spacer(modifier = Modifier.size(40.dp)) 
         }
 
         Spacer(modifier = Modifier.height(12.dp))
@@ -94,12 +94,16 @@ fun HomeScreen(
         Spacer(modifier = Modifier.height(12.dp))
 
         if (viewModel.isLoading) {
-            CircularProgressIndicator(color = Color.White)
+                Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
+                    CircularProgressIndicator(color = Color.White)
+                }
         } else {
             LazyVerticalGrid(columns = GridCells.Fixed(2)) {
                 items(subjects.size) { index ->
                     val subject = subjects[index]
-                    SubjectCard(subject = subject, onClick = { /* TODO: Handle subject click */ })
+                    SubjectCard(subject = subject, onClick = {
+                        navController.navigate("difficulty_screen/${subject.id}")
+                    })
                 }
             }
         }

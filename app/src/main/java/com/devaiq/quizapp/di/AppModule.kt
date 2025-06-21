@@ -4,8 +4,10 @@ import com.google.firebase.auth.FirebaseAuth
 import com.devaiq.quizapp.data.firebase.AuthService
 import com.devaiq.quizapp.data.firebase.FireStoreService
 import com.devaiq.quizapp.data.repository.AuthRepositoryImpl
+import com.devaiq.quizapp.data.repository.DifficultyRepositoryImpl
 import com.devaiq.quizapp.data.repository.SubjectRepositoryImpl
 import com.devaiq.quizapp.domain.repository.AuthRepository
+import com.devaiq.quizapp.domain.repository.DifficultyRepository
 import com.devaiq.quizapp.domain.repository.SubjectRepository
 import dagger.Module
 import dagger.Provides
@@ -40,6 +42,12 @@ object AppModule {
     fun provideSubjectRepository(fireStoreService: FireStoreService
     ): SubjectRepository {
         return  SubjectRepositoryImpl(fireStoreService)
+    }
+
+    @Provides
+    @Singleton
+    fun provideDifficultyRepository(fireStoreService: FireStoreService): DifficultyRepository {
+        return DifficultyRepositoryImpl(fireStoreService)
     }
 
 }
