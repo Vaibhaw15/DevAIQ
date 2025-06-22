@@ -26,6 +26,15 @@ fun BottomBar(navController: NavHostController) {
         screens.forEach { screen ->
             val selected = currentRoute == screen.route
             NavigationBarItem(
+                colors =  NavigationBarItemColors(
+                    selectedIconColor = Color.White,
+                    unselectedIconColor = Color.Gray.copy(alpha = 0.6f),
+                    selectedTextColor = Color.White,
+                    unselectedTextColor = Color.Gray.copy(alpha = 0.6f),
+                    selectedIndicatorColor = Color.Transparent,
+                    disabledIconColor = Color.Transparent,
+                    disabledTextColor = Color.Transparent
+                ),
                 icon = {
                     screen.icon?.let {
                         Icon(
