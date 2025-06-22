@@ -1,11 +1,14 @@
 package com.devaiq.quizapp.presentation.performance
 
+import android.content.Context
+import android.util.Log
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.devaiq.quizapp.domain.model.PerformanceModel
+import com.devaiq.quizapp.utils.readQuestionsFromAssets
 import com.google.firebase.Firebase
 import com.google.firebase.firestore.firestore
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -84,6 +87,26 @@ class PerformanceViewModel @Inject constructor() : ViewModel() {
 
         return resultList.sortedByDescending { it.timestamp }
     }
+    fun uploadToFirestore(context: Context) {
+        val db = Firebase.firestore
+        val questions = readQuestionsFromAssets(context)
+
+        questions.forEach { question ->
+            db.collection("subjects")
+                .document("java")
+                .collection("levels")
+                .document("hard")
+                .collection("questions")
+                .add(question)
+                .addOnSuccessListener {
+                    Log.d("UPLOAD", "✅ Uploaded}")
+                }
+                .addOnFailureListener {
+                    Log.e("UPLOAD", "❌ Failed: ${it.message}")
+                }
+        }
+    }
+
 
 
 

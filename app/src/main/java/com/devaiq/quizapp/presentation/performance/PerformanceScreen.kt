@@ -1,5 +1,6 @@
 package com.devaiq.quizapp.presentation.performance
 
+import android.content.Context
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -30,6 +31,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
@@ -46,11 +48,13 @@ import kotlin.math.absoluteValue
 @Composable
 fun PerformanceScreen(
     navController: NavController,
-    viewModel: PerformanceViewModel = hiltViewModel()
+    viewModel: PerformanceViewModel = hiltViewModel(),
+    context: Context = LocalContext.current
 ) {
     val userId = FirebaseAuth.getInstance().currentUser?.uid ?: return
     LaunchedEffect(Unit) {
         viewModel.loadPerformance(userId)
+        viewModel.uploadToFirestore(context)
     }
 
     val list = viewModel.performanceList

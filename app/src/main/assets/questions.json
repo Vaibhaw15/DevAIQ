@@ -1,0 +1,1102 @@
+[
+  {
+    "questionText": "What is the purpose of the 'volatile' keyword in Java?",
+    "correctAnswer": "Ensures visibility of changes across threads",
+    "explanation": "'volatile' ensures that updates to a variable are visible to all threads.",
+    "options": [
+      "Ensures variable can't be changed",
+      "Ensures visibility of changes across threads",
+      "Locks the variable",
+      "Declares a constant"
+    ]
+  },
+  {
+    "questionText": "What is the purpose of the 'volatile' keyword in Java?",
+    "correctAnswer": "Ensures visibility of changes across threads",
+    "explanation": "'volatile' ensures that updates to a variable are visible to all threads.",
+    "options": [
+      "Ensures variable can't be changed",
+      "Ensures visibility of changes across threads",
+      "Locks the variable",
+      "Declares a constant"
+    ]
+  },
+  {
+    "questionText": "Which concept allows one class to inherit another in Java?",
+    "correctAnswer": "Inheritance",
+    "explanation": "Inheritance allows one class to acquire properties of another.",
+    "options": [
+      "Encapsulation",
+      "Polymorphism",
+      "Inheritance",
+      "Abstraction"
+    ]
+  },
+  {
+    "questionText": "Which concept allows one class to inherit another in Java?",
+    "correctAnswer": "Inheritance",
+    "explanation": "Inheritance allows one class to acquire properties of another.",
+    "options": [
+      "Encapsulation",
+      "Polymorphism",
+      "Inheritance",
+      "Abstraction"
+    ]
+  },
+  {
+    "questionText": "Which concept allows one class to inherit another in Java?",
+    "correctAnswer": "Inheritance",
+    "explanation": "Inheritance allows one class to acquire properties of another.",
+    "options": [
+      "Encapsulation",
+      "Polymorphism",
+      "Inheritance",
+      "Abstraction"
+    ]
+  },
+  {
+    "questionText": "Which concept allows one class to inherit another in Java?",
+    "correctAnswer": "Inheritance",
+    "explanation": "Inheritance allows one class to acquire properties of another.",
+    "options": [
+      "Encapsulation",
+      "Polymorphism",
+      "Inheritance",
+      "Abstraction"
+    ]
+  },
+  {
+    "questionText": "Which concept allows one class to inherit another in Java?",
+    "correctAnswer": "Inheritance",
+    "explanation": "Inheritance allows one class to acquire properties of another.",
+    "options": [
+      "Encapsulation",
+      "Polymorphism",
+      "Inheritance",
+      "Abstraction"
+    ]
+  },
+  {
+    "questionText": "What is the purpose of the 'volatile' keyword in Java?",
+    "correctAnswer": "Ensures visibility of changes across threads",
+    "explanation": "'volatile' ensures that updates to a variable are visible to all threads.",
+    "options": [
+      "Ensures variable can't be changed",
+      "Ensures visibility of changes across threads",
+      "Locks the variable",
+      "Declares a constant"
+    ]
+  },
+  {
+    "questionText": "Which concept allows one class to inherit another in Java?",
+    "correctAnswer": "Inheritance",
+    "explanation": "Inheritance allows one class to acquire properties of another.",
+    "options": [
+      "Encapsulation",
+      "Polymorphism",
+      "Inheritance",
+      "Abstraction"
+    ]
+  },
+  {
+    "questionText": "What is the purpose of the 'volatile' keyword in Java?",
+    "correctAnswer": "Ensures visibility of changes across threads",
+    "explanation": "'volatile' ensures that updates to a variable are visible to all threads.",
+    "options": [
+      "Ensures variable can't be changed",
+      "Ensures visibility of changes across threads",
+      "Locks the variable",
+      "Declares a constant"
+    ]
+  },
+  {
+    "questionText": "What is the purpose of the 'volatile' keyword in Java?",
+    "correctAnswer": "Ensures visibility of changes across threads",
+    "explanation": "'volatile' ensures that updates to a variable are visible to all threads.",
+    "options": [
+      "Ensures variable can't be changed",
+      "Ensures visibility of changes across threads",
+      "Locks the variable",
+      "Declares a constant"
+    ]
+  },
+  {
+    "questionText": "Which concept allows one class to inherit another in Java?",
+    "correctAnswer": "Inheritance",
+    "explanation": "Inheritance allows one class to acquire properties of another.",
+    "options": [
+      "Encapsulation",
+      "Polymorphism",
+      "Inheritance",
+      "Abstraction"
+    ]
+  },
+  {
+    "questionText": "What is the purpose of the 'volatile' keyword in Java?",
+    "correctAnswer": "Ensures visibility of changes across threads",
+    "explanation": "'volatile' ensures that updates to a variable are visible to all threads.",
+    "options": [
+      "Ensures variable can't be changed",
+      "Ensures visibility of changes across threads",
+      "Locks the variable",
+      "Declares a constant"
+    ]
+  },
+  {
+    "questionText": "Which concept allows one class to inherit another in Java?",
+    "correctAnswer": "Inheritance",
+    "explanation": "Inheritance allows one class to acquire properties of another.",
+    "options": [
+      "Encapsulation",
+      "Polymorphism",
+      "Inheritance",
+      "Abstraction"
+    ]
+  },
+  {
+    "questionText": "Which concept allows one class to inherit another in Java?",
+    "correctAnswer": "Inheritance",
+    "explanation": "Inheritance allows one class to acquire properties of another.",
+    "options": [
+      "Encapsulation",
+      "Polymorphism",
+      "Inheritance",
+      "Abstraction"
+    ]
+  },
+  {
+    "questionText": "Which concept allows one class to inherit another in Java?",
+    "correctAnswer": "Inheritance",
+    "explanation": "Inheritance allows one class to acquire properties of another.",
+    "options": [
+      "Encapsulation",
+      "Polymorphism",
+      "Inheritance",
+      "Abstraction"
+    ]
+  },
+  {
+    "questionText": "What is the purpose of the 'volatile' keyword in Java?",
+    "correctAnswer": "Ensures visibility of changes across threads",
+    "explanation": "'volatile' ensures that updates to a variable are visible to all threads.",
+    "options": [
+      "Ensures variable can't be changed",
+      "Ensures visibility of changes across threads",
+      "Locks the variable",
+      "Declares a constant"
+    ]
+  },
+  {
+    "questionText": "What is the purpose of the 'volatile' keyword in Java?",
+    "correctAnswer": "Ensures visibility of changes across threads",
+    "explanation": "'volatile' ensures that updates to a variable are visible to all threads.",
+    "options": [
+      "Ensures variable can't be changed",
+      "Ensures visibility of changes across threads",
+      "Locks the variable",
+      "Declares a constant"
+    ]
+  },
+  {
+    "questionText": "What is the purpose of the 'volatile' keyword in Java?",
+    "correctAnswer": "Ensures visibility of changes across threads",
+    "explanation": "'volatile' ensures that updates to a variable are visible to all threads.",
+    "options": [
+      "Ensures variable can't be changed",
+      "Ensures visibility of changes across threads",
+      "Locks the variable",
+      "Declares a constant"
+    ]
+  },
+  {
+    "questionText": "Which concept allows one class to inherit another in Java?",
+    "correctAnswer": "Inheritance",
+    "explanation": "Inheritance allows one class to acquire properties of another.",
+    "options": [
+      "Encapsulation",
+      "Polymorphism",
+      "Inheritance",
+      "Abstraction"
+    ]
+  },
+  {
+    "questionText": "Which concept allows one class to inherit another in Java?",
+    "correctAnswer": "Inheritance",
+    "explanation": "Inheritance allows one class to acquire properties of another.",
+    "options": [
+      "Encapsulation",
+      "Polymorphism",
+      "Inheritance",
+      "Abstraction"
+    ]
+  },
+  {
+    "questionText": "Which concept allows one class to inherit another in Java?",
+    "correctAnswer": "Inheritance",
+    "explanation": "Inheritance allows one class to acquire properties of another.",
+    "options": [
+      "Encapsulation",
+      "Polymorphism",
+      "Inheritance",
+      "Abstraction"
+    ]
+  },
+  {
+    "questionText": "What is the purpose of the 'volatile' keyword in Java?",
+    "correctAnswer": "Ensures visibility of changes across threads",
+    "explanation": "'volatile' ensures that updates to a variable are visible to all threads.",
+    "options": [
+      "Ensures variable can't be changed",
+      "Ensures visibility of changes across threads",
+      "Locks the variable",
+      "Declares a constant"
+    ]
+  },
+  {
+    "questionText": "What is the purpose of the 'volatile' keyword in Java?",
+    "correctAnswer": "Ensures visibility of changes across threads",
+    "explanation": "'volatile' ensures that updates to a variable are visible to all threads.",
+    "options": [
+      "Ensures variable can't be changed",
+      "Ensures visibility of changes across threads",
+      "Locks the variable",
+      "Declares a constant"
+    ]
+  },
+  {
+    "questionText": "Which concept allows one class to inherit another in Java?",
+    "correctAnswer": "Inheritance",
+    "explanation": "Inheritance allows one class to acquire properties of another.",
+    "options": [
+      "Encapsulation",
+      "Polymorphism",
+      "Inheritance",
+      "Abstraction"
+    ]
+  },
+  {
+    "questionText": "Which concept allows one class to inherit another in Java?",
+    "correctAnswer": "Inheritance",
+    "explanation": "Inheritance allows one class to acquire properties of another.",
+    "options": [
+      "Encapsulation",
+      "Polymorphism",
+      "Inheritance",
+      "Abstraction"
+    ]
+  },
+  {
+    "questionText": "Which concept allows one class to inherit another in Java?",
+    "correctAnswer": "Inheritance",
+    "explanation": "Inheritance allows one class to acquire properties of another.",
+    "options": [
+      "Encapsulation",
+      "Polymorphism",
+      "Inheritance",
+      "Abstraction"
+    ]
+  },
+  {
+    "questionText": "What is the purpose of the 'volatile' keyword in Java?",
+    "correctAnswer": "Ensures visibility of changes across threads",
+    "explanation": "'volatile' ensures that updates to a variable are visible to all threads.",
+    "options": [
+      "Ensures variable can't be changed",
+      "Ensures visibility of changes across threads",
+      "Locks the variable",
+      "Declares a constant"
+    ]
+  },
+  {
+    "questionText": "Which concept allows one class to inherit another in Java?",
+    "correctAnswer": "Inheritance",
+    "explanation": "Inheritance allows one class to acquire properties of another.",
+    "options": [
+      "Encapsulation",
+      "Polymorphism",
+      "Inheritance",
+      "Abstraction"
+    ]
+  },
+  {
+    "questionText": "Which concept allows one class to inherit another in Java?",
+    "correctAnswer": "Inheritance",
+    "explanation": "Inheritance allows one class to acquire properties of another.",
+    "options": [
+      "Encapsulation",
+      "Polymorphism",
+      "Inheritance",
+      "Abstraction"
+    ]
+  },
+  {
+    "questionText": "What is the purpose of the 'volatile' keyword in Java?",
+    "correctAnswer": "Ensures visibility of changes across threads",
+    "explanation": "'volatile' ensures that updates to a variable are visible to all threads.",
+    "options": [
+      "Ensures variable can't be changed",
+      "Ensures visibility of changes across threads",
+      "Locks the variable",
+      "Declares a constant"
+    ]
+  },
+  {
+    "questionText": "What is the purpose of the 'volatile' keyword in Java?",
+    "correctAnswer": "Ensures visibility of changes across threads",
+    "explanation": "'volatile' ensures that updates to a variable are visible to all threads.",
+    "options": [
+      "Ensures variable can't be changed",
+      "Ensures visibility of changes across threads",
+      "Locks the variable",
+      "Declares a constant"
+    ]
+  },
+  {
+    "questionText": "Which concept allows one class to inherit another in Java?",
+    "correctAnswer": "Inheritance",
+    "explanation": "Inheritance allows one class to acquire properties of another.",
+    "options": [
+      "Encapsulation",
+      "Polymorphism",
+      "Inheritance",
+      "Abstraction"
+    ]
+  },
+  {
+    "questionText": "What is the purpose of the 'volatile' keyword in Java?",
+    "correctAnswer": "Ensures visibility of changes across threads",
+    "explanation": "'volatile' ensures that updates to a variable are visible to all threads.",
+    "options": [
+      "Ensures variable can't be changed",
+      "Ensures visibility of changes across threads",
+      "Locks the variable",
+      "Declares a constant"
+    ]
+  },
+  {
+    "questionText": "Which concept allows one class to inherit another in Java?",
+    "correctAnswer": "Inheritance",
+    "explanation": "Inheritance allows one class to acquire properties of another.",
+    "options": [
+      "Encapsulation",
+      "Polymorphism",
+      "Inheritance",
+      "Abstraction"
+    ]
+  },
+  {
+    "questionText": "What is the purpose of the 'volatile' keyword in Java?",
+    "correctAnswer": "Ensures visibility of changes across threads",
+    "explanation": "'volatile' ensures that updates to a variable are visible to all threads.",
+    "options": [
+      "Ensures variable can't be changed",
+      "Ensures visibility of changes across threads",
+      "Locks the variable",
+      "Declares a constant"
+    ]
+  },
+  {
+    "questionText": "Which concept allows one class to inherit another in Java?",
+    "correctAnswer": "Inheritance",
+    "explanation": "Inheritance allows one class to acquire properties of another.",
+    "options": [
+      "Encapsulation",
+      "Polymorphism",
+      "Inheritance",
+      "Abstraction"
+    ]
+  },
+  {
+    "questionText": "Which concept allows one class to inherit another in Java?",
+    "correctAnswer": "Inheritance",
+    "explanation": "Inheritance allows one class to acquire properties of another.",
+    "options": [
+      "Encapsulation",
+      "Polymorphism",
+      "Inheritance",
+      "Abstraction"
+    ]
+  },
+  {
+    "questionText": "Which concept allows one class to inherit another in Java?",
+    "correctAnswer": "Inheritance",
+    "explanation": "Inheritance allows one class to acquire properties of another.",
+    "options": [
+      "Encapsulation",
+      "Polymorphism",
+      "Inheritance",
+      "Abstraction"
+    ]
+  },
+  {
+    "questionText": "Which concept allows one class to inherit another in Java?",
+    "correctAnswer": "Inheritance",
+    "explanation": "Inheritance allows one class to acquire properties of another.",
+    "options": [
+      "Encapsulation",
+      "Polymorphism",
+      "Inheritance",
+      "Abstraction"
+    ]
+  },
+  {
+    "questionText": "Which concept allows one class to inherit another in Java?",
+    "correctAnswer": "Inheritance",
+    "explanation": "Inheritance allows one class to acquire properties of another.",
+    "options": [
+      "Encapsulation",
+      "Polymorphism",
+      "Inheritance",
+      "Abstraction"
+    ]
+  },
+  {
+    "questionText": "Which concept allows one class to inherit another in Java?",
+    "correctAnswer": "Inheritance",
+    "explanation": "Inheritance allows one class to acquire properties of another.",
+    "options": [
+      "Encapsulation",
+      "Polymorphism",
+      "Inheritance",
+      "Abstraction"
+    ]
+  },
+  {
+    "questionText": "What is the purpose of the 'volatile' keyword in Java?",
+    "correctAnswer": "Ensures visibility of changes across threads",
+    "explanation": "'volatile' ensures that updates to a variable are visible to all threads.",
+    "options": [
+      "Ensures variable can't be changed",
+      "Ensures visibility of changes across threads",
+      "Locks the variable",
+      "Declares a constant"
+    ]
+  },
+  {
+    "questionText": "Which concept allows one class to inherit another in Java?",
+    "correctAnswer": "Inheritance",
+    "explanation": "Inheritance allows one class to acquire properties of another.",
+    "options": [
+      "Encapsulation",
+      "Polymorphism",
+      "Inheritance",
+      "Abstraction"
+    ]
+  },
+  {
+    "questionText": "What is the purpose of the 'volatile' keyword in Java?",
+    "correctAnswer": "Ensures visibility of changes across threads",
+    "explanation": "'volatile' ensures that updates to a variable are visible to all threads.",
+    "options": [
+      "Ensures variable can't be changed",
+      "Ensures visibility of changes across threads",
+      "Locks the variable",
+      "Declares a constant"
+    ]
+  },
+  {
+    "questionText": "Which concept allows one class to inherit another in Java?",
+    "correctAnswer": "Inheritance",
+    "explanation": "Inheritance allows one class to acquire properties of another.",
+    "options": [
+      "Encapsulation",
+      "Polymorphism",
+      "Inheritance",
+      "Abstraction"
+    ]
+  },
+  {
+    "questionText": "Which concept allows one class to inherit another in Java?",
+    "correctAnswer": "Inheritance",
+    "explanation": "Inheritance allows one class to acquire properties of another.",
+    "options": [
+      "Encapsulation",
+      "Polymorphism",
+      "Inheritance",
+      "Abstraction"
+    ]
+  },
+  {
+    "questionText": "Which concept allows one class to inherit another in Java?",
+    "correctAnswer": "Inheritance",
+    "explanation": "Inheritance allows one class to acquire properties of another.",
+    "options": [
+      "Encapsulation",
+      "Polymorphism",
+      "Inheritance",
+      "Abstraction"
+    ]
+  },
+  {
+    "questionText": "Which concept allows one class to inherit another in Java?",
+    "correctAnswer": "Inheritance",
+    "explanation": "Inheritance allows one class to acquire properties of another.",
+    "options": [
+      "Encapsulation",
+      "Polymorphism",
+      "Inheritance",
+      "Abstraction"
+    ]
+  },
+  {
+    "questionText": "What is the purpose of the 'volatile' keyword in Java?",
+    "correctAnswer": "Ensures visibility of changes across threads",
+    "explanation": "'volatile' ensures that updates to a variable are visible to all threads.",
+    "options": [
+      "Ensures variable can't be changed",
+      "Ensures visibility of changes across threads",
+      "Locks the variable",
+      "Declares a constant"
+    ]
+  },
+  {
+    "questionText": "Which concept allows one class to inherit another in Java?",
+    "correctAnswer": "Inheritance",
+    "explanation": "Inheritance allows one class to acquire properties of another.",
+    "options": [
+      "Encapsulation",
+      "Polymorphism",
+      "Inheritance",
+      "Abstraction"
+    ]
+  },
+  {
+    "questionText": "Which concept allows one class to inherit another in Java?",
+    "correctAnswer": "Inheritance",
+    "explanation": "Inheritance allows one class to acquire properties of another.",
+    "options": [
+      "Encapsulation",
+      "Polymorphism",
+      "Inheritance",
+      "Abstraction"
+    ]
+  },
+  {
+    "questionText": "What is the purpose of the 'volatile' keyword in Java?",
+    "correctAnswer": "Ensures visibility of changes across threads",
+    "explanation": "'volatile' ensures that updates to a variable are visible to all threads.",
+    "options": [
+      "Ensures variable can't be changed",
+      "Ensures visibility of changes across threads",
+      "Locks the variable",
+      "Declares a constant"
+    ]
+  },
+  {
+    "questionText": "Which concept allows one class to inherit another in Java?",
+    "correctAnswer": "Inheritance",
+    "explanation": "Inheritance allows one class to acquire properties of another.",
+    "options": [
+      "Encapsulation",
+      "Polymorphism",
+      "Inheritance",
+      "Abstraction"
+    ]
+  },
+  {
+    "questionText": "Which concept allows one class to inherit another in Java?",
+    "correctAnswer": "Inheritance",
+    "explanation": "Inheritance allows one class to acquire properties of another.",
+    "options": [
+      "Encapsulation",
+      "Polymorphism",
+      "Inheritance",
+      "Abstraction"
+    ]
+  },
+  {
+    "questionText": "Which concept allows one class to inherit another in Java?",
+    "correctAnswer": "Inheritance",
+    "explanation": "Inheritance allows one class to acquire properties of another.",
+    "options": [
+      "Encapsulation",
+      "Polymorphism",
+      "Inheritance",
+      "Abstraction"
+    ]
+  },
+  {
+    "questionText": "Which concept allows one class to inherit another in Java?",
+    "correctAnswer": "Inheritance",
+    "explanation": "Inheritance allows one class to acquire properties of another.",
+    "options": [
+      "Encapsulation",
+      "Polymorphism",
+      "Inheritance",
+      "Abstraction"
+    ]
+  },
+  {
+    "questionText": "What is the purpose of the 'volatile' keyword in Java?",
+    "correctAnswer": "Ensures visibility of changes across threads",
+    "explanation": "'volatile' ensures that updates to a variable are visible to all threads.",
+    "options": [
+      "Ensures variable can't be changed",
+      "Ensures visibility of changes across threads",
+      "Locks the variable",
+      "Declares a constant"
+    ]
+  },
+  {
+    "questionText": "What is the purpose of the 'volatile' keyword in Java?",
+    "correctAnswer": "Ensures visibility of changes across threads",
+    "explanation": "'volatile' ensures that updates to a variable are visible to all threads.",
+    "options": [
+      "Ensures variable can't be changed",
+      "Ensures visibility of changes across threads",
+      "Locks the variable",
+      "Declares a constant"
+    ]
+  },
+  {
+    "questionText": "What is the purpose of the 'volatile' keyword in Java?",
+    "correctAnswer": "Ensures visibility of changes across threads",
+    "explanation": "'volatile' ensures that updates to a variable are visible to all threads.",
+    "options": [
+      "Ensures variable can't be changed",
+      "Ensures visibility of changes across threads",
+      "Locks the variable",
+      "Declares a constant"
+    ]
+  },
+  {
+    "questionText": "What is the purpose of the 'volatile' keyword in Java?",
+    "correctAnswer": "Ensures visibility of changes across threads",
+    "explanation": "'volatile' ensures that updates to a variable are visible to all threads.",
+    "options": [
+      "Ensures variable can't be changed",
+      "Ensures visibility of changes across threads",
+      "Locks the variable",
+      "Declares a constant"
+    ]
+  },
+  {
+    "questionText": "Which concept allows one class to inherit another in Java?",
+    "correctAnswer": "Inheritance",
+    "explanation": "Inheritance allows one class to acquire properties of another.",
+    "options": [
+      "Encapsulation",
+      "Polymorphism",
+      "Inheritance",
+      "Abstraction"
+    ]
+  },
+  {
+    "questionText": "What is the purpose of the 'volatile' keyword in Java?",
+    "correctAnswer": "Ensures visibility of changes across threads",
+    "explanation": "'volatile' ensures that updates to a variable are visible to all threads.",
+    "options": [
+      "Ensures variable can't be changed",
+      "Ensures visibility of changes across threads",
+      "Locks the variable",
+      "Declares a constant"
+    ]
+  },
+  {
+    "questionText": "Which concept allows one class to inherit another in Java?",
+    "correctAnswer": "Inheritance",
+    "explanation": "Inheritance allows one class to acquire properties of another.",
+    "options": [
+      "Encapsulation",
+      "Polymorphism",
+      "Inheritance",
+      "Abstraction"
+    ]
+  },
+  {
+    "questionText": "Which concept allows one class to inherit another in Java?",
+    "correctAnswer": "Inheritance",
+    "explanation": "Inheritance allows one class to acquire properties of another.",
+    "options": [
+      "Encapsulation",
+      "Polymorphism",
+      "Inheritance",
+      "Abstraction"
+    ]
+  },
+  {
+    "questionText": "Which concept allows one class to inherit another in Java?",
+    "correctAnswer": "Inheritance",
+    "explanation": "Inheritance allows one class to acquire properties of another.",
+    "options": [
+      "Encapsulation",
+      "Polymorphism",
+      "Inheritance",
+      "Abstraction"
+    ]
+  },
+  {
+    "questionText": "What is the purpose of the 'volatile' keyword in Java?",
+    "correctAnswer": "Ensures visibility of changes across threads",
+    "explanation": "'volatile' ensures that updates to a variable are visible to all threads.",
+    "options": [
+      "Ensures variable can't be changed",
+      "Ensures visibility of changes across threads",
+      "Locks the variable",
+      "Declares a constant"
+    ]
+  },
+  {
+    "questionText": "Which concept allows one class to inherit another in Java?",
+    "correctAnswer": "Inheritance",
+    "explanation": "Inheritance allows one class to acquire properties of another.",
+    "options": [
+      "Encapsulation",
+      "Polymorphism",
+      "Inheritance",
+      "Abstraction"
+    ]
+  },
+  {
+    "questionText": "What is the purpose of the 'volatile' keyword in Java?",
+    "correctAnswer": "Ensures visibility of changes across threads",
+    "explanation": "'volatile' ensures that updates to a variable are visible to all threads.",
+    "options": [
+      "Ensures variable can't be changed",
+      "Ensures visibility of changes across threads",
+      "Locks the variable",
+      "Declares a constant"
+    ]
+  },
+  {
+    "questionText": "What is the purpose of the 'volatile' keyword in Java?",
+    "correctAnswer": "Ensures visibility of changes across threads",
+    "explanation": "'volatile' ensures that updates to a variable are visible to all threads.",
+    "options": [
+      "Ensures variable can't be changed",
+      "Ensures visibility of changes across threads",
+      "Locks the variable",
+      "Declares a constant"
+    ]
+  },
+  {
+    "questionText": "Which concept allows one class to inherit another in Java?",
+    "correctAnswer": "Inheritance",
+    "explanation": "Inheritance allows one class to acquire properties of another.",
+    "options": [
+      "Encapsulation",
+      "Polymorphism",
+      "Inheritance",
+      "Abstraction"
+    ]
+  },
+  {
+    "questionText": "What is the purpose of the 'volatile' keyword in Java?",
+    "correctAnswer": "Ensures visibility of changes across threads",
+    "explanation": "'volatile' ensures that updates to a variable are visible to all threads.",
+    "options": [
+      "Ensures variable can't be changed",
+      "Ensures visibility of changes across threads",
+      "Locks the variable",
+      "Declares a constant"
+    ]
+  },
+  {
+    "questionText": "What is the purpose of the 'volatile' keyword in Java?",
+    "correctAnswer": "Ensures visibility of changes across threads",
+    "explanation": "'volatile' ensures that updates to a variable are visible to all threads.",
+    "options": [
+      "Ensures variable can't be changed",
+      "Ensures visibility of changes across threads",
+      "Locks the variable",
+      "Declares a constant"
+    ]
+  },
+  {
+    "questionText": "What is the purpose of the 'volatile' keyword in Java?",
+    "correctAnswer": "Ensures visibility of changes across threads",
+    "explanation": "'volatile' ensures that updates to a variable are visible to all threads.",
+    "options": [
+      "Ensures variable can't be changed",
+      "Ensures visibility of changes across threads",
+      "Locks the variable",
+      "Declares a constant"
+    ]
+  },
+  {
+    "questionText": "Which concept allows one class to inherit another in Java?",
+    "correctAnswer": "Inheritance",
+    "explanation": "Inheritance allows one class to acquire properties of another.",
+    "options": [
+      "Encapsulation",
+      "Polymorphism",
+      "Inheritance",
+      "Abstraction"
+    ]
+  },
+  {
+    "questionText": "What is the purpose of the 'volatile' keyword in Java?",
+    "correctAnswer": "Ensures visibility of changes across threads",
+    "explanation": "'volatile' ensures that updates to a variable are visible to all threads.",
+    "options": [
+      "Ensures variable can't be changed",
+      "Ensures visibility of changes across threads",
+      "Locks the variable",
+      "Declares a constant"
+    ]
+  },
+  {
+    "questionText": "Which concept allows one class to inherit another in Java?",
+    "correctAnswer": "Inheritance",
+    "explanation": "Inheritance allows one class to acquire properties of another.",
+    "options": [
+      "Encapsulation",
+      "Polymorphism",
+      "Inheritance",
+      "Abstraction"
+    ]
+  },
+  {
+    "questionText": "What is the purpose of the 'volatile' keyword in Java?",
+    "correctAnswer": "Ensures visibility of changes across threads",
+    "explanation": "'volatile' ensures that updates to a variable are visible to all threads.",
+    "options": [
+      "Ensures variable can't be changed",
+      "Ensures visibility of changes across threads",
+      "Locks the variable",
+      "Declares a constant"
+    ]
+  },
+  {
+    "questionText": "What is the purpose of the 'volatile' keyword in Java?",
+    "correctAnswer": "Ensures visibility of changes across threads",
+    "explanation": "'volatile' ensures that updates to a variable are visible to all threads.",
+    "options": [
+      "Ensures variable can't be changed",
+      "Ensures visibility of changes across threads",
+      "Locks the variable",
+      "Declares a constant"
+    ]
+  },
+  {
+    "questionText": "What is the purpose of the 'volatile' keyword in Java?",
+    "correctAnswer": "Ensures visibility of changes across threads",
+    "explanation": "'volatile' ensures that updates to a variable are visible to all threads.",
+    "options": [
+      "Ensures variable can't be changed",
+      "Ensures visibility of changes across threads",
+      "Locks the variable",
+      "Declares a constant"
+    ]
+  },
+  {
+    "questionText": "What is the purpose of the 'volatile' keyword in Java?",
+    "correctAnswer": "Ensures visibility of changes across threads",
+    "explanation": "'volatile' ensures that updates to a variable are visible to all threads.",
+    "options": [
+      "Ensures variable can't be changed",
+      "Ensures visibility of changes across threads",
+      "Locks the variable",
+      "Declares a constant"
+    ]
+  },
+  {
+    "questionText": "Which concept allows one class to inherit another in Java?",
+    "correctAnswer": "Inheritance",
+    "explanation": "Inheritance allows one class to acquire properties of another.",
+    "options": [
+      "Encapsulation",
+      "Polymorphism",
+      "Inheritance",
+      "Abstraction"
+    ]
+  },
+  {
+    "questionText": "What is the purpose of the 'volatile' keyword in Java?",
+    "correctAnswer": "Ensures visibility of changes across threads",
+    "explanation": "'volatile' ensures that updates to a variable are visible to all threads.",
+    "options": [
+      "Ensures variable can't be changed",
+      "Ensures visibility of changes across threads",
+      "Locks the variable",
+      "Declares a constant"
+    ]
+  },
+  {
+    "questionText": "What is the purpose of the 'volatile' keyword in Java?",
+    "correctAnswer": "Ensures visibility of changes across threads",
+    "explanation": "'volatile' ensures that updates to a variable are visible to all threads.",
+    "options": [
+      "Ensures variable can't be changed",
+      "Ensures visibility of changes across threads",
+      "Locks the variable",
+      "Declares a constant"
+    ]
+  },
+  {
+    "questionText": "Which concept allows one class to inherit another in Java?",
+    "correctAnswer": "Inheritance",
+    "explanation": "Inheritance allows one class to acquire properties of another.",
+    "options": [
+      "Encapsulation",
+      "Polymorphism",
+      "Inheritance",
+      "Abstraction"
+    ]
+  },
+  {
+    "questionText": "Which concept allows one class to inherit another in Java?",
+    "correctAnswer": "Inheritance",
+    "explanation": "Inheritance allows one class to acquire properties of another.",
+    "options": [
+      "Encapsulation",
+      "Polymorphism",
+      "Inheritance",
+      "Abstraction"
+    ]
+  },
+  {
+    "questionText": "What is the purpose of the 'volatile' keyword in Java?",
+    "correctAnswer": "Ensures visibility of changes across threads",
+    "explanation": "'volatile' ensures that updates to a variable are visible to all threads.",
+    "options": [
+      "Ensures variable can't be changed",
+      "Ensures visibility of changes across threads",
+      "Locks the variable",
+      "Declares a constant"
+    ]
+  },
+  {
+    "questionText": "Which concept allows one class to inherit another in Java?",
+    "correctAnswer": "Inheritance",
+    "explanation": "Inheritance allows one class to acquire properties of another.",
+    "options": [
+      "Encapsulation",
+      "Polymorphism",
+      "Inheritance",
+      "Abstraction"
+    ]
+  },
+  {
+    "questionText": "What is the purpose of the 'volatile' keyword in Java?",
+    "correctAnswer": "Ensures visibility of changes across threads",
+    "explanation": "'volatile' ensures that updates to a variable are visible to all threads.",
+    "options": [
+      "Ensures variable can't be changed",
+      "Ensures visibility of changes across threads",
+      "Locks the variable",
+      "Declares a constant"
+    ]
+  },
+  {
+    "questionText": "What is the purpose of the 'volatile' keyword in Java?",
+    "correctAnswer": "Ensures visibility of changes across threads",
+    "explanation": "'volatile' ensures that updates to a variable are visible to all threads.",
+    "options": [
+      "Ensures variable can't be changed",
+      "Ensures visibility of changes across threads",
+      "Locks the variable",
+      "Declares a constant"
+    ]
+  },
+  {
+    "questionText": "Which concept allows one class to inherit another in Java?",
+    "correctAnswer": "Inheritance",
+    "explanation": "Inheritance allows one class to acquire properties of another.",
+    "options": [
+      "Encapsulation",
+      "Polymorphism",
+      "Inheritance",
+      "Abstraction"
+    ]
+  },
+  {
+    "questionText": "Which concept allows one class to inherit another in Java?",
+    "correctAnswer": "Inheritance",
+    "explanation": "Inheritance allows one class to acquire properties of another.",
+    "options": [
+      "Encapsulation",
+      "Polymorphism",
+      "Inheritance",
+      "Abstraction"
+    ]
+  },
+  {
+    "questionText": "Which concept allows one class to inherit another in Java?",
+    "correctAnswer": "Inheritance",
+    "explanation": "Inheritance allows one class to acquire properties of another.",
+    "options": [
+      "Encapsulation",
+      "Polymorphism",
+      "Inheritance",
+      "Abstraction"
+    ]
+  },
+  {
+    "questionText": "What is the purpose of the 'volatile' keyword in Java?",
+    "correctAnswer": "Ensures visibility of changes across threads",
+    "explanation": "'volatile' ensures that updates to a variable are visible to all threads.",
+    "options": [
+      "Ensures variable can't be changed",
+      "Ensures visibility of changes across threads",
+      "Locks the variable",
+      "Declares a constant"
+    ]
+  },
+  {
+    "questionText": "Which concept allows one class to inherit another in Java?",
+    "correctAnswer": "Inheritance",
+    "explanation": "Inheritance allows one class to acquire properties of another.",
+    "options": [
+      "Encapsulation",
+      "Polymorphism",
+      "Inheritance",
+      "Abstraction"
+    ]
+  },
+  {
+    "questionText": "What is the purpose of the 'volatile' keyword in Java?",
+    "correctAnswer": "Ensures visibility of changes across threads",
+    "explanation": "'volatile' ensures that updates to a variable are visible to all threads.",
+    "options": [
+      "Ensures variable can't be changed",
+      "Ensures visibility of changes across threads",
+      "Locks the variable",
+      "Declares a constant"
+    ]
+  },
+  {
+    "questionText": "What is the purpose of the 'volatile' keyword in Java?",
+    "correctAnswer": "Ensures visibility of changes across threads",
+    "explanation": "'volatile' ensures that updates to a variable are visible to all threads.",
+    "options": [
+      "Ensures variable can't be changed",
+      "Ensures visibility of changes across threads",
+      "Locks the variable",
+      "Declares a constant"
+    ]
+  },
+  {
+    "questionText": "What is the purpose of the 'volatile' keyword in Java?",
+    "correctAnswer": "Ensures visibility of changes across threads",
+    "explanation": "'volatile' ensures that updates to a variable are visible to all threads.",
+    "options": [
+      "Ensures variable can't be changed",
+      "Ensures visibility of changes across threads",
+      "Locks the variable",
+      "Declares a constant"
+    ]
+  },
+  {
+    "questionText": "What is the purpose of the 'volatile' keyword in Java?",
+    "correctAnswer": "Ensures visibility of changes across threads",
+    "explanation": "'volatile' ensures that updates to a variable are visible to all threads.",
+    "options": [
+      "Ensures variable can't be changed",
+      "Ensures visibility of changes across threads",
+      "Locks the variable",
+      "Declares a constant"
+    ]
+  },
+  {
+    "questionText": "What is the purpose of the 'volatile' keyword in Java?",
+    "correctAnswer": "Ensures visibility of changes across threads",
+    "explanation": "'volatile' ensures that updates to a variable are visible to all threads.",
+    "options": [
+      "Ensures variable can't be changed",
+      "Ensures visibility of changes across threads",
+      "Locks the variable",
+      "Declares a constant"
+    ]
+  }
+]
