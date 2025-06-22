@@ -1,5 +1,10 @@
 package com.devaiq.quizapp.utils
 
+import androidx.compose.animation.core.Animatable
+import androidx.compose.animation.core.FastOutSlowInEasing
+import androidx.compose.animation.core.tween
+import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
 import androidx.compose.runtime.*
 import androidx.compose.material3.Text
 import androidx.compose.ui.Modifier
@@ -7,9 +12,21 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.size
+import androidx.compose.material.icons.Icons
+import androidx.compose.material3.Icon
+import androidx.compose.ui.draw.scale
+import androidx.compose.ui.graphics.Brush
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
+import com.devaiq.quizapp.R
 import kotlinx.coroutines.delay
 import com.devaiq.quizapp.presentation.auth.LoginViewModel
 import com.devaiq.quizapp.presentation.navigation.Screen
@@ -18,9 +35,16 @@ import com.google.firebase.auth.FirebaseAuth
 
 @Composable
 fun SplashScreen(navController: NavController, viewModel: LoginViewModel = hiltViewModel()) {
+    val scale = remember { Animatable(0f) }
 
+    // Launch animation and navigation
     LaunchedEffect(Unit) {
-        delay(1000)
+        scale.animateTo(
+            targetValue = 1f,
+            animationSpec = tween(durationMillis = 800, easing = FastOutSlowInEasing)
+        )
+        delay(1200) // total delay after animation
+
         val user = FirebaseAuth.getInstance().currentUser
         if (user != null) {
             navController.navigate(Screen.Main.route) {
@@ -33,10 +57,33 @@ fun SplashScreen(navController: NavController, viewModel: LoginViewModel = hiltV
         }
     }
 
+    // UI
     Box(
-        modifier = Modifier.fillMaxSize(),
+        modifier = Modifier
+            .fillMaxSize()
+            .background(color = Color.Black
+            ),
         contentAlignment = Alignment.Center
     ) {
-        Text("Quiz App", fontSize = 30.sp, fontWeight = FontWeight.Bold)
+        Column(horizontalAlignment = Alignment.CenterHorizontally) {
+            // Logo or Icon
+            Image(
+                painter = painterResource(id = R.drawable.logo),
+                contentDescription = "App Logo",
+                modifier = Modifier
+                    .scale(scale.value)
+                    .size(300.dp)
+            )
+
+            Spacer(modifier = Modifier.height(16.dp))
+
+            // App Name
+            Text(
+                text = "DevAIQ",
+                fontSize = 30.sp,
+                fontWeight = FontWeight.Bold,
+                color = Color.White
+            )
+        }
     }
 }
