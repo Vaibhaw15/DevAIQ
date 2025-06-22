@@ -13,7 +13,7 @@ import com.devaiq.quizapp.presentation.navigation.Screen
 fun BottomBar(navController: NavHostController) {
     val screens = listOf(
         Screen.Home,
-        Screen.Progress,
+        Screen.Performance,
         Screen.Profile
     )
     val navBackStackEntry by navController.currentBackStackEntryAsState()

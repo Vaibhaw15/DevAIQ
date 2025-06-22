@@ -10,6 +10,7 @@ import com.devaiq.quizapp.domain.model.Question
 import com.devaiq.quizapp.domain.repository.QuestionRepository
 import com.google.firebase.Firebase
 import com.google.firebase.firestore.FieldValue
+import com.google.firebase.firestore.SetOptions
 import com.google.firebase.firestore.firestore
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
@@ -53,7 +54,6 @@ class QuizViewModel @Inject constructor(
         } else {
             saveResultToFirebase(userId, subjectId, difficulty)
             navigateToResultScreen = true
-            // Navigate to result screen or show message
         }
     }
 
@@ -79,6 +79,13 @@ class QuizViewModel @Inject constructor(
             .addOnFailureListener { e ->
                 Log.e("Firestore", "Error saving result", e)
             }
+
+             Firebase.firestore
+                 .collection("users")
+            .document(userId)
+            .collection("results")
+            .document(subjectId)
+            .set(mapOf("active" to true), SetOptions.merge())
     }
 
 

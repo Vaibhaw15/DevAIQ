@@ -9,6 +9,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
 import com.devaiq.quizapp.presentation.home.HomeScreen
 import com.devaiq.quizapp.presentation.level.DifficultyScreen
+import com.devaiq.quizapp.presentation.performance.PerformanceScreen
 import com.devaiq.quizapp.presentation.quiz.QuizScreen
 import com.devaiq.quizapp.presentation.result.ResultScreen
 
@@ -20,9 +21,11 @@ fun NavGraphBuilder.mainGraph(
     composable(Screen.Home.route) {
         HomeScreen(navController)
     }
-    composable(Screen.Progress.route) {
-       // ProgressScreen()
+
+    composable(Screen.Performance.route) {
+        PerformanceScreen(navController)
     }
+
     composable(Screen.Profile.route) {
         ProfileScreen(
             navController = navController,
@@ -75,5 +78,7 @@ fun NavGraphBuilder.mainGraph(
             }
         )
     }
+
+
 
 }
