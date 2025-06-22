@@ -138,10 +138,7 @@ fun RegisterScreen(
             ) {
                 if (viewModel.loading) {
                     CircularProgressIndicator(
-                        color = Color.Black,
-                        strokeWidth = 2.dp,
-                        modifier = Modifier
-                            .size(24.dp)
+                        color = Color(0xFFDDE9F8)
                     )
                 } else {
                     Text("Create Account", fontSize = 16.sp)

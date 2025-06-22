@@ -136,9 +136,7 @@ fun ForgetPasswordScreen(
         ) {
             if (viewModel.isLoading) {
                 CircularProgressIndicator(
-                    modifier = Modifier.size(24.dp),
-                    color = Color.Black,
-                    strokeWidth = 2.dp
+                    color = Color(0xFFDDE9F8),
                 )
             } else {
                 Text("Send Reset Instructions")

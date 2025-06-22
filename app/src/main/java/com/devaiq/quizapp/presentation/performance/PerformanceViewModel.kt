@@ -21,14 +21,18 @@ class PerformanceViewModel @Inject constructor() : ViewModel() {
     var performanceList by mutableStateOf<List<PerformanceModel>>(emptyList())
         private set
 
+    var isLoading by mutableStateOf(false)
+
 
     fun loadPerformance(userId: String) {
         viewModelScope.launch {
+            isLoading = true
             val subjects = fetchSubjects(userId)
             val difficulties = listOf("Easy", "Medium", "Hard")
 
             val results = fetchLatestPerformance(userId, subjects, difficulties)
             performanceList = results
+            isLoading = false
         }
     }
     suspend fun fetchSubjects(userId: String): List<String> {

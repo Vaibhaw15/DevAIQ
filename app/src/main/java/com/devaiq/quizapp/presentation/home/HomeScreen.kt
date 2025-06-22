@@ -58,20 +58,20 @@ fun HomeScreen(
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.Start
         ) {
-            Box(
-                modifier = Modifier
-                    .clickable { navController.popBackStack() },
-                contentAlignment = Alignment.Center
-            ) {
-                Icon(
-                    imageVector = Icons.Default.ArrowBack,
-                    contentDescription = "Back",
-                    tint = Color.White
-                )
-            }
+//            Box(
+//                modifier = Modifier
+//                    .clickable { navController.popBackStack() },
+//                contentAlignment = Alignment.Center
+//            ) {
+//                Icon(
+//                    imageVector = Icons.Default.ArrowBack,
+//                    contentDescription = "Back",
+//                    tint = Color.White
+//                )
+//            }
 
             Text(
-                text = "Programming Languages",
+                text = "DevAIQ Quiz",
                 color = Color.White,
                 fontSize = 20.sp,
                 modifier = Modifier
@@ -90,7 +90,10 @@ fun HomeScreen(
             Text(
                 text = "Popular Languages",
                 color = Color.White,
-                fontSize = 22.sp
+                fontSize = 22.sp,
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(horizontal = 8.dp),
             )
 
             Spacer(modifier = Modifier.height(12.dp))
@@ -101,7 +104,7 @@ fun HomeScreen(
                         .fillMaxSize(),
                     contentAlignment = Alignment.Center
                 ) {
-                    CircularProgressIndicator(color = Color.White)
+                    CircularProgressIndicator(color =Color(0xFFDDE9F8))
                 }
             } else {
                 LazyVerticalGrid(columns = GridCells.Fixed(2)) {
