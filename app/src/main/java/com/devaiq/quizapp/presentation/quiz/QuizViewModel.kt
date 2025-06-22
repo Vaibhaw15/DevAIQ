@@ -8,10 +8,6 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.devaiq.quizapp.domain.model.Question
 import com.devaiq.quizapp.domain.repository.QuestionRepository
-import com.google.firebase.Firebase
-import com.google.firebase.firestore.FieldValue
-import com.google.firebase.firestore.SetOptions
-import com.google.firebase.firestore.firestore
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject
@@ -57,36 +53,16 @@ class QuizViewModel @Inject constructor(
         }
     }
 
-
-    fun saveResultToFirebase(userId: String, subjectId: String, difficulty: String) {
-        val result = hashMapOf(
-            "correct" to correctCount,
-            "total" to questions.size,
-            "timestamp" to FieldValue.serverTimestamp()
-        )
-
-        Firebase.firestore
-            .collection("users")
-            .document(userId)
-            .collection("results")
-            .document(subjectId)
-            .collection(difficulty)
-            .document("latest")
-            .set(result)
-            .addOnSuccessListener {
-                Log.d("Firestore", "Result saved successfully")
-            }
-            .addOnFailureListener { e ->
-                Log.e("Firestore", "Error saving result", e)
-            }
-
-             Firebase.firestore
-                 .collection("users")
-            .document(userId)
-            .collection("results")
-            .document(subjectId)
-            .set(mapOf("active" to true), SetOptions.merge())
+     fun saveResultToFirebase(userId: String, subjectId: String, difficulty: String){
+         viewModelScope.launch {
+             repository.saveQuizResult(
+                 userId = userId,
+                 subjectId = subjectId,
+                 difficulty = difficulty,
+                 correctCount = correctCount,
+                 totalQuestions = questions.size
+             )
+         }
     }
-
 
 }

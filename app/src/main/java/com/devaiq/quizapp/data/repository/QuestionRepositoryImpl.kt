@@ -24,5 +24,23 @@ class QuestionRepositoryImpl(
             }
     }
 
+    override suspend fun saveQuizResult(
+        userId: String,
+        subjectId: String,
+        difficulty: String,
+        correctCount: Int,
+        totalQuestions: Int,
+    ): Result<Unit> {
+        return fireStoreService.saveQuizResult(
+            userId = userId,
+            subjectId = subjectId,
+            difficulty = difficulty,
+            correctCount = correctCount,
+            totalQuestions = totalQuestions
+        )
+    }
+
+
+
 
 }

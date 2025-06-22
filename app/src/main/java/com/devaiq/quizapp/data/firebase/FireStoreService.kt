@@ -5,9 +5,12 @@ import com.devaiq.quizapp.data.model.DifficultyModel
 import com.devaiq.quizapp.data.model.QuestionModel
 import com.devaiq.quizapp.data.model.SubjectModel
 import com.google.firebase.Firebase
+import com.google.firebase.firestore.FieldValue
+import com.google.firebase.firestore.SetOptions
 import com.google.firebase.firestore.firestore
 import kotlinx.coroutines.tasks.await
 import java.util.Locale
+import kotlin.Result
 
 class FireStoreService {
     private val db = Firebase.firestore
@@ -25,7 +28,7 @@ class FireStoreService {
     }
 
 
-    suspend fun fetchSubjectsLevels(subjectId:String):List<DifficultyModel>{
+    suspend fun fetchSubjectsLevels(subjectId: String): List<DifficultyModel> {
         return try {
             val snapshot = db.collection("subjects")
                 .document(subjectId).collection("levels")
@@ -68,6 +71,49 @@ class FireStoreService {
             Log.e("FETCH", "Exception: ${e.localizedMessage}")
             Result.failure(e)
         }
+    }
+
+
+    fun saveQuizResult(
+        userId: String, subjectId: String, difficulty: String,
+        correctCount: Int, totalQuestions: Int,
+    ): Result<Unit> {
+       return try {
+            val result = hashMapOf(
+                "correct" to correctCount,
+                "total" to totalQuestions,
+                "timestamp" to FieldValue.serverTimestamp()
+            )
+
+            Firebase.firestore
+                .collection("users")
+                .document(userId)
+                .collection("results")
+                .document(subjectId)
+                .collection(difficulty)
+                .document("latest")
+                .set(result)
+                .addOnSuccessListener {
+                    Log.d("Firestore", "Result saved successfully")
+                }
+                .addOnFailureListener { e ->
+                    Log.e("Firestore", "Error saving result", e)
+                }
+
+            Firebase.firestore
+                .collection("users")
+                .document(userId)
+                .collection("results")
+                .document(subjectId)
+                .set(mapOf("active" to true), SetOptions.merge())
+
+            Result.success(Unit)
+        } catch (e: Exception) {
+            Log.e("Firestore", "Error saving result", e)
+            Result . failure (e)
+
+        }
+
     }
 
 }

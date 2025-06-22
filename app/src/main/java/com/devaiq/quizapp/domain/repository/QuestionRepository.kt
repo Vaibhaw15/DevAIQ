@@ -8,4 +8,12 @@ interface QuestionRepository {
         difficulty: String,
     ): List<Question>
 
+    suspend fun saveQuizResult(
+        userId: String,
+        subjectId: String,
+        difficulty: String,
+        correctCount: Int,
+        totalQuestions: Int,
+    ): Result<Unit>
+
 }
