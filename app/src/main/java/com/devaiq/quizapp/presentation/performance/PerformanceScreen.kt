@@ -58,7 +58,7 @@ fun PerformanceScreen(
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .padding(16.dp)
+            .padding( horizontal = 16.dp),
     ) {
         Row(
             modifier = Modifier
@@ -94,7 +94,6 @@ fun PerformanceScreen(
         LazyColumn(
             modifier = Modifier
                 .fillMaxSize()
-                .padding(16.dp)
         ) {
             items(list) { result: PerformanceModel ->
                 ResultCard(result)
