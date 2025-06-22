@@ -95,7 +95,7 @@ fun DifficultyScreen(
                     .padding(vertical = 12.dp)
                     .clickable {
                         // Navigate to quiz screen with subjectId & difficulty
-                       // navController.navigate("quiz/${subjectId}/${level.difficulty}")
+                        navController.navigate("quiz/${subjectId}/${level.level}")
                     },
                 horizontalArrangement = Arrangement.SpaceBetween,
                 verticalAlignment = Alignment.CenterVertically

@@ -1,10 +1,13 @@
 package com.devaiq.quizapp.data.firebase
 
+import android.util.Log
 import com.devaiq.quizapp.data.model.DifficultyModel
+import com.devaiq.quizapp.data.model.QuestionModel
 import com.devaiq.quizapp.data.model.SubjectModel
 import com.google.firebase.Firebase
 import com.google.firebase.firestore.firestore
 import kotlinx.coroutines.tasks.await
+import java.util.Locale
 
 class FireStoreService {
     private val db = Firebase.firestore
@@ -36,4 +39,35 @@ class FireStoreService {
             emptyList()
         }
     }
+
+    suspend fun fetchQuestions(subjectId: String, difficulty: String): Result<List<QuestionModel>> {
+        return try {
+            Log.d("FETCH", "subjectId=$subjectId difficulty=$difficulty") // check values
+
+            val snapshot = db.collection("subjects")
+                .document(subjectId)
+                .collection("levels")
+                .document(difficulty.lowercase(Locale.getDefault()))
+                .collection("questions")
+                .get()
+                .await()
+
+            Log.d("FETCH", "Documents fetched: ${snapshot.size()}")
+
+            for (doc in snapshot.documents) {
+                Log.d("FETCH_DOC", doc.data.toString())
+            }
+
+            val questions = snapshot.documents.mapNotNull { doc ->
+                val question = doc.toObject(QuestionModel::class.java)
+                question?.copy(id = doc.id)
+            }
+
+            Result.success(questions)
+        } catch (e: Exception) {
+            Log.e("FETCH", "Exception: ${e.localizedMessage}")
+            Result.failure(e)
+        }
+    }
+
 }

@@ -6,10 +6,12 @@ import com.devaiq.quizapp.data.firebase.FireStoreService
 import com.devaiq.quizapp.data.repository.AuthRepositoryImpl
 import com.devaiq.quizapp.data.repository.DifficultyRepositoryImpl
 import com.devaiq.quizapp.data.repository.ProfileRepositoryImpl
+import com.devaiq.quizapp.data.repository.QuestionRepositoryImpl
 import com.devaiq.quizapp.data.repository.SubjectRepositoryImpl
 import com.devaiq.quizapp.domain.repository.AuthRepository
 import com.devaiq.quizapp.domain.repository.DifficultyRepository
 import com.devaiq.quizapp.domain.repository.ProfileRepository
+import com.devaiq.quizapp.domain.repository.QuestionRepository
 import com.devaiq.quizapp.domain.repository.SubjectRepository
 import com.google.firebase.firestore.FirebaseFirestore
 import dagger.Module
@@ -66,6 +68,14 @@ object AppModule {
         firestore: FirebaseFirestore
     ):ProfileRepository {
         return ProfileRepositoryImpl(auth, firestore)
+    }
+
+    @Provides
+    @Singleton
+    fun provideQuestionRepository(
+        fireStoreService: FireStoreService
+    ):QuestionRepository {
+        return QuestionRepositoryImpl(fireStoreService)
     }
 
 

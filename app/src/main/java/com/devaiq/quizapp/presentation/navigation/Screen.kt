@@ -16,4 +16,6 @@ sealed class Screen(val route: String, val title: String = "", val icon: ImageVe
     object Progress : Screen("progress", "Progress", Icons.Default.Place)
     object Profile : Screen("profile", "Profile", Icons.Default.Person)
     object Difficulty : Screen("difficulty_screen")
+    object Quiz : Screen("quiz")
+    object Result : Screen("result")
 }
