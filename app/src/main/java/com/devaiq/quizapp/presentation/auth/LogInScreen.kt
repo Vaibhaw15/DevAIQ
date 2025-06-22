@@ -150,7 +150,7 @@ fun LogInScreen(
             ) {
                 if (isLoading) {
                     CircularProgressIndicator(
-                        color = Color.Black,
+                        color = Color(0xFFDDE9F8),
                         strokeWidth = 2.dp,
                         modifier = Modifier
                             .size(24.dp)
