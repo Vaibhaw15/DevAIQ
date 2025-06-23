@@ -93,7 +93,7 @@ class PerformanceViewModel @Inject constructor() : ViewModel() {
 
         questions.forEach { question ->
             db.collection("subjects")
-                .document("kotlin")
+                .document("java")
                 .collection("levels")
                 .document("hard")
                 .collection("questions")

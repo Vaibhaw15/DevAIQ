@@ -6,7 +6,7 @@ import com.google.common.reflect.TypeToken
 import com.google.gson.Gson
 
 fun readQuestionsFromAssets(context: Context): List<QuestionModel> {
-    val jsonString = context.assets.open("kotlinhard.json")
+    val jsonString = context.assets.open("javahard.json")
         .bufferedReader()
         .use { it.readText() }
 
