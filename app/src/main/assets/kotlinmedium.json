@@ -1,0 +1,2136 @@
+[
+  {
+    "questionText": "What is the primary difference between `==` and `===` in Kotlin?",
+    "correctAnswer": "`==` checks structural equality, `===` checks referential equality",
+    "explanation": "`==` compares the content of objects (calls `equals()`), while `===` checks if two references point to the exact same object in memory.",
+    "options": [
+      "`==` is for primitives, `===` for objects",
+      "`==` checks referential equality, `===` checks structural equality",
+      "`==` only works with nullable types, `===` works with all types",
+      "`==` checks structural equality, `===` checks referential equality"
+    ]
+  },
+  {
+    "questionText": "When should you prefer using `val` over `var`?",
+    "correctAnswer": "Always, unless you specifically need to reassign the variable",
+    "explanation": "Preferring `val` (immutable) promotes immutability, which leads to safer, more predictable, and often more performant code, especially in concurrent environments.",
+    "options": [
+      "When the variable is a primitive type",
+      "When the variable is part of a data class",
+      "Only when dealing with UI elements",
+      "Always, unless you specifically need to reassign the variable"
+    ]
+  },
+  {
+    "questionText": "What is the key advantage of Kotlin's null safety feature?",
+    "correctAnswer": "Eliminates NullPointerExceptions at compile time",
+    "explanation": "Kotlin's type system distinguishes between nullable and non-nullable types, forcing developers to handle null scenarios, thus preventing NullPointerExceptions at compile time rather than runtime.",
+    "options": [
+      "Automatically converts null to an empty string",
+      "Ignores all null values during execution",
+      "Provides a runtime warning for potential nulls",
+      "Eliminates NullPointerExceptions at compile time"
+    ]
+  },
+  {
+    "questionText": "Explain the purpose of the `?.` (safe call) operator.",
+    "correctAnswer": "Executes an operation only if the receiver is not null, otherwise returns null",
+    "explanation": "The safe call operator `?.` allows you to safely call methods or access properties on a nullable object. If the object is null, the entire expression evaluates to null instead of throwing a NullPointerException.",
+    "options": [
+      "Throws a NullPointerException if the receiver is null",
+      "Forces the receiver to be non-null",
+      "Assigns a default value if the receiver is null",
+      "Executes an operation only if the receiver is not null, otherwise returns null"
+    ]
+  },
+  {
+    "questionText": "When is it appropriate to use the `!!` (not-null assertion) operator?",
+    "correctAnswer": "When you are absolutely certain a nullable value will not be null at runtime and want to bypass null safety checks.",
+    "explanation": "The `!!` operator is an explicit assertion that a value is not null. Use it sparingly, as it can lead to NullPointerExceptions if your assumption is wrong. It's often a sign that proper null handling (like `?.` or `?:`) might be better.",
+    "options": [
+      "Anytime you have a nullable variable",
+      "To automatically handle null values",
+      "To convert a non-nullable type to a nullable type",
+      "When you are absolutely certain a nullable value will not be null at runtime and want to bypass null safety checks."
+    ]
+  },
+  {
+    "questionText": "What is a 'data class' in Kotlin and what built-in functions does it provide?",
+    "correctAnswer": "A class primarily used to hold data, providing `equals()`, `hashCode()`, `toString()`, `copy()`, and `componentN()` functions.",
+    "explanation": "Data classes are designed for convenience when dealing with classes that mainly store data. The compiler automatically generates these common utility functions.",
+    "options": [
+      "A class that cannot have any methods, only properties.",
+      "A class that can only be extended by other data classes.",
+      "A class that is always immutable.",
+      "A class primarily used to hold data, providing `equals()`, `hashCode()`, `toString()`, `copy()`, and `componentN()` functions."
+    ]
+  },
+  {
+    "questionText": "How does Kotlin handle immutability in collections?",
+    "correctAnswer": "It provides separate interfaces (e.g., `List` vs `MutableList`) for read-only and mutable collections.",
+    "explanation": "Kotlin distinguishes between read-only (e.g., `List`, `Set`, `Map`) and mutable (e.g., `MutableList`, `MutableSet`, `MutableMap`) collection interfaces, encouraging the use of immutable collections by default.",
+    "options": [
+      "All collections are immutable by default.",
+      "Immutability is enforced using the `final` keyword on collection variables.",
+      "It doesn't support immutable collections.",
+      "It provides separate interfaces (e.g., `List` vs `MutableList`) for read-only and mutable collections."
+    ]
+  },
+  {
+    "questionText": "What is the purpose of a 'companion object' in Kotlin?",
+    "correctAnswer": "To provide static-like members (functions and properties) that belong to a class but are not tied to a specific instance.",
+    "explanation": "A companion object is a singleton object defined within a class. Its members can be accessed directly using the class name, similar to static members in Java, but they are actual objects.",
+    "options": [
+      "To create instances of a class",
+      "To allow a class to inherit from multiple interfaces",
+      "To define abstract methods that must be implemented by subclasses",
+      "To provide static-like members (functions and properties) that belong to a class but are not tied to a specific instance."
+    ]
+  },
+  {
+    "questionText": "When would you use an 'enum class' over a regular class with constants?",
+    "correctAnswer": "When you have a fixed set of named constants that can also have their own properties and methods.",
+    "explanation": "Enum classes are more powerful than simple constants because each enum entry can be an object with its own state and behavior, providing better type safety and expressiveness.",
+    "options": [
+      "When you need to store dynamic values.",
+      "When you only need integer constants.",
+      "When the constants are private.",
+      "When you have a fixed set of named constants that can also have their own properties and methods."
+    ]
+  },
+  {
+    "questionText": "What is an 'extension function' in Kotlin and why is it useful?",
+    "correctAnswer": "A function that can be called as if it were a member of a class, without actually modifying the class, useful for adding utility functions to existing types.",
+    "explanation": "Extension functions allow you to 'extend' a class with new functionality without having to modify its source code or use inheritance, which is great for readability and utility functions.",
+    "options": [
+      "A function that modifies the behavior of a class at runtime.",
+      "A function that can only be used with primitive types.",
+      "A function that replaces an existing member function of a class.",
+      "A function that can be called as if it were a member of a class, without actually modifying the class, useful for adding utility functions to existing types."
+    ]
+  },
+  {
+    "questionText": "What is a 'higher-order function' in Kotlin?",
+    "correctAnswer": "A function that either takes functions as parameters or returns a function.",
+    "explanation": "Higher-order functions are a core concept in functional programming and allow for powerful abstractions, like `map`, `filter`, and `reduce` on collections.",
+    "options": [
+      "A function that calls another function only once.",
+      "A function that requires all its parameters to be of the same type.",
+      "A function that is executed on a separate thread.",
+      "A function that either takes functions as parameters or returns a function."
+    ]
+  },
+  {
+    "questionText": "Explain the concept of 'lambda expressions' in Kotlin.",
+    "correctAnswer": "Anonymous functions that can be passed as arguments or stored as variables, often used with higher-order functions.",
+    "explanation": "Lambdas are concise ways to define functions inline. They are commonly used as arguments to higher-order functions, making code more readable and expressive.",
+    "options": [
+      "Functions that are always named and require a full declaration.",
+      "Functions that cannot access variables from their outer scope.",
+      "Functions that are automatically generated by the compiler.",
+      "Anonymous functions that can be passed as arguments or stored as variables, often used with higher-order functions."
+    ]
+  },
+  {
+    "questionText": "What is the primary difference between a `sealed class` and an `enum class`?",
+    "correctAnswer": "Sealed classes represent restricted class hierarchies, while enum classes represent a fixed set of named constants.",
+    "explanation": "Sealed classes allow you to define a set of specific subclasses, and the compiler can check for exhaustive 'when' expressions. Enum classes are for a fixed set of distinct values.",
+    "options": [
+      "Sealed classes can have multiple instances, enum classes cannot.",
+      "Enum classes can inherit from other classes, sealed classes cannot.",
+      "Sealed classes only contain singletons, enum classes do not.",
+      "Sealed classes represent restricted class hierarchies, while enum classes represent a fixed set of named constants."
+    ]
+  },
+  {
+    "questionText": "When is it beneficial to use `when` as an expression rather than a statement?",
+    "correctAnswer": "When you want to assign the result of the conditional logic to a variable or return it from a function.",
+    "explanation": "Using `when` as an expression allows you to directly use its result, making code more concise and functional, especially when combined with exhaustive checks for sealed classes.",
+    "options": [
+      "When the conditional logic is very simple.",
+      "When you don't need to perform any actions.",
+      "Only when dealing with primitive types.",
+      "When you want to assign the result of the conditional logic to a variable or return it from a function."
+    ]
+  },
+  {
+    "questionText": "What is the purpose of the `lateinit` modifier?",
+    "correctAnswer": "Allows a non-null property to be initialized later, typically before its first use, preventing compile-time errors for properties that cannot be initialized in the constructor.",
+    "explanation": "`lateinit` is used for properties that will be initialized at a later point (e.g., in `onCreate` for Android Activities) but are guaranteed to be non-null when accessed. It avoids the need for nullable types and null checks.",
+    "options": [
+      "To make a property nullable.",
+      "To declare a constant.",
+      "To automatically initialize a property to its default value.",
+      "Allows a non-null property to be initialized later, typically before its first use, preventing compile-time errors for properties that cannot be initialized in the constructor."
+    ]
+  },
+  {
+    "questionText": "Explain the concept of 'lazy initialization' using `by lazy`.",
+    "correctAnswer": "Initializes a property only when it's accessed for the first time, improving performance for expensive initializations.",
+    "explanation": "`by lazy` is a delegated property that ensures the property's value is computed only once, and only when it's actually needed. This is useful for resources or computations that are not always required.",
+    "options": [
+      "Initializes a property at compile time.",
+      "Initializes a property every time it's accessed.",
+      "Makes a property immutable.",
+      "Initializes a property only when it's accessed for the first time, improving performance for expensive initializations."
+    ]
+  },
+  {
+    "questionText": "What are 'Coroutines' in Kotlin and what problem do they solve?",
+    "correctAnswer": "Lightweight threads that enable asynchronous, non-blocking programming, simplifying concurrent code by avoiding callback hell.",
+    "explanation": "Coroutines allow writing asynchronous code in a sequential, readable style. They manage concurrency more efficiently than traditional threads and make complex asynchronous flows easier to reason about.",
+    "options": [
+      "A new type of loop for iterative processes.",
+      "A mechanism for creating heavyweight threads.",
+      "A way to define classes with built-in concurrency.",
+      "Lightweight threads that enable asynchronous, non-blocking programming, simplifying concurrent code by avoiding callback hell."
+    ]
+  },
+  {
+    "questionText": "What is the purpose of the `suspend` keyword in Kotlin?",
+    "correctAnswer": "Marks a function or a lambda as 'suspendable', meaning it can be paused and resumed later without blocking the thread.",
+    "explanation": "The `suspend` keyword indicates that a function can perform a long-running operation (like a network request) without blocking the thread it's running on, allowing it to be paused and resumed.",
+    "options": [
+      "Makes a function run on the main thread.",
+      "Forces a function to execute synchronously.",
+      "Prevents a function from throwing exceptions.",
+      "Marks a function or a lambda as 'suspendable', meaning it can be paused and resumed later without blocking the thread."
+    ]
+  },
+  {
+    "questionText": "Explain the concept of 'Structured Concurrency' in Kotlin Coroutines.",
+    "correctAnswer": "Ensures that coroutines are organized in a hierarchy, so that when a parent coroutine is cancelled, all its child coroutines are also cancelled.",
+    "explanation": "Structured concurrency makes it easier to manage the lifecycle of coroutines and prevent resource leaks. If a coroutine fails or is cancelled, its children are automatically cleaned up.",
+    "options": [
+      "Allows all coroutines to run in parallel without any order.",
+      "Requires manual cancellation of each coroutine.",
+      "Only allows one coroutine to run at a time.",
+      "Ensures that coroutines are organized in a hierarchy, so that when a parent coroutine is cancelled, all its child coroutines are also cancelled."
+    ]
+  },
+  {
+    "questionText": "What is the difference between `launch` and `async` for starting coroutines?",
+    "correctAnswer": "`launch` starts a coroutine that does not return a result, while `async` starts a coroutine that returns a result (`Deferred`).",
+    "explanation": "`launch` is used for 'fire-and-forget' operations. `async` is used when you need to get a result from the coroutine using its `await()` method.",
+    "options": [
+      "`launch` is blocking, `async` is non-blocking.",
+      "`launch` runs on the main thread, `async` runs on a background thread.",
+      "`launch` is for short-lived tasks, `async` for long-running tasks.",
+      "`launch` starts a coroutine that does not return a result, while `async` starts a coroutine that returns a result (`Deferred`)."
+    ]
+  },
+  {
+    "questionText": "What are 'Scope Functions' in Kotlin (e.g., `let`, `apply`, `run`, `also`, `with`) and why are they useful?",
+    "correctAnswer": "Functions that provide a concise way to execute a block of code on an object, making it available within the lambda for operations or transformations.",
+    "explanation": "Scope functions reduce boilerplate and improve code readability by allowing you to operate on an object within a specific context without repeating its name.",
+    "options": [
+      "Functions that define the visibility of members.",
+      "Functions that create new objects based on existing ones.",
+      "Functions that handle exceptions automatically.",
+      "Functions that provide a concise way to execute a block of code on an object, making it available within the lambda for operations or transformations."
+    ]
+  },
+  {
+    "questionText": "When would you prefer `let` over `apply`?",
+    "correctAnswer": "Use `let` when you want to perform operations on a nullable object and potentially return a different value, using `it` as the implicit receiver. Use `apply` to configure an object and return the object itself, using `this` as the implicit receiver.",
+    "explanation": "`let` is great for null checks and transforming objects, while `apply` is ideal for object initialization or configuration.",
+    "options": [
+      "When you need to return the original object.",
+      "When the object is non-nullable.",
+      "When you only need to modify properties, not call functions.",
+      "Use `let` when you want to perform operations on a nullable object and potentially return a different value, using `it` as the implicit receiver. Use `apply` to configure an object and return the object itself, using `this` as the implicit receiver."
+    ]
+  },
+  {
+    "questionText": "What is the main use case for `with` in Kotlin?",
+    "correctAnswer": "To group multiple operations on a single object without repeating its name, especially when you don't need to return the object itself.",
+    "explanation": "`with` is useful for making code more concise when you're calling multiple methods or accessing multiple properties of an object. Unlike `apply`, it doesn't return the receiver.",
+    "options": [
+      "To perform null checks.",
+      "To create a new instance of an object.",
+      "To transform an object into another type.",
+      "To group multiple operations on a single object without repeating its name, especially when you don't need to return the object itself."
+    ]
+  },
+  {
+    "questionText": "How does Kotlin support 'functional programming' paradigms?",
+    "correctAnswer": "Through features like higher-order functions, lambda expressions, immutable collections, and extension functions.",
+    "explanation": "Kotlin is a multi-paradigm language. Its support for functions as first-class citizens, concise lambdas, and emphasis on immutability makes it very suitable for functional programming styles.",
+    "options": [
+      "By disallowing classes and objects.",
+      "Only through specialized functional libraries.",
+      "By forcing all variables to be mutable.",
+      "Through features like higher-order functions, lambda expressions, immutable collections, and extension functions."
+    ]
+  },
+  {
+    "questionText": "What is 'Destructuring Declarations' in Kotlin and how is it used?",
+    "correctAnswer": "A concise way to unpack an object into a number of variables, commonly used with data classes, pairs, and map entries.",
+    "explanation": "Destructuring allows you to assign components of an object directly to individual variables, improving readability, e.g., `val (name, age) = person`.",
+    "options": [
+      "A way to combine multiple variables into a single object.",
+      "A method for encrypting data.",
+      "A mechanism for defining abstract classes.",
+      "A concise way to unpack an object into a number of variables, commonly used with data classes, pairs, and map entries."
+    ]
+  },
+  {
+    "questionText": "Explain the concept of 'Type Inference' in Kotlin.",
+    "correctAnswer": "The ability of the Kotlin compiler to automatically determine the data type of a variable or expression without explicit type declaration.",
+    "explanation": "Type inference reduces boilerplate code and improves readability by allowing you to omit redundant type specifications. The compiler is smart enough to figure it out.",
+    "options": [
+      "Explicitly declaring the type of every variable.",
+      "Converting one data type to another during runtime.",
+      "Checking the type of a variable at runtime.",
+      "The ability of the Kotlin compiler to automatically determine the data type of a variable or expression without explicit type declaration."
+    ]
+  },
+  {
+    "questionText": "What is the primary use case for 'delegated properties' in Kotlin?",
+    "correctAnswer": "To reuse common property implementation logic (e.g., lazy initialization, observable properties, map-backed properties) by delegating getter/setter responsibility to another object.",
+    "explanation": "Delegated properties, using the `by` keyword, allow for powerful code reuse and abstraction, preventing boilerplate for common property behaviors.",
+    "options": [
+      "To define static properties.",
+      "To make properties always mutable.",
+      "To force properties to be non-nullable.",
+      "To reuse common property implementation logic (e.g., lazy initialization, observable properties, map-backed properties) by delegating getter/setter responsibility to another object."
+    ]
+  },
+  {
+    "questionText": "When should you use `object` declaration instead of a `class` with a `companion object`?",
+    "correctAnswer": "Use `object` when you need a true singleton (only one instance ever) with a global point of access. Use a `class` with a `companion object` when you need instances of the class AND static-like members.",
+    "explanation": "An `object` declaration directly creates a singleton instance. A `companion object` exists within a class and serves as a container for members associated with the class itself, while still allowing multiple instances of the main class.",
+    "options": [
+      "Never, they are interchangeable.",
+      "Always use `object` for better performance.",
+      "Always use `class` with `companion object` for better inheritance.",
+      "Use `object` when you need a true singleton (only one instance ever) with a global point of access. Use a `class` with a `companion object` when you need instances of the class AND static-like members."
+    ]
+  },
+  {
+    "questionText": "What is 'Type Projection' in Kotlin generics (`out` and `in`) and why is it important?",
+    "correctAnswer": "Allows you to restrict the way a generic type can be used (covariant `out` for producer, contravariant `in` for consumer), ensuring type safety in generic code.",
+    "explanation": "Type projection prevents unsafe operations when dealing with generic types. `out` means you can only get values out (producer), `in` means you can only put values in (consumer).",
+    "options": [
+      "It allows defining new generic types.",
+      "It removes type information at runtime for performance.",
+      "It is only used for primitive types.",
+      "Allows you to restrict the way a generic type can be used (covariant `out` for producer, contravariant `in` for consumer), ensuring type safety in generic code."
+    ]
+  },
+  {
+    "questionText": "Explain the concept of 'Smart Casts' in Kotlin.",
+    "correctAnswer": "The Kotlin compiler automatically casts a variable to a more specific type after a type check (e.g., `is` or `!is`) without requiring an explicit cast.",
+    "explanation": "Smart casts reduce boilerplate and improve safety. After checking `if (x is String)`, you can directly use `x.length` without casting `x as String`.",
+    "options": [
+      "Explicitly converting a variable to another type.",
+      "Checking the type of a variable at runtime without any action.",
+      "A mechanism to automatically handle null values.",
+      "The Kotlin compiler automatically casts a variable to a more specific type after a type check (e.g., `is` or `!is`) without requiring an explicit cast."
+    ]
+  },
+  {
+    "questionText": "What is the primary purpose of 'inline functions' in Kotlin?",
+    "correctAnswer": "To reduce the overhead of higher-order functions and lambdas by copying their bytecode directly into the call site.",
+    "explanation": "Inlining can improve performance by avoiding the overhead of function calls, especially for lambdas, but it can also increase code size.",
+    "options": [
+      "To make functions asynchronous.",
+      "To allow functions to be called from Java.",
+      "To force a function to run on a specific thread.",
+      "To reduce the overhead of higher-order functions and lambdas by copying their bytecode directly into the call site."
+    ]
+  },
+  {
+    "questionText": "When should you use `crossinline` and `noinline` modifiers with lambda parameters?",
+    "correctAnswer": "`crossinline` for inline functions to prevent non-local returns from the lambda; `noinline` for inline functions to prevent specific lambda parameters from being inlined.",
+    "explanation": "These modifiers give fine-grained control over how lambdas behave within inline functions. `crossinline` ensures a non-local return won't happen, while `noinline` explicitly opts out a lambda from inlining.",
+    "options": [
+      "`crossinline` for blocking calls, `noinline` for non-blocking calls.",
+      "`crossinline` for suspending functions, `noinline` for regular functions.",
+      "`crossinline` for private lambdas, `noinline` for public lambdas.",
+      "`crossinline` for inline functions to prevent non-local returns from the lambda; `noinline` for inline functions to prevent specific lambda parameters from being inlined."
+    ]
+  },
+  {
+    "questionText": "What are 'Type Safe Builders' in Kotlin and what are their benefits?",
+    "correctAnswer": "A pattern for creating domain-specific languages (DSLs) using functions with receiver types and lambdas, enabling concise and readable object construction.",
+    "explanation": "Type-safe builders are commonly used for constructing hierarchical structures (e.g., HTML, XML, UI layouts) in a declarative and type-safe manner, improving readability and maintainability.",
+    "options": [
+      "Tools for automatically generating Kotlin code.",
+      "A feature that ensures all variables are type-checked at runtime.",
+      "A mechanism for creating immutable data structures.",
+      "A pattern for creating domain-specific languages (DSLs) using functions with receiver types and lambdas, enabling concise and readable object construction."
+    ]
+  },
+  {
+    "questionText": "Explain the concept of 'Delegation' in Kotlin using the `by` keyword.",
+    "correctAnswer": "Allows a class to implement an interface by delegating all of its public members to a specified object, promoting code reuse and favoring composition over inheritance.",
+    "explanation": "Class delegation using `by` is a built-in language feature that simplifies the Delegation design pattern, where an object forwards calls to another object.",
+    "options": [
+      "A mechanism for creating singletons.",
+      "A way to extend the functionality of a class without inheritance.",
+      "A method for defining abstract classes.",
+      "Allows a class to implement an interface by delegating all of its public members to a specified object, promoting code reuse and favoring composition over inheritance."
+    ]
+  },
+  {
+    "questionText": "What is the primary difference between `Array<T>` and primitive arrays like `IntArray` in Kotlin?",
+    "correctAnswer": "`Array<T>` holds objects and has boxing/unboxing overhead for primitives, while `IntArray` (and others) are specialized arrays for primitive types, avoiding boxing/unboxing overhead.",
+    "explanation": "Using specialized primitive arrays like `IntArray`, `LongArray`, etc., is more efficient when dealing with large collections of primitive values, as it avoids the overhead of wrapping them in objects.",
+    "options": [
+      "`Array<T>` is immutable, `IntArray` is mutable.",
+      "`IntArray` can only store positive numbers.",
+      "`Array<T>` is only for Java interoperability.",
+      "`Array<T>` holds objects and has boxing/unboxing overhead for primitives, while `IntArray` (and others) are specialized arrays for primitive types, avoiding boxing/unboxing overhead."
+    ]
+  },
+  {
+    "questionText": "When would you use `typealias` in Kotlin?",
+    "correctAnswer": "To provide an alternative name for an existing type, improving readability and simplifying complex type signatures without creating a new type.",
+    "explanation": "`typealias` is especially useful for making code clearer when dealing with long generic types or function types.",
+    "options": [
+      "To create a new data type with different behavior.",
+      "To perform type casting at runtime.",
+      "To define a new interface.",
+      "To provide an alternative name for an existing type, improving readability and simplifying complex type signatures without creating a new type."
+    ]
+  },
+  {
+    "questionText": "What is the purpose of the `infix` keyword in function declarations?",
+    "correctAnswer": "Allows a function with a single parameter to be called without dot notation and parentheses, making the call look like an operator.",
+    "explanation": "Infix functions enhance readability, particularly for creating mini-DSLs or when operations naturally fit a binary operator style (e.g., `1 to \"one\"`).",
+    "options": [
+      "Makes a function abstract.",
+      "Forces a function to be called with named arguments.",
+      "Prevents a function from being overridden.",
+      "Allows a function with a single parameter to be called without dot notation and parentheses, making the call look like an operator."
+    ]
+  },
+  {
+    "questionText": "How does Kotlin handle checked exceptions compared to Java?",
+    "correctAnswer": "Kotlin does not have checked exceptions; all exceptions are unchecked (runtime exceptions).",
+    "explanation": "This design choice in Kotlin aims to reduce boilerplate code and is a common practice in modern languages. It puts more emphasis on robust error handling through other mechanisms (e.g., return types, `Result` type, or direct error propagation) when appropriate, rather than forcing `try-catch` blocks everywhere.",
+    "options": [
+      "Kotlin requires all exceptions to be declared in the function signature.",
+      "Kotlin automatically handles all exceptions, no `try-catch` needed.",
+      "Kotlin has its own unique checked exception mechanism.",
+      "Kotlin does not have checked exceptions; all exceptions are unchecked (runtime exceptions)."
+    ]
+  },
+  {
+    "questionText": "What is the difference between `interface` and `abstract class` in Kotlin?",
+    "correctAnswer": "Interfaces can provide default implementations for methods but cannot store state (properties with backing fields), while abstract classes can have state and abstract/concrete methods.",
+    "explanation": "The key distinction lies in state. Interfaces define contracts and behavior. Abstract classes define partial implementations and can hold state, serving as base classes in an inheritance hierarchy.",
+    "options": [
+      "Interfaces can have constructors, abstract classes cannot.",
+      "Abstract classes can be instantiated, interfaces cannot.",
+      "Interfaces can inherit from classes, abstract classes cannot.",
+      "Interfaces can provide default implementations for methods but cannot store state (properties with backing fields), while abstract classes can have state and abstract/concrete methods."
+    ]
+  },
+  {
+    "questionText": "When would you use a `constructor` keyword for a primary constructor?",
+    "correctAnswer": "When you need to add visibility modifiers or annotations to the primary constructor.",
+    "explanation": "If the primary constructor doesn't have any visibility modifiers or annotations, the `constructor` keyword can be omitted for conciseness.",
+    "options": [
+      "Always, it's mandatory.",
+      "Never, it's deprecated.",
+      "Only for secondary constructors.",
+      "When you need to add visibility modifiers or annotations to the primary constructor."
+    ]
+  },
+  {
+    "questionText": "What is the purpose of the `init` block in a Kotlin class?",
+    "correctAnswer": "To execute initialization logic that is part of the primary constructor, executed after primary constructor parameters are processed.",
+    "explanation": "`init` blocks run when an instance of the class is created. Multiple `init` blocks are executed in the order they appear.",
+    "options": [
+      "To define static methods.",
+      "To handle exceptions during object creation.",
+      "To declare private properties.",
+      "To execute initialization logic that is part of the primary constructor, executed after primary constructor parameters are processed."
+    ]
+  },
+  {
+    "questionText": "What is 'Reified Type Parameters' in Kotlin inline functions and its benefit?",
+    "correctAnswer": "Allows you to access the actual type arguments of an inline function at runtime, enabling type checks (`is`) and casts (`as`) on generic types.",
+    "explanation": "Normally, generic type information is erased at runtime (type erasure). `reified` bypasses this for inline functions, making it useful for functions like `filterIsInstance<T>()`.",
+    "options": [
+      "It makes type parameters optional.",
+      "It restricts type parameters to primitive types.",
+      "It prevents type parameters from being null.",
+      "Allows you to access the actual type arguments of an inline function at runtime, enabling type checks (`is`) and casts (`as`) on generic types."
+    ]
+  },
+  {
+    "questionText": "What is the role of `build.gradle.kts` (Kotlin DSL) in a Kotlin project?",
+    "correctAnswer": "It's a build script written in Kotlin, leveraging Kotlin's features for a more type-safe and readable build configuration with Gradle.",
+    "explanation": "Kotlin DSL for Gradle provides autocompletion, refactoring, and compile-time checks for build scripts, which is a significant improvement over Groovy DSL.",
+    "options": [
+      "It's a configuration file for Android Studio themes.",
+      "It's a file for defining unit tests.",
+      "It's a database schema definition.",
+      "It's a build script written in Kotlin, leveraging Kotlin's features for a more type-safe and readable build configuration with Gradle."
+    ]
+  },
+  {
+    "questionText": "How does Kotlin's `String templates` (e.g., `\"Hello, ${name}!\"`) improve code readability?",
+    "correctAnswer": "They allow embedding expressions directly within string literals, making string concatenation and formatting more concise and readable compared to traditional concatenation.",
+    "explanation": "String templates eliminate the need for verbose string concatenation (`+` operator) or formatting functions, leading to cleaner code.",
+    "options": [
+      "They automatically translate strings to different languages.",
+      "They only work with numerical values.",
+      "They encrypt strings for security.",
+      "They allow embedding expressions directly within string literals, making string concatenation and formatting more concise and readable compared to traditional concatenation."
+    ]
+  },
+  {
+    "questionText": "What is the purpose of the `also` scope function?",
+    "correctAnswer": "Executes a block of code on the receiver object, makes the receiver available as `it`, and returns the receiver object itself, useful for side effects.",
+    "explanation": "`also` is often used when you want to perform some additional operations on an object (like logging or debugging) after it has been initialized or processed, without changing its value.",
+    "options": [
+      "To transform an object into another type.",
+      "To perform null checks and return a different value.",
+      "To create a new instance of an object.",
+      "Executes a block of code on the receiver object, makes the receiver available as `it`, and returns the receiver object itself, useful for side effects."
+    ]
+  },
+  {
+    "questionText": "What is the primary benefit of using `sequences` over `collections` for chain operations on large datasets?",
+    "correctAnswer": "Lazy evaluation: intermediate operations are not performed until the terminal operation is called, improving performance by avoiding unnecessary intermediate collections.",
+    "explanation": "Sequences process elements one by one, applying all transformations to each element before moving to the next. Collections process all elements for one transformation, then for the next, potentially creating many intermediate lists.",
+    "options": [
+      "Sequences are always faster for small datasets.",
+      "Collections automatically parallelize operations.",
+      "Sequences provide built-in sorting.",
+      "Lazy evaluation: intermediate operations are not performed until the terminal operation is called, improving performance by avoiding unnecessary intermediate collections."
+    ]
+  },
+  {
+    "questionText": "How does Kotlin promote immutability in programming?",
+    "correctAnswer": "By providing `val` for read-only variables, immutable collection interfaces, and encouraging data classes.",
+    "explanation": "Immutability is a cornerstone of robust software, especially in concurrent programming. Kotlin's language features strongly encourage this practice.",
+    "options": [
+      "By forcing all variables to be `var`.",
+      "By having no concept of constants.",
+      "By automatically modifying variables behind the scenes.",
+      "By providing `val` for read-only variables, immutable collection interfaces, and encouraging data classes."
+    ]
+  },
+  {
+    "questionText": "What is 'Covariance' in Kotlin generics, denoted by `out`?",
+    "correctAnswer": "Allows a type parameter to be used only in 'out' (producer) positions, meaning a `List<Derived>` can be assigned to a `List<Base>`. It's safe to read but not write.",
+    "explanation": "Covariance ensures type safety when a generic type parameter is used only for producing values. For example, a list of `Dogs` can be treated as a list of `Animals`.",
+    "options": [
+      "Allows a type parameter to be used only in 'in' (consumer) positions.",
+      "Requires an exact type match.",
+      "Disallows any type substitution.",
+      "Allows a type parameter to be used only in 'out' (producer) positions, meaning a `List<Derived>` can be assigned to a `List<Base>`. It's safe to read but not write."
+    ]
+  },
+  {
+    "questionText": "What is 'Contravariance' in Kotlin generics, denoted by `in`?",
+    "correctAnswer": "Allows a type parameter to be used only in 'in' (consumer) positions, meaning a `Comparator<Base>` can be assigned to a `Comparator<Derived>`. It's safe to write but not read.",
+    "explanation": "Contravariance ensures type safety when a generic type parameter is used only for consuming values. For example, a `Comparator` that can compare `Animals` can also compare `Dogs`.",
+    "options": [
+      "Allows a type parameter to be used only in 'out' (producer) positions.",
+      "Requires an exact type match.",
+      "Disallows any type substitution.",
+      "Allows a type parameter to be used only in 'in' (consumer) positions, meaning a `Comparator<Base>` can be assigned to a `Comparator<Derived>`. It's safe to write but not read."
+    ]
+  },
+  {
+    "questionText": "What is the purpose of `sealed interfaces` in Kotlin?",
+    "correctAnswer": "To define a closed set of implementing classes or objects, making `when` expressions exhaustive and enabling compiler checks.",
+    "explanation": "Sealed interfaces work similarly to sealed classes but for interfaces. They are useful for representing a limited set of possibilities, often in conjunction with 'when' expressions that require exhaustive checks.",
+    "options": [
+      "To allow any class to implement them.",
+      "To define interfaces that can only have abstract methods.",
+      "To create multiple instances of the same interface.",
+      "To define a closed set of implementing classes or objects, making `when` expressions exhaustive and enabling compiler checks."
+    ]
+  },
+  {
+    "questionText": "When using a `when` expression without an argument, what does each branch condition evaluate to?",
+    "correctAnswer": "Each branch condition evaluates to a boolean expression.",
+    "explanation": "When `when` is used as a statement or expression without an argument, each `if` condition in its branches is evaluated sequentially until one is true. The corresponding block is then executed.",
+    "options": [
+      "A numeric value.",
+      "A String value.",
+      "An object instance.",
+      "Each branch condition evaluates to a boolean expression."
+    ]
+  },
+  {
+    "questionText": "What is the difference between `filter` and `filterNotNull` on collections?",
+    "correctAnswer": "`filter` keeps elements that satisfy a predicate; `filterNotNull` specifically removes null elements and casts the collection to a non-nullable type.",
+    "explanation": "`filterNotNull` is a specialized and convenient function for handling nullability within collections, resulting in a collection where all elements are guaranteed non-null.",
+    "options": [
+      "`filter` only works on mutable collections.",
+      "`filterNotNull` allows custom predicates.",
+      "No difference, they are interchangeable.",
+      "`filter` keeps elements that satisfy a predicate; `filterNotNull` specifically removes null elements and casts the collection to a non-nullable type."
+    ]
+  },
+  {
+    "questionText": "How can you make a `val` property mutable using delegation?",
+    "correctAnswer": "By delegating it to a `ReadWriteProperty` or `Var` (from Kotlin stdlib's `Delegates`) that provides a `setValue` function.",
+    "explanation": "While `val` itself denotes immutability of the reference, delegated properties allow the *value* it refers to to be controlled by a delegate that might have internal mutable state (e.g., `Delegates.observable` or `Delegates.vetoable`).",
+    "options": [
+      "You cannot, `val` is always immutable.",
+      "By explicitly casting it to `var`.",
+      "By adding the `mutable` keyword.",
+      "By delegating it to a `ReadWriteProperty` or `Var` (from Kotlin stdlib's `Delegates`) that provides a `setValue` function."
+    ]
+  },
+  {
+    "questionText": "What is the purpose of the `componentN()` functions automatically generated for data classes?",
+    "correctAnswer": "They enable destructuring declarations by providing access to the properties of the data class by their order.",
+    "explanation": "When you write `val (a, b) = MyDataClass(...)`, it's actually calling `component1()` and `component2()` behind the scenes.",
+    "options": [
+      "To convert data classes to other types.",
+      "To compare data classes for equality.",
+      "To print a string representation of the data class.",
+      "They enable destructuring declarations by providing access to the properties of the data class by their order."
+    ]
+  },
+  {
+    "questionText": "How do you handle default values for function parameters in Kotlin?",
+    "correctAnswer": "By specifying the default value directly in the function signature after the parameter name.",
+    "explanation": "Default arguments simplify function calls by allowing you to omit arguments when their default value is sufficient, reducing overloads.",
+    "options": [
+      "Using an `if` statement inside the function body.",
+      "By providing a `null` value and using the Elvis operator.",
+      "It's not possible; you must overload the function.",
+      "By specifying the default value directly in the function signature after the parameter name."
+    ]
+  },
+  {
+    "questionText": "What is the advantage of using `named arguments` in function calls?",
+    "correctAnswer": "Improved readability and flexibility in parameter order, especially for functions with many parameters or default arguments.",
+    "explanation": "Named arguments make the purpose of each argument clear and allow you to pass them in any order, which is beneficial when dealing with functions that have many optional parameters.",
+    "options": [
+      "They make function calls faster.",
+      "They are only for recursive functions.",
+      "They automatically convert argument types.",
+      "Improved readability and flexibility in parameter order, especially for functions with many parameters or default arguments."
+    ]
+  },
+  {
+    "questionText": "Can a `data class` inherit from another class?",
+    "correctAnswer": "Yes, but it must be an `open` class, and data class rules still apply (e.g., properties in the primary constructor).",
+    "explanation": "Data classes can inherit, but they are implicitly `final` and cannot be `open` themselves. However, they can implement interfaces.",
+    "options": [
+      "No, data classes are always standalone.",
+      "Only if the parent class is also a data class.",
+      "Only if the parent class has no properties.",
+      "Yes, but it must be an `open` class, and data class rules still apply (e.g., properties in the primary constructor)."
+    ]
+  },
+  {
+    "questionText": "What is the primary use case for `inline classes` (now `value classes`) in Kotlin?",
+    "correctAnswer": "To create a type-safe wrapper around a single value type without incurring the overhead of a new object allocation at runtime.",
+    "explanation": "`inline class` (renamed to `value class` from Kotlin 1.5) provides type safety for primitive wrappers without affecting performance, as the compiler optimizes them away.",
+    "options": [
+      "To define classes that can be inherited by multiple other classes.",
+      "To create singleton objects.",
+      "To handle asynchronous operations.",
+      "To create a type-safe wrapper around a single value type without incurring the overhead of a new object allocation at runtime."
+    ]
+  },
+  {
+    "questionText": "How does Kotlin achieve interoperability with Java?",
+    "correctAnswer": "Kotlin code can call Java code and vice-versa seamlessly, sharing data types, collections, and frameworks.",
+    "explanation": "Kotlin is designed for 100% interoperability with Java. This means you can mix and match Kotlin and Java files in the same project, leveraging existing Java libraries and frameworks.",
+    "options": [
+      "By compiling Kotlin code into a separate executable.",
+      "By requiring explicit conversion layers between Kotlin and Java.",
+      "By forcing all Java code to be rewritten in Kotlin.",
+      "Kotlin code can call Java code and vice-versa seamlessly, sharing data types, collections, and frameworks."
+    ]
+  },
+  {
+    "questionText": "What is the `main` function's typical signature in Kotlin?",
+    "correctAnswer": "`fun main(args: Array<String>)` or `fun main()`",
+    "explanation": "The `main` function serves as the entry point. The parameter `args: Array<String>` is optional if command-line arguments are not needed.",
+    "options": [
+      "public static void main(String[] args)",
+      "void main()",
+      "main(String... args)",
+      "`fun main(args: Array<String>)` or `fun main()`"
+    ]
+  },
+  {
+    "questionText": "What is the primary benefit of using `kotlin-stdlib-jdk8` (or similar `jdkX` versions) over `kotlin-stdlib`?",
+    "correctAnswer": "It includes additional extension functions for Java 8+ features like Streams and Time API, making them more idiomatic Kotlin.",
+    "explanation": "The JDK-specific standard libraries provide extensions that bridge Kotlin's idiomatic style with newer Java features, enhancing convenience and readability when working with those APIs.",
+    "options": [
+      "It makes Kotlin code run faster on older JVMs.",
+      "It allows Kotlin to be compiled without a JDK.",
+      "It provides compatibility with legacy Java 6 projects.",
+      "It includes additional extension functions for Java 8+ features like Streams and Time API, making them more idiomatic Kotlin."
+    ]
+  },
+  {
+    "questionText": "How can you specify a custom getter or setter for a property in Kotlin?",
+    "correctAnswer": "By defining `get()` and/or `set(value)` blocks after the property declaration.",
+    "explanation": "Custom accessors allow you to control how a property's value is retrieved or updated, enabling computed properties or validation logic.",
+    "options": [
+      "By using `@Getter` and `@Setter` annotations.",
+      "By overriding `getProperty()` and `setProperty()` methods.",
+      "By making the property private and using public functions.",
+      "By defining `get()` and/or `set(value)` blocks after the property declaration."
+    ]
+  },
+  {
+    "questionText": "What is a 'backing field' and when is it implicitly generated for a property?",
+    "correctAnswer": "It's the actual storage for a property's value, implicitly generated when a property needs to store a value and isn't a custom getter/setter only.",
+    "explanation": "The backing field is the invisible field that holds the property's value. It's automatically created if your property uses the default getter/setter or if your custom accessors use the `field` identifier.",
+    "options": [
+      "It's a private method for property initialization.",
+      "It's a public variable that can be accessed directly.",
+      "It's only generated for `const val` properties.",
+      "It's the actual storage for a property's value, implicitly generated when a property needs to store a value and isn't a custom getter/setter only."
+    ]
+  },
+  {
+    "questionText": "What is the purpose of `object expressions` (anonymous objects) in Kotlin?",
+    "correctAnswer": "To create anonymous classes that can implement interfaces or inherit from classes without explicitly defining a named class.",
+    "explanation": "Object expressions are useful for creating single-use objects or adapting interfaces, similar to anonymous inner classes in Java.",
+    "options": [
+      "To define static methods.",
+      "To create singleton objects.",
+      "To declare a new class.",
+      "To create anonymous classes that can implement interfaces or inherit from classes without explicitly defining a named class."
+    ]
+  },
+  {
+    "questionText": "What happens if a `when` expression used as an expression is not exhaustive (and not a `sealed` class/interface)?",
+    "correctAnswer": "The compiler will typically require an `else` branch or a default case to ensure all possibilities are covered.",
+    "explanation": "If the `when` expression is not exhaustive (doesn't cover all possible cases) and is used as an expression, Kotlin's compiler will usually force an `else` branch to guarantee a return value for all inputs.",
+    "options": [
+      "It will throw a runtime error.",
+      "It will automatically infer the missing cases.",
+      "It will compile successfully without warnings.",
+      "The compiler will typically require an `else` branch or a default case to ensure all possibilities are covered."
+    ]
+  },
+  {
+    "questionText": "What is the main advantage of using `List` over `ArrayList` directly in Kotlin code (when possible)?",
+    "correctAnswer": "It promotes programming to an interface (`List`) rather than a concrete implementation (`ArrayList`), encouraging immutability and flexibility.",
+    "explanation": "Using `List` (read-only interface) whenever possible promotes safer code by default. If mutability is truly needed, `MutableList` is the appropriate interface.",
+    "options": [
+      "`List` is always faster than `ArrayList`.",
+      "`List` provides more methods than `ArrayList`.",
+      "`ArrayList` is deprecated in Kotlin.",
+      "It promotes programming to an interface (`List`) rather than a concrete implementation (`ArrayList`), encouraging immutability and flexibility."
+    ]
+  },
+  {
+    "questionText": "Explain the concept of 'Operator Overloading' in Kotlin.",
+    "correctAnswer": "Allows you to provide custom implementations for predefined operators (like `+`, `-`, `*`, `/`, `==`, `[]`) when used with instances of your custom classes.",
+    "explanation": "Operator overloading makes code more intuitive and readable by allowing operators to behave naturally with user-defined types (e.g., adding two custom `Vector` objects).",
+    "options": [
+      "Creating new operators that are not part of the standard set.",
+      "Restricting the use of operators to specific data types.",
+      "Changing the precedence of operators.",
+      "Allows you to provide custom implementations for predefined operators (like `+`, `-`, `*`, `/`, `==`, `[]`) when used with instances of your custom classes."
+    ]
+  },
+  {
+    "questionText": "What is the difference between `map` and `flatMap` on collections?",
+    "correctAnswer": "`map` transforms each element and returns a list of results; `flatMap` transforms each element into a collection of elements and then flattens these collections into a single list.",
+    "explanation": "`flatMap` is useful when your transformation function returns a collection, and you want to combine all these inner collections into one flat list.",
+    "options": [
+      "`map` only works on numbers, `flatMap` on strings.",
+      "`flatMap` is always slower than `map`.",
+      "`map` changes the type of elements, `flatMap` only filters.",
+      "`map` transforms each element and returns a list of results; `flatMap` transforms each element into a collection of elements and then flattens these collections into a single list."
+    ]
+  },
+  {
+    "questionText": "What is the purpose of `tailrec` modifier for functions?",
+    "correctAnswer": "Instructs the compiler to optimize recursive calls into an iterative loop, preventing StackOverflowErrors for deep recursions.",
+    "explanation": "`tailrec` can only be applied to tail-recursive functions (where the recursive call is the last operation). This optimization eliminates the need for recursion in the JVM stack.",
+    "options": [
+      "Forces a function to run on a background thread.",
+      "Makes a function return a list.",
+      "Enables the function to be called from Java.",
+      "Instructs the compiler to optimize recursive calls into an iterative loop, preventing StackOverflowErrors for deep recursions."
+    ]
+  },
+  {
+    "questionText": "What is the primary difference between a `class` and an `object` declaration in Kotlin?",
+    "correctAnswer": "A `class` is a blueprint for creating multiple instances, while an `object` declaration creates a singleton instance (a class with a single instance) directly.",
+    "explanation": "The `object` keyword combines class declaration and instance creation into one. It's Kotlin's idiomatic way to declare singletons.",
+    "options": [
+      "`class` is for static methods, `object` is for instance methods.",
+      "`object` can be inherited, `class` cannot.",
+      "No difference, they are interchangeable.",
+      "A `class` is a blueprint for creating multiple instances, while an `object` declaration creates a singleton instance (a class with a single instance) directly."
+    ]
+  },
+  {
+    "questionText": "How does Kotlin's `Property Access Syntax` differ from Java's traditional getters/setters?",
+    "correctAnswer": "Kotlin allows accessing properties directly using `object.property` notation, while Java typically uses `object.getProperty()` and `object.setProperty()`.",
+    "explanation": "Kotlin synthesizes getters and setters for properties, allowing direct access. This makes property access more concise and natural, similar to field access, but still leveraging the underlying accessors.",
+    "options": [
+      "Kotlin does not have getters or setters.",
+      "Kotlin uses only public fields.",
+      "Kotlin forces manual getter/setter creation.",
+      "Kotlin allows accessing properties directly using `object.property` notation, while Java typically uses `object.getProperty()` and `object.setProperty()`."
+    ]
+  },
+  {
+    "questionText": "What is the purpose of `type safe builders` in Kotlin?",
+    "correctAnswer": "To create concise and type-safe Domain Specific Languages (DSLs) for building complex nested structures programmatically.",
+    "explanation": "Type-safe builders leverage Kotlin's lambdas with receivers to provide a declarative way to construct objects, often seen in frameworks like Ktor or Anko for UI definitions.",
+    "options": [
+      "To enforce strict type checking at runtime.",
+      "To automatically generate code from a schema.",
+      "To manage dependencies in a project.",
+      "To create concise and type-safe Domain Specific Languages (DSLs) for building complex nested structures programmatically."
+    ]
+  },
+  {
+    "questionText": "Can a `data class` be `abstract`?",
+    "correctAnswer": "No, data classes are always concrete and cannot be declared as `abstract`.",
+    "explanation": "Data classes are meant to be simple data holders, implying they can be instantiated. Abstract classes cannot be instantiated.",
+    "options": [
+      "Yes, if it has no properties.",
+      "Yes, if it extends another abstract class.",
+      "Only if it implements an interface.",
+      "No, data classes are always concrete and cannot be declared as `abstract`."
+    ]
+  },
+  {
+    "questionText": "What is the purpose of `takeIf` and `takeUnless` scope functions?",
+    "correctAnswer": "`takeIf` returns the receiver object if a predicate is true, otherwise returns null; `takeUnless` returns the receiver if a predicate is false, otherwise returns null.",
+    "explanation": "These functions are useful for conditional chaining, allowing you to proceed with an object only if a certain condition is met or not met.",
+    "options": [
+      "To throw exceptions based on conditions.",
+      "To perform logging based on conditions.",
+      "To modify the receiver object based on conditions.",
+      "`takeIf` returns the receiver object if a predicate is true, otherwise returns null; `takeUnless` returns the receiver if a predicate is false, otherwise returns null."
+    ]
+  },
+  {
+    "questionText": "How do you define a `primary constructor` with parameters in Kotlin?",
+    "correctAnswer": "Parameters are listed directly in the class header after the class name, e.g., `class Person(val name: String, var age: Int)`.",
+    "explanation": "This concise syntax for the primary constructor is one of Kotlin's powerful features, allowing for direct property declaration within the constructor.",
+    "options": [
+      "Using a separate `constructor` block inside the class body.",
+      "Using an `init` block.",
+      "By defining public fields.",
+      "Parameters are listed directly in the class header after the class name, e.g., `class Person(val name: String, var age: Int)`."
+    ]
+  },
+  {
+    "questionText": "What is the role of `sealed class` with `when` expressions for exhaustive checks?",
+    "correctAnswer": "When all possible subclasses of a `sealed class` are covered in a `when` expression, Kotlin's compiler ensures exhaustiveness without requiring an `else` branch.",
+    "explanation": "This combination provides strong type safety and helps prevent runtime errors, as the compiler guarantees all cases are handled.",
+    "options": [
+      "It requires an `else` branch in all `when` expressions.",
+      "It makes `when` expressions slower.",
+      "It only works with primitive types.",
+      "When all possible subclasses of a `sealed class` are covered in a `when` expression, Kotlin's compiler ensures exhaustiveness without requiring an `else` branch."
+    ]
+  },
+  {
+    "questionText": "What is the purpose of `type safe builders` in Kotlin?",
+    "correctAnswer": "To create concise and type-safe Domain Specific Languages (DSLs) for building complex nested structures programmatically.",
+    "explanation": "Type-safe builders leverage Kotlin's lambdas with receivers to provide a declarative way to construct objects, often seen in frameworks like Ktor or Anko for UI definitions.",
+    "options": [
+      "To enforce strict type checking at runtime.",
+      "To automatically generate code from a schema.",
+      "To manage dependencies in a project.",
+      "To create concise and type-safe Domain Specific Languages (DSLs) for building complex nested structures programmatically."
+    ]
+  },
+  {
+    "questionText": "Can an extension function access private members of the class it extends?",
+    "correctAnswer": "No, extension functions cannot access private or protected members of the class they extend.",
+    "explanation": "Extension functions are syntactic sugar; they don't become part of the class's API in the same way as regular member functions. They are resolved statically.",
+    "options": [
+      "Yes, always.",
+      "Only if the extension function is defined in the same file.",
+      "Only if the class is also an `open` class.",
+      "No, extension functions cannot access private or protected members of the class they extend."
+    ]
+  },
+  {
+    "questionText": "What is the effect of the `const` modifier on a `val` property?",
+    "correctAnswer": "It makes the property a compile-time constant, meaning its value is known at compile time and is inlined wherever it's used.",
+    "explanation": "`const val` can only be used with primitive types and `String` and must be initialized with a compile-time constant value. It's often used for global constants.",
+    "options": [
+      "It makes the property mutable.",
+      "It makes the property nullable.",
+      "It makes the property lazy-initialized.",
+      "It makes the property a compile-time constant, meaning its value is known at compile time and is inlined wherever it's used."
+    ]
+  },
+  {
+    "questionText": "When would you use a `for` loop with an `indices` property?",
+    "correctAnswer": "When you need to iterate over the indices (positions) of elements in a collection, often to access elements by index.",
+    "explanation": "Example: `for (i in myList.indices) { println(myList[i]) }`.",
+    "options": [
+      "When you need to iterate over key-value pairs in a map.",
+      "When you need to iterate over elements in reverse order.",
+      "When you need to create a new collection.",
+      "When you need to iterate over the indices (positions) of elements in a collection, often to access elements by index."
+    ]
+  },
+  {
+    "questionText": "What is the role of the `crossinline` modifier in inline lambda parameters?",
+    "correctAnswer": "It prevents the lambda from performing non-local returns (i.e., returning from the enclosing function).",
+    "explanation": "If an `inline` function accepts a lambda, by default, that lambda can perform a non-local return. `crossinline` restricts this, ensuring the lambda only returns to its direct caller.",
+    "options": [
+      "It forces the lambda to be inlined.",
+      "It prevents the lambda from accessing outer scope variables.",
+      "It makes the lambda asynchronous.",
+      "It prevents the lambda from performing non-local returns (i.e., returning from the enclosing function)."
+    ]
+  },
+  {
+    "questionText": "What is a `Property Reference` (`::propertyName`) and when is it useful?",
+    "correctAnswer": "A way to obtain a reference to a property as a first-class object, useful for reflection, higher-order functions that operate on properties, or delegated properties.",
+    "explanation": "Property references allow you to pass properties around like values, enabling more generic and powerful functions (e.g., `myList.map(Person::name)`).",
+    "options": [
+      "To define a new property.",
+      "To access a property's value directly without a getter.",
+      "To make a property immutable.",
+      "A way to obtain a reference to a property as a first-class object, useful for reflection, higher-order functions that operate on properties, or delegated properties."
+    ]
+  },
+  {
+    "questionText": "How do you specify a generic constraint that a type parameter must be a `Comparable`?",
+    "correctAnswer": "Using a `where` clause or directly in the generic declaration: `<T : Comparable<T>>` or `<T> where T : Comparable<T>`.",
+    "explanation": "Generic constraints ensure that the type argument fulfills certain requirements, allowing you to call specific methods or properties on it.",
+    "options": [
+      "Using `T requires Comparable<T>`",
+      "Using `T implements Comparable<T>`",
+      "Using `T is Comparable<T>`",
+      "Using a `where` clause or directly in the generic declaration: `<T : Comparable<T>>` or `<T> where T : Comparable<T>`."
+    ]
+  },
+  {
+    "questionText": "What is the `Result` type in Kotlin's standard library and when is it used?",
+    "correctAnswer": "A sealed class that encapsulates either a successful value or a failure (exception), providing a robust way to handle operations that might fail without throwing exceptions directly.",
+    "explanation": "`Result` is a functional approach to error handling, similar to `Either` or `Optional` in other languages, allowing for explicit success/failure handling.",
+    "options": [
+      "A class for performing mathematical calculations.",
+      "A type used only for network requests.",
+      "A way to manage multiple return values from a function.",
+      "A sealed class that encapsulates either a successful value or a failure (exception), providing a robust way to handle operations that might fail without throwing exceptions directly."
+    ]
+  },
+  {
+    "questionText": "What is the purpose of `val` in a primary constructor parameter like `class Person(val name: String)`?",
+    "correctAnswer": "It declares a property of the class with the given name and type, initialized by the corresponding constructor parameter.",
+    "explanation": "This concise syntax directly creates a read-only property (`val`) for the class, initialized from the constructor argument.",
+    "options": [
+      "It makes the parameter mutable.",
+      "It defines a private field that cannot be accessed.",
+      "It is only for `data class`.",
+      "It declares a property of the class with the given name and type, initialized by the corresponding constructor parameter."
+    ]
+  },
+  {
+    "questionText": "What is the purpose of `var` in a primary constructor parameter like `class Person(var age: Int)`?",
+    "correctAnswer": "It declares a mutable property of the class with the given name and type, initialized by the corresponding constructor parameter.",
+    "explanation": "This creates a mutable property (`var`) for the class, initialized from the constructor argument, with automatically generated getters and setters.",
+    "options": [
+      "It makes the parameter read-only.",
+      "It defines a private field that cannot be accessed.",
+      "It is only for `data class`.",
+      "It declares a mutable property of the class with the given name and type, initialized by the corresponding constructor parameter."
+    ]
+  },
+  {
+    "questionText": "Can a `private` function be an `extension function`?",
+    "correctAnswer": "Yes, an extension function can be private, limiting its visibility to the file it's declared in.",
+    "explanation": "Visibility modifiers apply to extension functions just like regular functions, controlling where they can be called from.",
+    "options": [
+      "No, extension functions must always be public.",
+      "Only if the class being extended is also private.",
+      "Only if it's a `suspend` function.",
+      "Yes, an extension function can be private, limiting its visibility to the file it's declared in."
+    ]
+  },
+  {
+    "questionText": "What happens if you define a member function and an extension function with the same signature?",
+    "correctAnswer": "The member function will always take precedence and be called over the extension function.",
+    "explanation": "Member functions always win when there's a name clash with extension functions. This ensures the core behavior of a class isn't accidentally overridden by extensions.",
+    "options": [
+      "It will result in a compilation error.",
+      "The extension function will take precedence.",
+      "Kotlin will randomly choose which one to call.",
+      "The member function will always take precedence and be called over the extension function."
+    ]
+  },
+  {
+    "questionText": "What is the purpose of a `labeled break` or `labeled continue`?",
+    "correctAnswer": "To break or continue from an outer loop or an enclosing block, rather than the innermost one.",
+    "explanation": "Labels (e.g., `loop@ for (...)`) provide a way to control the flow of execution in nested loops or complex blocks precisely.",
+    "options": [
+      "To define a new type of loop.",
+      "To add comments to a loop.",
+      "To make a loop run faster.",
+      "To break or continue from an outer loop or an enclosing block, rather than the innermost one."
+    ]
+  },
+  {
+    "questionText": "What is the difference between `listOf()` and `arrayOf()`?",
+    "correctAnswer": "`listOf()` creates an immutable `List` (collection), while `arrayOf()` creates a mutable `Array` (fixed-size structure).",
+    "explanation": "Lists and Arrays serve different purposes. Lists are flexible collections, while Arrays are fixed-size data structures often used for performance-critical scenarios or Java interoperability.",
+    "options": [
+      "No difference, they are interchangeable.",
+      "`listOf()` creates a mutable list, `arrayOf()` creates an immutable array.",
+      "`listOf()` is only for strings, `arrayOf()` for numbers.",
+      "`listOf()` creates an immutable `List` (collection), while `arrayOf()` creates a mutable `Array` (fixed-size structure)."
+    ]
+  },
+  {
+    "questionText": "Can a `data class` implement an `interface`?",
+    "correctAnswer": "Yes, a `data class` can implement one or more interfaces.",
+    "explanation": "Implementing interfaces allows data classes to adhere to contracts defined by those interfaces while still benefiting from automatic function generation.",
+    "options": [
+      "No, data classes cannot implement interfaces.",
+      "Only if the interface has no methods.",
+      "Only if the interface is also a `sealed interface`.",
+      "Yes, a `data class` can implement one or more interfaces."
+    ]
+  },
+  {
+    "questionText": "What is the output of `(1..5).toList().sum()`?",
+    "correctAnswer": "15",
+    "explanation": "`(1..5)` creates a range from 1 to 5 (inclusive). `toList()` converts it to a list. `sum()` calculates the sum of elements.",
+    "options": [
+      "5",
+      "Error",
+      "12345",
+      "15"
+    ]
+  },
+  {
+    "questionText": "What is the output of `(1 until 5).toList().size`?",
+    "correctAnswer": "4",
+    "explanation": "`(1 until 5)` creates a range from 1 up to (but not including) 5, so it includes 1, 2, 3, 4.",
+    "options": [
+      "5",
+      "Error",
+      "0",
+      "4"
+    ]
+  },
+  {
+    "questionText": "What is the output of `val name: String? = null; name?.length ?: -1`?",
+    "correctAnswer": "-1",
+    "explanation": "The safe call `name?.length` evaluates to `null` because `name` is null. The Elvis operator `?:` then provides the default value of `-1`.",
+    "options": [
+      "0",
+      "null",
+      "Error",
+      "-1"
+    ]
+  },
+  {
+    "questionText": "What is the output of `val name: String? = \"Kotlin\"; name?.length ?: -1`?",
+    "correctAnswer": "7",
+    "explanation": "The safe call `name?.length` evaluates to 7 because `name` is not null. The Elvis operator `?:` is not used.",
+    "options": [
+      "0",
+      "null",
+      "Error",
+      "7"
+    ]
+  },
+  {
+    "questionText": "What is the output of `val list = listOf(1, 2, 3); list[0]`?",
+    "correctAnswer": "1",
+    "explanation": "Lists are 0-indexed, so `list[0]` accesses the first element.",
+    "options": [
+      "Error",
+      "2",
+      "3",
+      "1"
+    ]
+  },
+  {
+    "questionText": "What is the output of `val map = mapOf(\"a\" to 1, \"b\" to 2); map[\"a\"]`?",
+    "correctAnswer": "1",
+    "explanation": "Maps allow accessing values by their corresponding keys using square brackets.",
+    "options": [
+      "\"a\"",
+      "Error",
+      "null",
+      "1"
+    ]
+  },
+  {
+    "questionText": "Can you override a `val` property with a `var` property in a subclass?",
+    "correctAnswer": "Yes, you can override a `val` with a `var` if the `val` is declared as `open` in the superclass.",
+    "explanation": "This allows a property that is read-only in the base class to become mutable in a derived class. The reverse (overriding `var` with `val`) is also possible.",
+    "options": [
+      "No, `val` is always immutable and cannot be overridden by `var`.",
+      "Only if the superclass is a `data class`.",
+      "Only if the `val` is explicitly `private`.",
+      "Yes, you can override a `val` with a `var` if the `val` is declared as `open` in the superclass."
+    ]
+  },
+  {
+    "questionText": "What is the purpose of `apply` scope function?",
+    "correctAnswer": "Executes a block of code on the receiver object, makes the receiver available as `this`, and returns the receiver object itself, typically for object configuration.",
+    "explanation": "`apply` is excellent for chaining configuration calls on an object, making initialization code very clean.",
+    "options": [
+      "To transform an object into a different type.",
+      "To perform null checks on an object.",
+      "To execute asynchronous operations.",
+      "Executes a block of code on the receiver object, makes the receiver available as `this`, and returns the receiver object itself, typically for object configuration."
+    ]
+  },
+  {
+    "questionText": "What is the difference between a `class` and an `interface`?",
+    "correctAnswer": "A class can have constructors, maintain state, and fully implement behavior. An interface defines a contract, can have abstract and default methods, but cannot maintain state with backing fields.",
+    "explanation": "The core distinction is that a class creates concrete instances with state, while an interface focuses on defining behavior and contracts that classes can adhere to.",
+    "options": [
+      "Interfaces can be instantiated, classes cannot.",
+      "Classes can implement multiple interfaces, interfaces cannot inherit from multiple classes.",
+      "Interfaces can have private members, classes cannot.",
+      "A class can have constructors, maintain state, and fully implement behavior. An interface defines a contract, can have abstract and default methods, but cannot maintain state with backing fields."
+    ]
+  },
+  {
+    "questionText": "How can you make a generic function or class `reified`?",
+    "correctAnswer": "By marking the generic type parameter with the `reified` keyword and the function itself as `inline`.",
+    "explanation": "The `reified` keyword is only applicable to type parameters of `inline` functions. This allows the type information to be available at runtime, bypassing type erasure.",
+    "options": [
+      "By adding `@RuntimeType` annotation.",
+      "By using the `dynamic` keyword.",
+      "By declaring it as `abstract`.",
+      "By marking the generic type parameter with the `reified` keyword and the function itself as `inline`."
+    ]
+  },
+  {
+    "questionText": "What is `Type Inference` and how does it affect Kotlin code?",
+    "correctAnswer": "It's the compiler's ability to automatically determine the type of an expression, reducing boilerplate code and improving readability by allowing developers to omit explicit type declarations.",
+    "explanation": "Type inference is a significant feature that makes Kotlin code more concise and less verbose compared to languages that require explicit type declarations everywhere.",
+    "options": [
+      "It forces explicit type declarations for every variable.",
+      "It converts one data type into another during runtime.",
+      "It disables type checking, leading to less safe code.",
+      "It's the compiler's ability to automatically determine the type of an expression, reducing boilerplate code and improving readability by allowing developers to omit explicit type declarations."
+    ]
+  },
+  {
+    "questionText": "What is the difference between a `constructor` and an `init` block?",
+    "correctAnswer": "The primary constructor declares parameters and properties; `init` blocks contain initialization logic that runs after the primary constructor and its properties are set up.",
+    "explanation": "The `init` block is part of the primary constructor's logic, allowing for more complex initialization that doesn't fit directly in the constructor parameters.",
+    "options": [
+      "`init` blocks run before the constructor.",
+      "Constructors are only for `data class`, `init` for regular classes.",
+      "`init` blocks define properties, constructors define methods.",
+      "The primary constructor declares parameters and properties; `init` blocks contain initialization logic that runs after the primary constructor and its properties are set up."
+    ]
+  },
+  {
+    "questionText": "How do you define a `singleton` in Kotlin?",
+    "correctAnswer": "Using the `object` keyword (e.g., `object MySingleton { ... }`).",
+    "explanation": "The `object` declaration is the idiomatic and most concise way to create singletons in Kotlin, handling instantiation and thread-safety automatically.",
+    "options": [
+      "Using a private constructor and a static factory method.",
+      "By declaring a class with only `val` properties.",
+      "By making all members `private`.",
+      "Using the `object` keyword (e.g., `object MySingleton { ... }`)."
+    ]
+  },
+  {
+    "questionText": "What is the main purpose of `sealed class` and `sealed interface` in Kotlin?",
+    "correctAnswer": "To restrict class/interface hierarchies, ensuring that all direct subclasses/implementations are known at compile time, which helps in exhaustive `when` expressions.",
+    "explanation": "Sealed classes/interfaces are particularly useful for modeling finite state machines or other situations where you have a limited, well-defined set of possibilities.",
+    "options": [
+      "To prevent inheritance.",
+      "To make all methods abstract.",
+      "To automatically generate boilerplate code.",
+      "To restrict class/interface hierarchies, ensuring that all direct subclasses/implementations are known at compile time, which helps in exhaustive `when` expressions."
+    ]
+  },
+  {
+    "questionText": "What is the difference between `Iterable` and `Collection` in Kotlin's collections hierarchy?",
+    "correctAnswer": "`Collection` extends `Iterable` and adds methods for querying size, emptiness, and membership (`contains`, `containsAll`), while `Iterable` only provides an iterator.",
+    "explanation": "All `List`, `Set`, and `Map` types ultimately inherit from `Collection` (for their values in maps), which gives them more functionalities than a basic `Iterable`.",
+    "options": [
+      "No difference, they are synonyms.",
+      "`Iterable` is mutable, `Collection` is immutable.",
+      "`Collection` is only for primitive types.",
+      "`Collection` extends `Iterable` and adds methods for querying size, emptiness, and membership (`contains`, `containsAll`), while `Iterable` only provides an iterator."
+    ]
+  },
+  {
+    "questionText": "When should you use `ArrayDeque` over `ArrayList` or `LinkedList`?",
+    "correctAnswer": "When you need efficient adding/removing of elements from both ends of the collection, as it offers constant-time performance for these operations.",
+    "explanation": "`ArrayDeque` (double-ended queue) is generally preferred over `LinkedList` for most queue-like operations due to better cache locality, and over `ArrayList` when frequent additions/removals at both ends are needed.",
+    "options": [
+      "Always, it's the fastest for all operations.",
+      "When you need random access to elements.",
+      "When you need to iterate slowly.",
+      "When you need efficient adding/removing of elements from both ends of the collection, as it offers constant-time performance for these operations."
+    ]
+  },
+  {
+    "questionText": "What is the purpose of `groupBy` on collections?",
+    "correctAnswer": "To group elements of a collection based on a specified key, returning a `Map` where keys are the grouping criteria and values are lists of elements corresponding to that key.",
+    "explanation": "`groupBy` is powerful for categorizing data within a collection, transforming a flat list into a structured map.",
+    "options": [
+      "To sort a collection by a specific criterion.",
+      "To filter elements based on a condition.",
+      "To combine elements into a single result.",
+      "To group elements of a collection based on a specified key, returning a `Map` where keys are the grouping criteria and values are lists of elements corresponding to that key."
+    ]
+  },
+  {
+    "questionText": "What is the difference between `fold` and `reduce` for collection operations?",
+    "correctAnswer": "`fold` takes an initial value and applies an operation to accumulate a result; `reduce` does not take an initial value and uses the first element as the accumulator.",
+    "explanation": "`fold` is safer as it always has a starting point, even for empty collections (returns initial value). `reduce` on an empty collection will throw an exception.",
+    "options": [
+      "No difference, they are aliases for each other.",
+      "`reduce` is only for numeric types, `fold` for any type.",
+      "`fold` is always slower than `reduce`.",
+      "`fold` takes an initial value and applies an operation to accumulate a result; `reduce` does not take an initial value and uses the first element as the accumulator."
+    ]
+  },
+  {
+    "questionText": "What is the primary benefit of Kotlin's concise syntax compared to Java?",
+    "correctAnswer": "Reduced boilerplate code, leading to more readable, maintainable, and less error-prone code.",
+    "explanation": "Features like data classes, null safety, type inference, and extension functions significantly reduce the amount of code needed to express logic, enhancing productivity.",
+    "options": [
+      "Faster compilation speed only.",
+      "Automatic code generation for all features.",
+      "It only affects Android development.",
+      "Reduced boilerplate code, leading to more readable, maintainable, and less error-prone code."
+    ]
+  },
+  {
+    "questionText": "Explain the concept of `Scope Functions` (`let`, `run`, `apply`, `also`, `with`) in Kotlin.",
+    "correctAnswer": "They are functions that allow you to execute a block of code on an object, providing a temporary scope where the object is easily accessible, and each function returns a different result.",
+    "explanation": "These functions help to write more fluent and expressive code by providing various ways to interact with an object within a lambda.",
+    "options": [
+      "They define the visibility of variables within a class.",
+      "They are used for defining global functions.",
+      "They restrict access to certain parts of the code.",
+      "They are functions that allow you to execute a block of code on an object, providing a temporary scope where the object is easily accessible, and each function returns a different result."
+    ]
+  },
+  {
+    "questionText": "What is the purpose of `val` in a property declaration like `val name: String`?",
+    "correctAnswer": "Declares a read-only property (immutable reference). Its value can only be assigned once during initialization.",
+    "explanation": "Even if the object referred to by a `val` is mutable, the `val` itself cannot be reassigned to point to a different object.",
+    "options": [
+      "Declares a mutable property that can be reassigned.",
+      "Declares a static property.",
+      "Declares a nullable property.",
+      "Declares a read-only property (immutable reference). Its value can only be assigned once during initialization."
+    ]
+  },
+  {
+    "questionText": "What is the purpose of `var` in a property declaration like `var age: Int`?",
+    "correctAnswer": "Declares a mutable property (variable reference). Its value can be reassigned multiple times.",
+    "explanation": "`var` is used when the value associated with the property needs to change over its lifetime.",
+    "options": [
+      "Declares a read-only property.",
+      "Declares a static property.",
+      "Declares a nullable property.",
+      "Declares a mutable property (variable reference). Its value can be reassigned multiple times."
+    ]
+  },
+  {
+    "questionText": "When using `when` as an expression, what happens if no branch condition matches and there's no `else` branch?",
+    "correctAnswer": "It will result in a compilation error if the `when` expression is not exhaustive (e.g., without a `sealed` type) and needs to return a value.",
+    "explanation": "Kotlin's compiler requires `when` expressions to be exhaustive when they are used to return a value, ensuring that all possible scenarios are handled.",
+    "options": [
+      "It will return `null`.",
+      "It will return an empty string.",
+      "It will throw a runtime error.",
+      "It will result in a compilation error if the `when` expression is not exhaustive (e.g., without a `sealed` type) and needs to return a value."
+    ]
+  },
+  {
+    "questionText": "What is the advantage of using a `lambda with receiver` in Kotlin?",
+    "correctAnswer": "It allows a lambda to have a receiver object (`this`), enabling a DSL-like syntax for configuring or operating on that object within the lambda's body.",
+    "explanation": "Lambdas with receivers are fundamental to Kotlin's type-safe builders and scope functions, making code more concise and readable.",
+    "options": [
+      "It makes the lambda run on a separate thread.",
+      "It prevents the lambda from accessing variables outside its scope.",
+      "It forces the lambda to be immutable.",
+      "It allows a lambda to have a receiver object (`this`), enabling a DSL-like syntax for configuring or operating on that object within the lambda's body."
+    ]
+  },
+  {
+    "questionText": "How does Kotlin's `String interpolation` differ from traditional string concatenation?",
+    "correctAnswer": "String interpolation (`$`) allows embedding expressions directly within string literals for more readable and concise string creation, while concatenation (`+`) combines separate string parts.",
+    "explanation": "Interpolation makes complex string formatting much easier to read and write compared to repeatedly using the `+` operator.",
+    "options": [
+      "String interpolation is only for numeric values.",
+      "String interpolation is slower than concatenation.",
+      "String interpolation encrypts strings.",
+      "String interpolation (`$`) allows embedding expressions directly within string literals for more readable and concise string creation, while concatenation (`+`) combines separate string parts."
+    ]
+  },
+  {
+    "questionText": "What is the purpose of `Property Accessors` (`get()` and `set()`) in Kotlin?",
+    "correctAnswer": "They define how a property's value is read and written, allowing custom logic like validation, transformation, or computed values without needing separate getter/setter methods.",
+    "explanation": "Property accessors are a core part of Kotlin's property syntax, providing flexibility while maintaining a clean access syntax (`obj.property`).",
+    "options": [
+      "They only apply to `private` properties.",
+      "They automatically make properties immutable.",
+      "They are only used for Java interoperability.",
+      "They define how a property's value is read and written, allowing custom logic like validation, transformation, or computed values without needing separate getter/setter methods."
+    ]
+  },
+  {
+    "questionText": "What is the difference between `List<Any>` and `List<*>` (star projection)?",
+    "correctAnswer": "`List<Any>` is a list of actual `Any` objects, allowing both reading and writing. `List<*>` is a list of unknown type, allowing safe reading (elements are `Any?`) but no writing of specific types.",
+    "explanation": "`List<*>` is for when you don't care about the specific type argument but still want type safety for reading elements as `Any?`. You can't add elements to `List<*>` because the compiler doesn't know what type to expect.",
+    "options": [
+      "No difference, they are interchangeable.",
+      "`List<*>` is mutable, `List<Any>` is immutable.",
+      "`List<Any>` is only for Java, `List<*>` is for Kotlin.",
+      "`List<Any>` is a list of actual `Any` objects, allowing both reading and writing. `List<*>` is a list of unknown type, allowing safe reading (elements are `Any?`) but no writing of specific types."
+    ]
+  },
+  {
+    "questionText": "How can you return multiple values from a function in Kotlin?",
+    "correctAnswer": "Using `data class`, `Pair`, `Triple`, or destructuring declarations with any custom class that provides `componentN()` functions.",
+    "explanation": "Kotlin provides flexible ways to return multiple logically grouped values, improving readability over returning a raw `Array` or `List`.",
+    "options": [
+      "It's not possible to return multiple values from a function.",
+      "Only by returning a `Map`.",
+      "Only by using `vararg` parameters.",
+      "Using `data class`, `Pair`, `Triple`, or destructuring declarations with any custom class that provides `componentN()` functions."
+    ]
+  },
+  {
+    "questionText": "What is the primary role of the `kotlin-reflect` library?",
+    "correctAnswer": "Provides runtime reflection capabilities, allowing inspection and manipulation of Kotlin classes, properties, and functions.",
+    "explanation": "The `kotlin-reflect` library is necessary if you need to use advanced reflection features like property references (`::propertyName`), invoking members dynamically, or inspecting generic types at runtime.",
+    "options": [
+      "To compile Kotlin code into JavaScript.",
+      "To provide a dependency injection framework.",
+      "To optimize collection operations.",
+      "Provides runtime reflection capabilities, allowing inspection and manipulation of Kotlin classes, properties, and functions."
+    ]
+  },
+  {
+    "questionText": "What is the purpose of `sequence` in Kotlin collections?",
+    "correctAnswer": "Provides lazy evaluation of collection operations, processing elements one by one as needed, which can be more efficient for large datasets or chained operations.",
+    "explanation": "Unlike regular collections, which perform each operation on all elements and create intermediate lists, sequences perform operations on elements as they are requested, avoiding unnecessary allocations.",
+    "options": [
+      "To force eager evaluation of collection operations.",
+      "To sort collection elements faster.",
+      "To only work with mutable collections.",
+      "Provides lazy evaluation of collection operations, processing elements one by one as needed, which can be more efficient for large datasets or chained operations."
+    ]
+  },
+  {
+    "questionText": "Can a `lateinit var` be a nullable type?",
+    "correctAnswer": "No, `lateinit var` can only be used with non-nullable types.",
+    "explanation": "The whole point of `lateinit` is to tell the compiler that a non-nullable property will be initialized before use, thus avoiding null checks.",
+    "options": [
+      "Yes, always.",
+      "Only if it's a primitive type.",
+      "Only in Android development.",
+      "No, `lateinit var` can only be used with non-nullable types."
+    ]
+  },
+  {
+    "questionText": "What is the difference between `Any` and `Any?` in Kotlin?",
+    "correctAnswer": "`Any` is the root of the Kotlin class hierarchy (non-nullable), equivalent to `Object` in Java. `Any?` is the nullable version of `Any`, meaning it can hold any type or `null`.",
+    "explanation": "Kotlin's type system is null-safe. `Any` guarantees a non-null value, while `Any?` explicitly allows for nulls.",
+    "options": [
+      "No difference, they are interchangeable.",
+      "`Any` is only for primitives, `Any?` for objects.",
+      "`Any?` is always safer to use.",
+      "`Any` is the root of the Kotlin class hierarchy (non-nullable), equivalent to `Object` in Java. `Any?` is the nullable version of `Any`, meaning it can hold any type or `null`."
+    ]
+  },
+  {
+    "questionText": "What is the purpose of the `contract` function in Kotlin?",
+    "correctAnswer": "To provide information to the compiler about the behavior of a function's parameters, enabling smarter analysis and diagnostics (e.g., about nullability).",
+    "explanation": "Contracts are a relatively advanced feature used by library authors to give hints to the compiler, improving its ability to perform smart casts and nullability checks for callers of the function.",
+    "options": [
+      "To define a new interface.",
+      "To specify thread safety guarantees.",
+      "To measure function performance.",
+      "To provide information to the compiler about the behavior of a function's parameters, enabling smarter analysis and diagnostics (e.g., about nullability)."
+    ]
+  },
+  {
+    "questionText": "What does `return@label` mean in Kotlin?",
+    "correctAnswer": "It performs a non-local return from the function where the label is defined, rather than from the innermost lambda or function.",
+    "explanation": "Labeled returns are used to explicitly specify which function or lambda you want to return from, especially when dealing with nested higher-order functions.",
+    "options": [
+      "It returns from the current lambda only.",
+      "It defines a new label for a loop.",
+      "It is a syntax error.",
+      "It performs a non-local return from the function where the label is defined, rather than from the innermost lambda or function."
+    ]
+  },
+  {
+    "questionText": "What is the main benefit of using `when` as an expression over an `if-else if` chain?",
+    "correctAnswer": "It offers more concise syntax, supports various types of conditions (values, ranges, types), and can enforce exhaustiveness for `sealed` types.",
+    "explanation": "`when` is more powerful and flexible than `if-else if` for complex conditional logic, leading to cleaner and often safer code.",
+    "options": [
+      "It's always faster than `if-else if`.",
+      "It only works with primitive types.",
+      "It cannot handle multiple conditions.",
+      "It offers more concise syntax, supports various types of conditions (values, ranges, types), and can enforce exhaustiveness for `sealed` types."
+    ]
+  },
+  {
+    "questionText": "What is the purpose of the `takeLast` function on collections?",
+    "correctAnswer": "Returns a list containing the last `n` elements of the original collection.",
+    "explanation": "`takeLast` is useful for extracting suffixes of collections.",
+    "options": [
+      "Removes the last `n` elements from the collection.",
+      "Returns a single element from the end of the collection.",
+      "Reverses the order of the last `n` elements.",
+      "Returns a list containing the last `n` elements of the original collection."
+    ]
+  },
+  {
+    "questionText": "What is the purpose of the `drop` function on collections?",
+    "correctAnswer": "Returns a new list containing all elements except the first `n` elements.",
+    "explanation": "`drop` is useful for skipping a prefix of a collection.",
+    "options": [
+      "Removes the last `n` elements.",
+      "Returns only the first `n` elements.",
+      "Filters elements based on a condition.",
+      "Returns a new list containing all elements except the first `n` elements."
+    ]
+  },
+  {
+    "questionText": "What is the `associate` function on collections used for?",
+    "correctAnswer": "To transform a collection into a `Map` where each element provides both the key and the value for an entry.",
+    "explanation": "`associate` (and `associateBy`, `associateWith`) are powerful functions for creating maps from existing collections in a single, concise operation.",
+    "options": [
+      "To combine two maps.",
+      "To sort a map by its keys.",
+      "To filter map entries.",
+      "To transform a collection into a `Map` where each element provides both the key and the value for an entry."
+    ]
+  },
+  {
+    "questionText": "How can you iterate over a `Map` in Kotlin, accessing both keys and values?",
+    "correctAnswer": "Using `for ((key, value) in myMap)` or `myMap.forEach { (key, value) -> ... }`.",
+    "explanation": "Kotlin's destructuring declarations make iterating over map entries very convenient.",
+    "options": [
+      "Using `for (key in myMap.keys)` and then `myMap[key]`.",
+      "Using `for (value in myMap.values)` only.",
+      "Using `myMap.iterate()` method.",
+      "Using `for ((key, value) in myMap)` or `myMap.forEach { (key, value) -> ... }`."
+    ]
+  },
+  {
+    "questionText": "What is the purpose of `require()` and `check()` functions in Kotlin?",
+    "correctAnswer": "`require()` is for validating arguments passed to a function (throws `IllegalArgumentException`). `check()` is for validating state (throws `IllegalStateException`).",
+    "explanation": "These standard library functions provide concise ways to enforce preconditions and invariants, making error conditions explicit.",
+    "options": [
+      "They are used for logging messages.",
+      "They are used for asynchronous operations.",
+      "They are used for type casting.",
+      "`require()` is for validating arguments passed to a function (throws `IllegalArgumentException`). `check()` is for validating state (throws `IllegalStateException`)."
+    ]
+  },
+  {
+    "questionText": "What is the difference between `is` and `as` in Kotlin for type checking/casting?",
+    "correctAnswer": "`is` is a type check operator, returning true or false if an object is of a certain type (often leading to smart casts). `as` is an unsafe cast operator, attempting to cast and throwing `ClassCastException` if it fails.",
+    "explanation": "`is` is for safely checking types. `as` should be used with caution, typically when you are certain of the type, or combined with `as?` for safe casting.",
+    "options": [
+      "No difference, they are interchangeable.",
+      "`is` is for explicit casting, `as` for implicit.",
+      "`is` only works for primitive types, `as` for objects.",
+      "`is` is a type check operator, returning true or false if an object is of a certain type (often leading to smart casts). `as` is an unsafe cast operator, attempting to cast and throwing `ClassCastException` if it fails."
+    ]
+  },
+  {
+    "questionText": "What is the purpose of `val` property inside a `data class` primary constructor?",
+    "correctAnswer": "It declares a read-only property (immutable) for the data class, and its value is included in `equals()`, `hashCode()`, and `toString()` generations.",
+    "explanation": "Properties declared with `val` in the primary constructor are key to data classes' value-based equality and immutability. If a `var` is used, it still participates in these generated methods, but it implies mutability of the property.",
+    "options": [
+      "It makes the property non-nullable only.",
+      "It means the property can be reassigned.",
+      "It excludes the property from `equals()` and `hashCode()`.",
+      "It declares a read-only property (immutable) for the data class, and its value is included in `equals()`, `hashCode()`, and `toString()` generations."
+    ]
+  },
+  {
+    "questionText": "What is `Expression Body` syntax for functions?",
+    "correctAnswer": "A concise syntax for functions that return a single expression, allowing you to omit the return type and curly braces.",
+    "explanation": "Example: `fun double(x: Int) = x * 2`. This makes simple functions very compact and readable.",
+    "options": [
+      "A way to define abstract functions.",
+      "A method for writing multi-line comments.",
+      "A technique for optimizing function calls.",
+      "A concise syntax for functions that return a single expression, allowing you to omit the return type and curly braces."
+    ]
+  },
+  {
+    "questionText": "What is the benefit of using `apply` over a regular constructor for object initialization?",
+    "correctAnswer": "It allows for a more fluent and readable way to configure an object by chaining property assignments and function calls within a lambda, returning the configured object itself.",
+    "explanation": "`apply` is particularly useful when you're setting up a new object and need to perform several operations on it right after creation.",
+    "options": [
+      "It makes the object immutable.",
+      "It automatically handles null values.",
+      "It only works with primitive types.",
+      "It allows for a more fluent and readable way to configure an object by chaining property assignments and function calls within a lambda, returning the configured object itself."
+    ]
+  },
+  {
+    "questionText": "When using `kotlinx.serialization`, what is the purpose of the `@Serializable` annotation?",
+    "correctAnswer": "It marks a class as eligible for automatic serialization and deserialization by the `kotlinx.serialization` library.",
+    "explanation": "The `@Serializable` annotation tells the compiler plugin to generate the necessary serializer and deserializer code for the class.",
+    "options": [
+      "It makes the class part of the standard library.",
+      "It defines the class as an interface.",
+      "It hides the class from external access.",
+      "It marks a class as eligible for automatic serialization and deserialization by the `kotlinx.serialization` library."
+    ]
+  },
+  {
+    "questionText": "What is the primary function of `buildString` in Kotlin?",
+    "correctAnswer": "To efficiently build a string using a `StringBuilder` under the hood, within a lambda, for improved performance compared to repeated string concatenation.",
+    "explanation": "`buildString` is a convenience function that provides a `StringBuilder` scope, allowing you to append parts to it and then returns the final string.",
+    "options": [
+      "To convert a list of characters to a string.",
+      "To format strings using templates.",
+      "To parse strings into numbers.",
+      "To efficiently build a string using a `StringBuilder` under the hood, within a lambda, for improved performance compared to repeated string concatenation."
+    ]
+  },
+  {
+    "questionText": "What is the difference between `MutableList<T>()` and `arrayListOf<T>()` for creating mutable lists?",
+    "correctAnswer": "`mutableListOf()` is the idiomatic Kotlin way, returning `MutableList`. `arrayListOf()` is a Java-specific function returning `ArrayList`, useful for Java interoperability or when needing `ArrayList` specific features.",
+    "explanation": "Both create mutable lists, but `mutableListOf()` aligns with Kotlin's standard library conventions, while `arrayListOf()` exposes the underlying Java type.",
+    "options": [
+      "No difference, they are aliases.",
+      "`arrayListOf()` is immutable.",
+      "`mutableListOf()` is slower.",
+      "`mutableListOf()` is the idiomatic Kotlin way, returning `MutableList`. `arrayListOf()` is a Java-specific function returning `ArrayList`, useful for Java interoperability or when needing `ArrayList` specific features."
+    ]
+  },
+  {
+    "questionText": "What is the purpose of `val` as a parameter in an `abstract` class's primary constructor?",
+    "correctAnswer": "It declares an abstract property that must be overridden by concrete subclasses, ensuring they provide a value for this property.",
+    "explanation": "Just like abstract methods, abstract properties in an abstract class must be implemented in concrete subclasses. The `val` indicates it's a read-only property.",
+    "options": [
+      "It creates a private field.",
+      "It makes the parameter optional.",
+      "It prevents the property from being overridden.",
+      "It declares an abstract property that must be overridden by concrete subclasses, ensuring they provide a value for this property."
+    ]
+  },
+  {
+    "questionText": "What is `Backing Field` and `Backing Property` in Kotlin?",
+    "correctAnswer": "A `backing field` is the implicit field storing a property's value. A `backing property` is a separate, private property used to explicitly manage the getter/setter logic of a public property, often to hide mutable state.",
+    "explanation": "Backing properties are a common pattern (e.g., `private var _items: MutableList<T> = mutableListOf(); val items: List<T> get() = _items`) to expose an immutable view while internally managing mutability.",
+    "options": [
+      "They are only used for `const val`.",
+      "They define how a property is accessed from Java.",
+      "They are synonymous terms.",
+      "A `backing field` is the implicit field storing a property's value. A `backing property` is a separate, private property used to explicitly manage the getter/setter logic of a public property, often to hide mutable state."
+    ]
+  },
+  {
+    "questionText": "What is the purpose of the `repeat` function in Kotlin?",
+    "correctAnswer": "To execute a given action a specified number of times, primarily used for simple fixed-count loops where the index is not always needed.",
+    "explanation": "`repeat` is a concise way to perform an action `n` times. The lambda it takes implicitly receives the current iteration number as `it`.",
+    "options": [
+      "To create a recursive function.",
+      "To perform an action only once.",
+      "To iterate over a collection.",
+      "To execute a given action a specified number of times, primarily used for simple fixed-count loops where the index is not always needed."
+    ]
+  },
+  {
+    "questionText": "How does Kotlin's `Smart Casts` contribute to null safety?",
+    "correctAnswer": "By automatically casting a nullable type to its non-nullable counterpart after a null check, allowing direct access to members without explicit casting or `!!`.",
+    "explanation": "Example: `if (x != null) { x.length }`. After the `if` check, `x` is smartly cast to `String` (non-nullable), so `x.length` is safe.",
+    "options": [
+      "It makes all types nullable by default.",
+      "It throws exceptions when nulls are encountered.",
+      "It converts all nulls to empty strings.",
+      "By automatically casting a nullable type to its non-nullable counterpart after a null check, allowing direct access to members without explicit casting or `!!`."
+    ]
+  },
+  {
+    "questionText": "What is the primary difference between `map` and `forEach` on collections?",
+    "correctAnswer": "`map` transforms each element and returns a new list of the transformed results, while `forEach` iterates over elements to perform an action without returning a new collection.",
+    "explanation": "`map` is for transformations (functional purity), `forEach` is for side effects.",
+    "options": [
+      "No difference, they are interchangeable.",
+      "`forEach` is faster than `map`.",
+      "`map` only works on mutable collections.",
+      "`map` transforms each element and returns a new list of the transformed results, while `forEach` iterates over elements to perform an action without returning a new collection."
+    ]
+  },
+  {
+    "questionText": "What is the purpose of `also` scope function?",
+    "correctAnswer": "Executes a block of code on the receiver object, makes the receiver available as `it`, and returns the receiver object itself, useful for side effects or logging without altering the object.",
+    "explanation": "`also` is good for performing operations that don't need to change the object or return a transformed value, such as printing, logging, or adding to another collection.",
+    "options": [
+      "To transform an object into another type.",
+      "To create a new instance of an object.",
+      "To perform null checks and return a different value.",
+      "Executes a block of code on the receiver object, makes the receiver available as `it`, and returns the receiver object itself, useful for side effects or logging without altering the object."
+    ]
+  },
+  {
+    "questionText": "What is the `associateBy` function on collections used for?",
+    "correctAnswer": "To create a `Map` from a collection where keys are derived from elements using a key selector function, and values are the elements themselves.",
+    "explanation": "`associateBy` simplifies the process of creating a map where each element of the original collection becomes a value, and a new key is computed for it.",
+    "options": [
+      "To combine two maps.",
+      "To sort a map by its values.",
+      "To filter map entries.",
+      "To create a `Map` from a collection where keys are derived from elements using a key selector function, and values are the elements themselves."
+    ]
+  },
+  {
+    "questionText": "What is the `associateWith` function on collections used for?",
+    "correctAnswer": "To create a `Map` from a collection where elements become keys, and values are derived from elements using a value selector function.",
+    "explanation": "`associateWith` is useful when you want to use the elements of a collection as keys in a map and then compute values for them.",
+    "options": [
+      "To combine two maps.",
+      "To sort a map by its keys.",
+      "To filter map entries.",
+      "To create a `Map` from a collection where elements become keys, and values are derived from elements using a value selector function."
+    ]
+  },
+  {
+    "questionText": "What is `Array<out T>` (covariance for arrays) in Kotlin?",
+    "correctAnswer": "An array that can only be read from, where elements are of type `T` or its subtypes. You cannot write into it safely without a cast.",
+    "explanation": "This allows `Array<Derived>` to be assigned to `Array<Base>` if `Base` is declared `out`. It prevents potential runtime `ArrayStoreException` by disallowing writes.",
+    "options": [
+      "An array that can only be written to.",
+      "An array where all elements are null.",
+      "An array that allows both reading and writing safely.",
+      "An array that can only be read from, where elements are of type `T` or its subtypes. You cannot write into it safely without a cast."
+    ]
+  },
+  {
+    "questionText": "What is the typical use case for `listOfNotNull`?",
+    "correctAnswer": "To create a list containing only the non-null elements from a variable number of arguments, filtering out any `null`s.",
+    "explanation": "`listOfNotNull` is a convenient function for quickly creating a list from potentially nullable arguments without needing manual null checks or filters.",
+    "options": [
+      "To create a list that can contain nulls.",
+      "To ensure all elements in a list are null.",
+      "To filter out all non-null elements.",
+      "To create a list containing only the non-null elements from a variable number of arguments, filtering out any `null`s."
+    ]
+  },
+  {
+    "questionText": "What is the purpose of `runCatching` in Kotlin?",
+    "correctAnswer": "To execute a block of code and return a `Result` object, encapsulating either success (value) or failure (exception), without directly throwing an exception.",
+    "explanation": "`runCatching` is a functional approach to exception handling, making error flows more explicit and composable.",
+    "options": [
+      "To force a function to throw an exception.",
+      "To rethrow an exception.",
+      "To always execute a block of code successfully.",
+      "To execute a block of code and return a `Result` object, encapsulating either success (value) or failure (exception), without directly throwing an exception."
+    ]
+  },
+  {
+    "questionText": "How does Kotlin's `property access syntax` simplify interaction with Java getters/setters?",
+    "correctAnswer": "It allows accessing Java getters (`getName()`) and setters (`setName(value)`) as if they were Kotlin properties (`.name = value`), reducing boilerplate.",
+    "explanation": "This seamless integration makes working with Java libraries and existing Java code much more idiomatic in Kotlin.",
+    "options": [
+      "It requires manual creation of Kotlin-specific getters/setters.",
+      "It disables Java interoperability.",
+      "It only works for private Java fields.",
+      "It allows accessing Java getters (`getName()`) and setters (`setName(value)`) as if they were Kotlin properties (`.name = value`), reducing boilerplate."
+    ]
+  },
+  {
+    "questionText": "What is a `receiver type` in the context of extension functions and lambdas with receivers?",
+    "correctAnswer": "The type of the object on which the extension function is called or the lambda is invoked, allowing its members to be accessed directly within the function/lambda body.",
+    "explanation": "The receiver type defines the implicit `this` or the context object within the extension function or lambda, making the syntax very concise (e.g., `StringBuilder.() -> Unit`).",
+    "options": [
+      "The return type of the function.",
+      "The type of the first parameter of the function.",
+      "A type that can receive multiple arguments.",
+      "The type of the object on which the extension function is called or the lambda is invoked, allowing its members to be accessed directly within the function/lambda body."
+    ]
+  },
+  {
+    "questionText": "What is the difference between `filter` and `filterIsInstance` on collections?",
+    "correctAnswer": "`filter` keeps elements that satisfy a predicate; `filterIsInstance` keeps only elements that are instances of a specified type and automatically casts them.",
+    "explanation": "`filterIsInstance<T>()` is a powerful and concise way to filter a collection by type and get a type-safe list of those instances, often used with `reified` type parameters in inline functions.",
+    "options": [
+      "No difference, they are interchangeable.",
+      "`filterIsInstance` works only on mutable lists.",
+      "`filter` is only for primitive types.",
+      "`filter` keeps elements that satisfy a predicate; `filterIsInstance` keeps only elements that are instances of a specified type and automatically casts them."
+    ]
+  },
+  {
+    "questionText": "When should you use `mapIndexed` over `map`?",
+    "correctAnswer": "When the transformation logic requires access to both the element and its index in the collection.",
+    "explanation": "`mapIndexed` provides both the index and the element as arguments to its lambda, useful for scenarios where position matters.",
+    "options": [
+      "When the transformation is very simple.",
+      "When you don't need to create a new list.",
+      "When performance is critical.",
+      "When the transformation logic requires access to both the element and its index in the collection."
+    ]
+  },
+  {
+    "questionText": "What is the purpose of `val` in a property declared in an interface?",
+    "correctAnswer": "It declares an abstract property that must be implemented by concrete classes implementing the interface, providing a getter (and potentially a setter if it's `var`).",
+    "explanation": "Interfaces can declare abstract properties, meaning implementing classes must provide a concrete implementation for them.",
+    "options": [
+      "It defines a private field that cannot be accessed.",
+      "It makes the property mutable.",
+      "It declares a static property.",
+      "It declares an abstract property that must be implemented by concrete classes implementing the interface, providing a getter (and potentially a setter if it's `var`)."
+    ]
+  },
+  {
+    "questionText": "What is the output of `val numbers = listOf(1, 2, 3); numbers.find { it == 2 }`?",
+    "correctAnswer": "2",
+    "explanation": "The `find` function returns the first element that matches the given predicate, or `null` if no such element is found.",
+    "options": [
+      "null",
+      "true",
+      "Error",
+      "2"
+    ]
+  },
+  {
+    "questionText": "What is the output of `val numbers = listOf(1, 2, 3); numbers.find { it == 5 }`?",
+    "correctAnswer": "null",
+    "explanation": "The `find` function returns `null` if no element matches the given predicate.",
+    "options": [
+      "5",
+      "true",
+      "Error",
+      "null"
+    ]
+  },
+  {
+    "questionText": "What is the output of `val numbers = listOf(1, 2, 3); numbers.any { it > 2 }`?",
+    "correctAnswer": "true",
+    "explanation": "The `any` function returns `true` if at least one element in the collection matches the given predicate.",
+    "options": [
+      "false",
+      "Error",
+      "null",
+      "true"
+    ]
+  },
+  {
+    "questionText": "What is the output of `val numbers = listOf(1, 2, 3); numbers.all { it < 5 }`?",
+    "correctAnswer": "true",
+    "explanation": "The `all` function returns `true` if all elements in the collection match the given predicate.",
+    "options": [
+      "false",
+      "Error",
+      "null",
+      "true"
+    ]
+  },
+  {
+    "questionText": "What is the output of `val numbers = listOf(1, 2, 3); numbers.none { it > 5 }`?",
+    "correctAnswer": "true",
+    "explanation": "The `none` function returns `true` if no elements in the collection match the given predicate.",
+    "options": [
+      "false",
+      "Error",
+      "null",
+      "true"
+    ]
+  },
+  {
+    "questionText": "What is the output of `val text = \"hello\"; text.capitalize()`?",
+    "correctAnswer": "\"Hello\"",
+    "explanation": "The `capitalize()` function (deprecated in Kotlin 1.5+, replaced by `replaceFirstChar { it.uppercaseChar() }`) capitalizes the first letter of the string.",
+    "options": [
+      "\"hello\"",
+      "\"HELLO\"",
+      "Error",
+      "\"Hello\""
+    ]
+  },
+  {
+    "questionText": "What is the output of `val text = \"WORLD\"; text.toLowerCase()`?",
+    "correctAnswer": "\"world\"",
+    "explanation": "The `toLowerCase()` function (deprecated in Kotlin 1.5+, replaced by `lowercase()`) converts the string to lowercase.",
+    "options": [
+      "\"WORLD\"",
+      "\"World\"",
+      "Error",
+      "\"world\""
+    ]
+  },
+  {
+    "questionText": "What is the output of `val numbers = listOf(1, 2, 3); numbers.joinToString(separator = \"-\")`?",
+    "correctAnswer": "\"1-2-3\"",
+    "explanation": "`joinToString` concatenates elements of a collection into a string, with optional separator, prefix, and postfix.",
+    "options": [
+      "\"123\"",
+      "[1, 2, 3]",
+      "Error",
+      "\"1-2-3\""
+    ]
+  },
+  {
+    "questionText": "What is the purpose of `run` scope function?",
+    "correctAnswer": "Executes a block of code on the receiver object, makes the receiver available as `this`, and returns the result of the lambda (last expression).",
+    "explanation": "`run` is useful when you want to compute a value from an object and then return that value, often combined with null checks (`myObject?.run { ... }`).",
+    "options": [
+      "To perform side effects and return the original object.",
+      "To transform an object into a different type.",
+      "To create a new instance of an object.",
+      "Executes a block of code on the receiver object, makes the receiver available as `this`, and returns the result of the lambda (last expression)."
+    ]
+  },
+  {
+    "questionText": "What is the output of `val x: Int? = null; x?.let { it + 5 } ?: 0`?",
+    "correctAnswer": "0",
+    "explanation": "`x` is null, so `x?.let { ... }` evaluates to null. The Elvis operator `?:` then provides `0` as the default.",
+    "options": [
+      "null",
+      "Error",
+      "5",
+      "0"
+    ]
+  },
+  {
+    "questionText": "What is the output of `val x: Int? = 10; x?.let { it + 5 } ?: 0`?",
+    "correctAnswer": "15",
+    "explanation": "`x` is 10, so `x?.let { ... }` executes the lambda, returning `10 + 5 = 15`. The Elvis operator is not triggered.",
+    "options": [
+      "null",
+      "Error",
+      "0",
+      "15"
+    ]
+  },
+  {
+    "questionText": "What is the purpose of `with` scope function?",
+    "correctAnswer": "To group multiple operations on a single object, where the object is passed as an argument and made available as `this` inside the lambda. It returns the result of the lambda.",
+    "explanation": "`with` is useful for configuring an object when you don't need to return the object itself, or when you have an object and want to perform several operations on it within a block.",
+    "options": [
+      "To perform null checks.",
+      "To return the original object.",
+      "To create a new object.",
+      "To group multiple operations on a single object, where the object is passed as an argument and made available as `this` inside the lambda. It returns the result of the lambda."
+    ]
+  },
+  {
+    "questionText": "Can you define an `extension property` with a backing field?",
+    "correctAnswer": "No, extension properties cannot have backing fields because they don't actually add members to the class.",
+    "explanation": "Extension properties are essentially syntactic sugar for getter/setter functions. They compute their value on demand and don't store it within the extended object.",
+    "options": [
+      "Yes, always.",
+      "Only if the class is `open`.",
+      "Only for `val` properties.",
+      "No, extension properties cannot have backing fields because they don't actually add members to the class."
+    ]
+  },
+  {
+    "questionText": "What is the purpose of `take` function on collections?",
+    "correctAnswer": "Returns a list containing the first `n` elements of the original collection.",
+    "explanation": "`take` is useful for extracting prefixes of collections.",
+    "options": [
+      "Removes the first `n` elements from the collection.",
+      "Returns a single element from the beginning of the collection.",
+      "Reverses the order of the first `n` elements.",
+      "Returns a list containing the first `n` elements of the original collection."
+    ]
+  },
+  {
+    "questionText": "What is the output of `val list = mutableListOf(1, 2, 3); list.add(4); list`?",
+    "correctAnswer": "[1, 2, 3, 4]",
+    "explanation": "The `add` function modifies the mutable list in place.",
+    "options": [
+      "[1, 2, 3]",
+      "Error",
+      "null",
+      "[1, 2, 3, 4]"
+    ]
+  },
+  {
+    "questionText": "What is the output of `val list = mutableListOf(1, 2, 3); list.remove(2); list`?",
+    "correctAnswer": "[1, 3]",
+    "explanation": "The `remove` function removes the first occurrence of the specified element.",
+    "options": [
+      "[1, 2, 3]",
+      "Error",
+      "null",
+      "[1, 3]"
+    ]
+  },
+  {
+    "questionText": "What is the output of `val list = listOf(\"a\", \"b\", \"c\"); list.subList(1, 3)`?",
+    "correctAnswer": "[\"b\", \"c\"]",
+    "explanation": "The `subList` function returns a view of the portion of this list between the specified `fromIndex` (inclusive) and `toIndex` (exclusive).",
+    "options": [
+      "[\"a\", \"b\", \"c\"]",
+      "[\"a\", \"b\"]",
+      "[\"b\"]",
+      "[\"b\", \"c\"]"
+    ]
+  },
+  {
+    "questionText": "What is the output of `val map = mapOf(1 to \"one\", 2 to \"two\"); map.containsValue(\"one\")`?",
+    "correctAnswer": "true",
+    "explanation": "The `containsValue` function checks if the map contains the specified value.",
+    "options": [
+      "false",
+      "Error",
+      "null",
+      "true"
+    ]
+  },
+  {
+    "questionText": "What is the output of `val map = mapOf(1 to \"one\", 2 to \"two\"); map.containsKey(3)`?",
+    "correctAnswer": "false",
+    "explanation": "The `containsKey` function checks if the map contains the specified key.",
+    "options": [
+      "true",
+      "Error",
+      "null",
+      "false"
+    ]
+  },
+  {
+    "questionText": "What is the output of `val numbers = listOf(1, 2, 3); numbers.chunked(2)`?",
+    "correctAnswer": "[[1, 2], [3]]",
+    "explanation": "The `chunked` function splits the collection into a list of lists, each of the specified size.",
+    "options": [
+      "[1, 2, 3]",
+      "[[1], [2], [3]]",
+      "[[1, 3], [2]]",
+      "[[1, 2], [3]]"
+    ]
+  },
+  {
+    "questionText": "What is the output of `val numbers = listOf(1, 2, 3); numbers.zip(listOf(\"a\", \"b\", \"c\"))`?",
+    "correctAnswer": "[(1, a), (2, b), (3, c)]",
+    "explanation": "The `zip` function combines two lists into a list of pairs.",
+    "options": [
+      "[1, 2, 3, a, b, c]",
+      "Error",
+      "[(a, 1), (b, 2), (c, 3)]",
+      "[(1, a), (2, b), (3, c)]"
+    ]
+  },
+  {
+    "questionText": "What is the output of `val numbers = listOf(1, 2, 3); numbers.map { it * 2 }`?",
+    "correctAnswer": "[2, 4, 6]",
+    "explanation": "The `map` function applies a transformation to each element and returns a new list.",
+    "options": [
+      "[1, 2, 3]",
+      "Error",
+      "6",
+      "[2, 4, 6]"
+    ]
+  },
+  {
+    "questionText": "What is the output of `val names = listOf(\"Alice\", \"Bob\"); names.map { it.length }`?",
+    "correctAnswer": "[5, 3]",
+    "explanation": "The `map` function transforms each string into its length.",
+    "options": [
+      "[\"Alice\", \"Bob\"]",
+      "Error",
+      "8",
+      "[5, 3]"
+    ]
+  },
+  {
+    "questionText": "What is the output of `val words = listOf(\"apple\", \"banana\"); words.flatMap { it.toList() }`?",
+    "correctAnswer": "[a, p, p, l, e, b, a, n, a, n, a]",
+    "explanation": "`flatMap` transforms each word into a list of its characters, then flattens them into a single list.",
+    "options": [
+      "[[a, p, p, l, e], [b, a, n, a, n, a]]",
+      "[\"apple\", \"banana\"]",
+      "Error",
+      "[a, p, p, l, e, b, a, n, a, n, a]"
+    ]
+  },
+  {
+    "questionText": "What is the output of `val numbers = listOf(1, 2, 3, 4, 5); numbers.filter { it % 2 == 0 }`?",
+    "correctAnswer": "[2, 4]",
+    "explanation": "The `filter` function keeps only even numbers.",
+    "options": [
+      "[1, 3, 5]",
+      "Error",
+      "[]",
+      "[2, 4]"
+    ]
+  },
+  {
+    "questionText": "What is the output of `val nullableList = listOf(\"a\", null, \"b\"); nullableList.filterNotNull()`?",
+    "correctAnswer": "[\"a\", \"b\"]",
+    "explanation": "`filterNotNull` removes all null elements from the list.",
+    "options": [
+      "[\"a\", null, \"b\"]",
+      "Error",
+      "[]",
+      "[\"a\", \"b\"]"
+    ]
+  },
+  {
+    "questionText": "What is the output of `val numbers = listOf(1, 2, 3); numbers.plus(4)`?",
+    "correctAnswer": "[1, 2, 3, 4]",
+    "explanation": "The `plus` operator creates a new list with the added element, leaving the original list unchanged (for immutable lists).",
+    "options": [
+      "[1, 2, 3]",
+      "Error",
+      "4",
+      "[1, 2, 3, 4]"
+    ]
+  },
+  {
+    "questionText": "What is the output of `val numbers = listOf(1, 2, 3); numbers.minus(2)`?",
+    "correctAnswer": "[1, 3]",
+    "explanation": "The `minus` operator creates a new list with the specified element removed.",
+    "options": [
+      "[1, 2, 3]",
+      "Error",
+      "2",
+      "[1, 3]"
+    ]
+  },
+  {
+    "questionText": "What is the output of `val map = mapOf(\"a\" to 1, \"b\" to 2); map.filterKeys { it == \"a\" }`?",
+    "correctAnswer": "{a=1}",
+    "explanation": "`filterKeys` creates a new map containing only entries whose keys satisfy the given predicate.",
+    "options": [
+      "{b=2}",
+      "Error",
+      "{\"a\": 1, \"b\": 2}",
+      "{a=1}"
+    ]
+  },
+  {
+    "questionText": "What is the output of `val map = mapOf(\"a\" to 1, \"b\" to 2); map.filterValues { it > 1 }`?",
+    "correctAnswer": "{b=2}",
+    "explanation": "`filterValues` creates a new map containing only entries whose values satisfy the given predicate.",
+    "options": [
+      "{a=1}",
+      "Error",
+      "{\"a\": 1, \"b\": 2}",
+      "{b=2}"
+    ]
+  },
+  {
+    "questionText": "What is the output of `val list = listOf(1, 2, 3); list.first { it % 2 == 1 }`?",
+    "correctAnswer": "1",
+    "explanation": "`first` returns the first element matching the predicate.",
+    "options": [
+      "2",
+      "3",
+      "Error",
+      "1"
+    ]
+  },
+  {
+    "questionText": "What is the output of `val list = listOf(1, 2, 3); list.last { it % 2 == 1 }`?",
+    "correctAnswer": "3",
+    "explanation": "`last` returns the last element matching the predicate.",
+    "options": [
+      "1",
+      "2",
+      "Error",
+      "3"
+    ]
+  },
+  {
+    "questionText": "What is the output of `val list = listOf(1, 2, 3).reversed()`?",
+    "correctAnswer": "[3, 2, 1]",
+    "explanation": "`reversed()` returns a new list with the elements in reverse order.",
+    "options": [
+      "[1, 2, 3]",
+      "Error",
+      "null",
+      "[3, 2, 1]"
+    ]
+  },
+  {
+    "questionText": "What is the output of `val list = listOf(1, 2, 2, 3); list.distinct()`?",
+    "correctAnswer": "[1, 2, 3]",
+    "explanation": "`distinct()` returns a new list containing only the unique elements.",
+    "options": [
+      "[1, 2, 2, 3]",
+      "Error",
+      "null",
+      "[1, 2, 3]"
+    ]
+  },
+  {
+    "questionText": "What is the output of `val list = listOf(1, 2, 3); list.slice(1..2)`?",
+    "correctAnswer": "[2, 3]",
+    "explanation": "`slice` returns a list containing elements from the specified range of indices.",
+    "options": [
+      "[1, 2, 3]",
+      "[1, 2]",
+      "[2]",
+      "[2, 3]"
+    ]
+  },
+  {
+    "questionText": "What is the output of `val list = listOf(1, 2, 3); list.count { it > 1 }`?",
+    "correctAnswer": "2",
+    "explanation": "`count` returns the number of elements that satisfy the given predicate.",
+    "options": [
+      "1",
+      "3",
+      "Error",
+      "2"
+    ]
+  },
+  {
+    "questionText": "What is the output of `val list = listOf(1, 2, 3); list.fold(0) { acc, i -> acc + i }`?",
+    "correctAnswer": "6",
+    "explanation": "`fold` starts with an initial value (0) and accumulates the sum of elements.",
+    "options": [
+      "1",
+      "Error",
+      "3",
+      "6"
+    ]
+  },
+  {
+    "questionText": "What is the output of `val list = listOf(1, 2, 3); list.reduce { acc, i -> acc + i }`?",
+    "correctAnswer": "6",
+    "explanation": "`reduce` uses the first element (1) as the initial accumulator and sums the rest.",
+    "options": [
+      "1",
+      "Error",
+      "3",
+      "6"
+    ]
+  },
+  {
+    "questionText": "What is the output of `val list = listOf(1, 2, 3); list.maxOf { it }`?",
+    "correctAnswer": "3",
+    "explanation": "`maxOf` returns the maximum value among elements after applying a selector function. For integers, it's simply the max.",
+    "options": [
+      "1",
+      "Error",
+      "null",
+      "3"
+    ]
+  },
+  {
+    "questionText": "What is the output of `val list = listOf(1, 2, 3); list.minOf { it }`?",
+    "correctAnswer": "1",
+    "explanation": "`minOf` returns the minimum value among elements after applying a selector function. For integers, it's simply the min.",
+    "options": [
+      "3",
+      "Error",
+      "null",
+      "1"
+    ]
+  }
+]
