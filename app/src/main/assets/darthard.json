@@ -1,0 +1,1103 @@
+[
+  {
+    "questionText": "What is the key difference in compilation targets between Dart's `dart2native` and `dart2js`?",
+    "correctAnswer": "`dart2native` compiles to self-contained executables (AOT for native platforms), while `dart2js` compiles to JavaScript for web browsers.",
+    "explanation": "`dart2native` uses Ahead-of-Time (AOT) compilation for native machine code, suitable for command-line tools and desktop apps. `dart2js` compiles Dart to highly optimized JavaScript for web deployment.",
+    "options": [
+      "`dart2native` compiles to bytecode, `dart2js` to WebAssembly.",
+      "`dart2native` is for server-side, `dart2js` for client-side.",
+      "`dart2native` compiles to self-contained executables (AOT for native platforms), while `dart2js` compiles to JavaScript for web browsers.",
+      "They both compile to the same target, just with different optimizations."
+    ]
+  },
+  {
+    "questionText": "How do you define a `getter` and `setter` for a property in Dart?",
+    "correctAnswer": "Using the `get` and `set` keywords followed by the property name, allowing custom logic to be executed when the property is read or written.",
+    "explanation": "Example: `int get area => _width * _height;` and `set width(int value) { if (value > 0) _width = value; }`",
+    "options": [
+      "By simply declaring public variables.",
+      "Getters and setters are defined using separate classes.",
+      "Using the `get` and `set` keywords followed by the property name, allowing custom logic to be executed when the property is read or written.",
+      "Dart does not support explicit getters and setters."
+    ]
+  },
+  {
+    "questionText": "What is the `Comparator` function used for in Dart, specifically with lists?",
+    "correctAnswer": "A `Comparator` is a function that defines a custom sorting order for elements, typically used with `List.sort()` to specify how two elements should be compared.",
+    "explanation": "It takes two arguments and returns `0` if they are equal, a negative number if the first is smaller, and a positive number if the first is larger.",
+    "options": [
+      "To check for equality between two lists.",
+      "To filter elements from a list.",
+      "A `Comparator` is a function that defines a custom sorting order for elements, typically used with `List.sort()` to specify how two elements should be compared.",
+      "To combine two lists."
+    ]
+  },
+  {
+    "questionText": "When would you choose `Iterable.reduce()` over `Iterable.fold()`?",
+    "correctAnswer": "Use `reduce()` when you want to combine elements into a single value and the first element can serve as the initial value. Use `fold()` when you need an explicit initial value for the accumulation, especially if the return type differs from the element type.",
+    "explanation": "`reduce()` will throw an error on an empty iterable, while `fold()` will return the initial value.",
+    "options": [
+      "`reduce()` is always faster.",
+      "`fold()` is for numbers, `reduce()` is for strings.",
+      "Use `reduce()` when you want to combine elements into a single value and the first element can serve as the initial value. Use `fold()` when you need an explicit initial value for the accumulation, especially if the return type differs from the element type.",
+      "They are interchangeable."
+    ]
+  },
+  {
+    "questionText": "What is `Future.delayed()` used for?",
+    "correctAnswer": "To create a `Future` that completes after a specified duration, useful for simulating delays or scheduling tasks to run after a certain time.",
+    "explanation": "Example: `Future.delayed(Duration(seconds: 2), () => 'Hello');`",
+    "options": [
+      "To execute a function immediately.",
+      "To handle errors in Futures.",
+      "To create a `Future` that completes after a specified duration, useful for simulating delays or scheduling tasks to run after a certain time.",
+      "To measure the exact execution time of a Future."
+    ]
+  },
+  {
+    "questionText": "What is the purpose of `package:path` library in Dart?",
+    "correctAnswer": "The `package:path` library provides utilities for manipulating file and directory paths in a platform-independent way, handling differences between Windows, Linux, and macOS path conventions.",
+    "explanation": "It helps in constructing, joining, normalizing, and extracting parts of paths reliably.",
+    "options": [
+      "For drawing graphics.",
+      "For managing network connections.",
+      "The `package:path` library provides utilities for manipulating file and directory paths in a platform-independent way, handling differences between Windows, Linux, and macOS path conventions.",
+      "For database operations."
+    ]
+  },
+  {
+    "questionText": "When would you use `typedef` to create an alias for a function type with generic parameters?",
+    "correctAnswer": "When you have complex function signatures involving generics that you need to reuse as a type, such as a callback function that takes a generic type.",
+    "explanation": "Example: `typedef ListMapper<T, R> = List<R> Function(List<T> input);` makes it clear you're dealing with a function that maps one list type to another.",
+    "options": [
+      "Only for non-generic functions.",
+      "When you need to define a new generic class.",
+      "When you have complex function signatures involving generics that you need to reuse as a type, such as a callback function that takes a generic type.",
+      "Never, it's not a common use case."
+    ]
+  },
+  {
+    "questionText": "Explain Dart's `sound null safety`.",
+    "correctAnswer": "Sound null safety ensures that if a variable's type is non-nullable, it *cannot* contain `null` at runtime. The compiler strictly checks this, eliminating entire classes of null pointer exceptions.",
+    "explanation": "This differs from 'unsound' null safety where checks might only happen at runtime or not at all, leaving room for errors.",
+    "options": [
+      "It means nulls are automatically converted to default values.",
+      "It allows any variable to be null.",
+      "Sound null safety ensures that if a variable's type is non-nullable, it *cannot* contain `null` at runtime. The compiler strictly checks this, eliminating entire classes of null pointer exceptions.",
+      "It only applies to optional parameters."
+    ]
+  },
+  {
+    "questionText": "What is the benefit of using `enums` over `static const` variables for a fixed set of choices?",
+    "correctAnswer": "Enums provide compile-time type safety, better readability, and allow for exhaustiveness checking in `switch` statements, preventing errors if a new value is added and not handled.",
+    "explanation": "Using strings or integers with `static const` can lead to typos or unhandled cases more easily.",
+    "options": [
+      "`static const` variables are always more performant.",
+      "Enums are only for small numbers of choices.",
+      "Enums provide compile-time type safety, better readability, and allow for exhaustiveness checking in `switch` statements, preventing errors if a new value is added and not handled.",
+      "There is no significant benefit."
+    ]
+  },
+  {
+    "questionText": "How can you make a `Stream` a `broadcast` stream?",
+    "correctAnswer": "By calling the `.asBroadcastStream()` method on an existing `Stream` or by creating a `StreamController.broadcast()`.",
+    "explanation": "This converts a single-subscription stream into a broadcast stream that can have multiple listeners.",
+    "options": [
+      "You cannot convert a `Stream` to a `broadcast` stream.",
+      "By adding `broadcast` keyword to the function.",
+      "By calling the `.asBroadcastStream()` method on an existing `Stream` or by creating a `StreamController.broadcast()`.",
+      "By implementing a specific interface."
+    ]
+  },
+  {
+    "questionText": "What is the purpose of the `external` keyword in Dart?",
+    "correctAnswer": "The `external` keyword declares a function or variable whose implementation is provided elsewhere, typically in native code (e.g., C/C++ via FFI) or by the Dart runtime.",
+    "explanation": "It's used when integrating with platform-specific code or system calls that are not written in Dart.",
+    "options": [
+      "To import an external library.",
+      "To export a function to be used by other Dart files.",
+      "The `external` keyword declares a function or variable whose implementation is provided elsewhere, typically in native code (e.g., C/C++ via FFI) or by the Dart runtime.",
+      "To make a method visible only within the current file."
+    ]
+  },
+  {
+    "questionText": "What is the `assert` keyword primarily used for in Dart?",
+    "correctAnswer": "`assert` is used for debugging and validating assumptions during development. It checks a boolean condition and throws an `AssertionError` if the condition is false.",
+    "explanation": "`assert` statements are typically ignored in production (release) builds, so they should not be used for crucial runtime validation or error handling.",
+    "options": [
+      "To define a new constant.",
+      "To declare a nullable variable.",
+      "`assert` is used for debugging and validating assumptions during development. It checks a boolean condition and throws an `AssertionError` if the condition is false.",
+      "To catch exceptions at runtime."
+    ]
+  },
+  {
+    "questionText": "How can you prevent a Dart class from being extended?",
+    "correctAnswer": "By making the class `final` (Dart 3+ feature) or by having a private constructor (e.g., `_MyClass()`).",
+    "explanation": "The `final` modifier explicitly prevents inheritance. A private constructor means other libraries cannot directly create instances or extend the class.",
+    "options": [
+      "By making all its methods static.",
+      "By declaring it as `abstract`.",
+      "By making the class `final` (Dart 3+ feature) or by having a private constructor (e.g., `_MyClass()`).",
+      "By using the `implements` keyword."
+    ]
+  },
+  {
+    "questionText": "What are the common lifecycle states of a `Future`?",
+    "correctAnswer": "Uncompleted (pending), Completed with a value, Completed with an error.",
+    "explanation": "A Future is initially uncompleted, and once its asynchronous operation finishes, it transitions to one of the two completed states.",
+    "options": [
+      "New, Running, Stopped.",
+      "Idle, Busy, Done.",
+      "Uncompleted (pending), Completed with a value, Completed with an error.",
+      "Created, Executing, Finished."
+    ]
+  },
+  {
+    "questionText": "How do you specify a default value for a `named parameter` in a Dart function?",
+    "correctAnswer": "By assigning a value directly in the parameter declaration within the curly braces, e.g., `int age = 30`.",
+    "explanation": "Example: `void greet({String name = 'Guest', int age = 0}) {}`",
+    "options": [
+      "By making the parameter nullable.",
+      "Default values are not allowed for named parameters.",
+      "By assigning a value directly in the parameter declaration within the curly braces, e.g., `int age = 30`.",
+      "By using the `late` keyword."
+    ]
+  },
+  {
+    "questionText": "What is the difference between `const` and `new` for creating objects?",
+    "correctAnswer": "`const` creates a compile-time constant instance (can be reused if identical), while `new` always creates a new instance at runtime (though `new` is optional since Dart 2).",
+    "explanation": "If you have `const MyClass()` multiple times, Dart can point to the same underlying object, saving memory and improving performance. `new MyClass()` always creates a distinct object.",
+    "options": [
+      "`const` is for classes, `new` is for functions.",
+      "`new` is deprecated, `const` is the only way.",
+      "`const` creates a compile-time constant instance (can be reused if identical), while `new` always creates a new instance at runtime (though `new` is optional since Dart 2).",
+      "There is no difference in their behavior."
+    ]
+  },
+  {
+    "questionText": "What is the purpose of `UriData` in `dart:convert`?",
+    "correctAnswer": "`UriData` represents the data content of a `data:` URI, allowing for easy access to the MIME type, charset, and actual data (decoded if necessary).",
+    "explanation": "Data URIs embed small files directly into web pages or other documents.",
+    "options": [
+      "To send data over a network connection.",
+      "To encrypt data for security.",
+      "`UriData` represents the data content of a `data:` URI, allowing for easy access to the MIME type, charset, and actual data (decoded if necessary).",
+      "To store data in a local database."
+    ]
+  },
+  {
+    "questionText": "Explain the concept of `zones` in `dart:async`.",
+    "correctAnswer": "Zones are an execution context that allows you to capture and control asynchronous operations, providing a way to encapsulate error handling, logging, and other behaviors across asynchronous boundaries.",
+    "explanation": "`runZonedGuarded` is the most common use of zones for global error handling.",
+    "options": [
+      "Zones are used for defining UI layouts.",
+      "Zones are physical locations for servers.",
+      "Zones are an execution context that allows you to capture and control asynchronous operations, providing a way to encapsulate error handling, logging, and other behaviors across asynchronous boundaries.",
+      "Zones are a type of data structure."
+    ]
+  },
+  {
+    "questionText": "How can you perform a `deep copy` of a Dart `List` of objects?",
+    "correctAnswer": "You need to iterate through the original list and create new instances of each object, then add them to a new list. Simply using `List.from()` or spread operator creates a shallow copy.",
+    "explanation": "A shallow copy duplicates the list structure but not the objects themselves, so changes to objects in the copy affect the original. A deep copy duplicates both the structure and the objects.",
+    "options": [
+      "By using `List.from(originalList)`.",
+      "By using the spread operator `[...originalList]`.",
+      "You need to iterate through the original list and create new instances of each object, then add them to a new list. Simply using `List.from()` or spread operator creates a shallow copy.",
+      "Dart's lists are always deep copied automatically."
+    ]
+  },
+  {
+    "questionText": "What is the purpose of `Stream.periodic()`?",
+    "correctAnswer": "`Stream.periodic()` creates a `Stream` that emits events at regular, specified intervals.",
+    "explanation": "It's useful for creating timers, animations, or regular data polling.",
+    "options": [
+      "To get a single event from a Stream.",
+      "To pause a Stream.",
+      "`Stream.periodic()` creates a `Stream` that emits events at regular, specified intervals.",
+      "To filter events from a Stream."
+    ]
+  },
+  {
+    "questionText": "How do you check if a `Stream` has no more events?",
+    "correctAnswer": "The `.listen()` method's `onDone` callback is invoked when the stream has no more events.",
+    "explanation": "Additionally, the `Stream.isDone` property can be used for some Stream types after the Stream has closed.",
+    "options": [
+      "By checking `stream.isEmpty`.",
+      "Streams never end.",
+      "The `.listen()` method's `onDone` callback is invoked when the stream has no more events.",
+      "By using `stream.close()`."
+    ]
+  },
+  {
+    "questionText": "What is the primary difference between Dart's `async` and `sync*` functions?",
+    "correctAnswer": "`async` functions return a single `Future` asynchronously. `sync*` functions return an `Iterable` synchronously, yielding values one by one.",
+    "explanation": "`async` is for a single, future result. `sync*` is for generating a sequence of values that can be iterated over immediately.",
+    "options": [
+      "`async` is for UI, `sync*` is for backend.",
+      "They are the same, just different syntax.",
+      "`async` functions return a single `Future` asynchronously. `sync*` functions return an `Iterable` synchronously, yielding values one by one.",
+      "`sync*` functions always throw errors."
+    ]
+  },
+  {
+    "questionText": "What is the `library` keyword used for in Dart?",
+    "correctAnswer": "The `library` keyword is used to declare a library, which is a unit of organization for Dart code. It helps in structuring projects and controlling visibility of identifiers.",
+    "explanation": "It allows you to explicitly name your logical code units and then use `part` and `part of` to split a library across multiple files.",
+    "options": [
+      "To import external packages.",
+      "To define a new class.",
+      "The `library` keyword is used to declare a library, which is a unit of organization for Dart code. It helps in structuring projects and controlling visibility of identifiers.",
+      "To declare global variables."
+    ]
+  },
+  {
+    "questionText": "When would you use `part` and `part of` keywords?",
+    "correctAnswer": "When you want to split a single Dart `library` into multiple physical files, but still treat them as a single logical unit. `part` identifies a file as part of a library, and `part of` links it back to the main library file.",
+    "explanation": "This can help manage very large `.dart` files within a single logical library.",
+    "options": [
+      "For importing independent libraries.",
+      "For creating new packages.",
+      "When you want to split a single Dart `library` into multiple physical files, but still treat them as a single logical unit. `part` identifies a file as part of a library, and `part of` links it back to the main library file.",
+      "To define abstract classes."
+    ]
+  },
+  {
+    "questionText": "What is the significance of the `export` keyword in Dart?",
+    "correctAnswer": "The `export` keyword is used in a Dart file to make all or selected identifiers from another library available to anyone who imports *this* file.",
+    "explanation": "It's a way to re-export dependencies, simplifying imports for users of your library.",
+    "options": [
+      "To prevent identifiers from being used outside the file.",
+      "To import a library for internal use only.",
+      "The `export` keyword is used in a Dart file to make all or selected identifiers from another library available to anyone who imports *this* file.",
+      "To rename identifiers upon import."
+    ]
+  },
+  {
+    "questionText": "What is the `rethrow` keyword used for in exception handling?",
+    "correctAnswer": "The `rethrow` keyword is used within a `catch` block to rethrow the caught exception after performing some handling or logging, allowing it to be caught by an outer `catch` block.",
+    "explanation": "It preserves the original stack trace of the exception.",
+    "options": [
+      "To throw a new, different exception.",
+      "To ignore the caught exception.",
+      "The `rethrow` keyword is used within a `catch` block to rethrow the caught exception after performing some handling or logging, allowing it to be caught by an outer `catch` block.",
+      "To immediately stop program execution."
+    ]
+  }
+,
+  {
+    "questionText": "Explain the concept of 'tree shaking' in Dart compilation and its benefit.",
+    "correctAnswer": "Tree shaking is a compile-time optimization that removes unused code from the final executable. Its benefit is significantly reducing the size of the deployed application, leading to faster downloads and startup times.",
+    "explanation": "If a piece of code (like a function or class) is never called or referenced, the compiler 'shakes it off' the dependency tree, making the resulting binary smaller.",
+    "options": [
+      "Tree shaking is a runtime garbage collection process.",
+      "Tree shaking encrypts the source code for security.",
+      "Tree shaking is a compile-time optimization that removes unused code from the final executable. Its benefit is significantly reducing the size of the deployed application, leading to faster downloads and startup times.",
+      "Tree shaking automatically formats your code for readability."
+    ]
+  },
+  {
+    "questionText": "In the context of `Stream`, what is the purpose of `StreamTransformer`?",
+    "correctAnswer": "`StreamTransformer` is a class that transforms events from one `Stream` into another, allowing for complex operations like filtering, mapping, or buffering to be applied in a reusable way.",
+    "explanation": "It provides a powerful way to chain operations on streams, similar to how `Iterable.map` or `Iterable.where` work but for asynchronous data.",
+    "options": [
+      "To convert a `Future` into a `Stream`.",
+      "To handle errors in a `Stream`.",
+      "`StreamTransformer` is a class that transforms events from one `Stream` into another, allowing for complex operations like filtering, mapping, or buffering to be applied in a reusable way.",
+      "To combine multiple `Streams` into one."
+    ]
+  },
+  {
+    "questionText": "What is the significance of the `_` (underscore) prefix for identifiers in Dart?",
+    "correctAnswer": "An `_` prefix makes an identifier (variable, function, class, etc.) library-private, meaning it is only visible and accessible within the same library (`.dart` file or group of `part` files).",
+    "explanation": "Dart does not have `public`, `private`, `protected` keywords like Java/C#. Privacy is determined at the library level.",
+    "options": [
+      "It marks the identifier as a global variable.",
+      "It makes the identifier abstract.",
+      "An `_` prefix makes an identifier (variable, function, class, etc.) library-private, meaning it is only visible and accessible within the same library (`.dart` file or group of `part` files).",
+      "It indicates the identifier is deprecated."
+    ]
+  },
+  {
+    "questionText": "Describe Dart's implicit interfaces and their impact on design patterns.",
+    "correctAnswer": "Every class in Dart implicitly defines an interface containing all its public members. This allows any class to be used as an interface without explicit `interface` keyword, enabling composition over inheritance and promoting patterns like dependency injection.",
+    "explanation": "When you `implement` a class, you're implementing its implicit interface, meaning you must provide implementations for all its public methods and properties.",
+    "options": [
+      "Implicit interfaces only apply to abstract classes.",
+      "Implicit interfaces require explicit `implements` keyword for every method.",
+      "Every class in Dart implicitly defines an interface containing all its public members. This allows any class to be used as an interface without explicit `interface` keyword, enabling composition over inheritance and promoting patterns like dependency injection.",
+      "Implicit interfaces are only used for asynchronous programming."
+    ]
+  },
+  {
+    "questionText": "When might you use `typedef` to define a 'type alias' for a non-function type in Dart 2.13+?",
+    "correctAnswer": "To create a simpler, more readable name for a complex existing type, such as a highly nested generic type or a type that represents a common pattern, e.g., `typedef IdMap = Map<String, Map<String, int>>;`.",
+    "explanation": "Before Dart 2.13, `typedef` was strictly for function types. Now it can alias any type, improving code clarity when dealing with verbose type declarations.",
+    "options": [
+      "Only for making private type names public.",
+      "To define a new enum.",
+      "To create a simpler, more readable name for a complex existing type, such as a highly nested generic type or a type that represents a common pattern, e.g., `typedef IdMap = Map<String, Map<String, int>>;`.",
+      "To convert a class into an interface."
+    ]
+  },
+  {
+    "questionText": "What is 'covariance' in Dart's type system, and how does the `covariant` keyword relate to it?",
+    "correctAnswer": "Covariance means that a subtype can be used where a supertype is expected. The `covariant` keyword in Dart is used on a method parameter to relax this rule for override, allowing a more specific type in the overriding method, but runtime checks are inserted to maintain soundness.",
+    "explanation": "Without `covariant`, Dart's type system is contravariant for method parameters to maintain soundness. `covariant` is a powerful but potentially unsafe escape hatch, as it shifts the type safety check from compile time to runtime.",
+    "options": [
+      "Covariance means a supertype can be used where a subtype is expected.",
+      "The `covariant` keyword makes a method parameter immutable.",
+      "Covariance means that a subtype can be used where a supertype is expected. The `covariant` keyword in Dart is used on a method parameter to relax this rule for override, allowing a more specific type in the overriding method, but runtime checks are inserted to maintain soundness.",
+      "It's used to define abstract methods."
+    ]
+  },
+  {
+    "questionText": "Explain the concept of 'flow analysis' in Dart's null safety.",
+    "correctAnswer": "Flow analysis is a static analysis technique used by the Dart compiler to track the possible nullability of variables through code paths. It intelligently infers when a nullable variable can be safely treated as non-nullable (e.g., after a null check) and flags potential null dereferences.",
+    "explanation": "This allows for more flexible null safety without requiring excessive explicit non-null assertions (`!`) after every check, making the code cleaner.",
+    "options": [
+      "Flow analysis is a runtime debugging tool.",
+      "Flow analysis only applies to `Future` types.",
+      "Flow analysis is a static analysis technique used by the Dart compiler to track the possible nullability of variables through code paths. It intelligently infers when a nullable variable can be safely treated as non-nullable (e.g., after a null check) and flags potential null dereferences.",
+      "It automatically converts nulls to empty strings."
+    ]
+  },
+  {
+    "questionText": "What is a `typedef` used for in Dart when defining a type alias for a generic function signature?",
+    "correctAnswer": "To create a reusable, readable name for a complex generic function type, making it easier to declare function parameters or variables that adhere to that specific generic function signature.",
+    "explanation": "Example: `typedef Mapper<T, R> = R Function(T value);` allows you to simply write `Mapper<int, String> intToStringMapper;`",
+    "options": [
+      "To define a new generic class.",
+      "To restrict the types allowed in a generic function.",
+      "To create a reusable, readable name for a complex generic function type, making it easier to declare function parameters or variables that adhere to that specific generic function signature.",
+      "To convert a generic function into a non-generic one."
+    ]
+  },
+  {
+    "questionText": "How does Dart's approach to `async/await` and `Isolates` differ from traditional threading models in other languages (e.g., Java, C#)?",
+    "correctAnswer": "Dart's `async/await` handles concurrency (non-blocking I/O) on a single thread using an event loop, while `Isolates` provide true parallelism by running separate, independent memory heaps, avoiding shared-memory concurrency issues like race conditions and deadlocks common in traditional multi-threading.",
+    "explanation": "This design simplifies concurrent programming by eliminating the need for complex locks and synchronization primitives that are common in shared-memory threading models.",
+    "options": [
+      "Dart uses shared memory between `Isolates` just like threads.",
+      "`async/await` in Dart automatically creates new threads.",
+      "Dart's `async/await` handles concurrency (non-blocking I/O) on a single thread using an event loop, while `Isolates` provide true parallelism by running separate, independent memory heaps, avoiding shared-memory concurrency issues like race conditions and deadlocks common in traditional multi-threading.",
+      "Dart has no support for true parallelism."
+    ]
+  },
+  {
+    "questionText": "When would you use `StreamController.broadcast()` over a regular `StreamController()`?",
+    "correctAnswer": "Use `StreamController.broadcast()` when you need multiple listeners to receive the same events from the stream (e.g., UI events, notifications). Use a regular `StreamController()` when you expect only one listener over the stream's lifetime.",
+    "explanation": "A regular `StreamController` throws an error if you try to listen to it more than once without first cancelling the previous subscription.",
+    "options": [
+      "When you want to emit events only once.",
+      "When the stream will only have synchronous events.",
+      "Use `StreamController.broadcast()` when you need multiple listeners to receive the same events from the stream (e.g., UI events, notifications). Use a regular `StreamController()` when you expect only one listener over the stream's lifetime.",
+      "When you don't need to close the stream."
+    ]
+  },
+  {
+    "questionText": "What is the `Deferred Library Loading` (deferred as) feature in Dart used for, and what are its benefits?",
+    "correctAnswer": "Deferred library loading allows you to load parts of your application on demand (lazily). Its benefit is reducing the initial download size and startup time of web applications, as the unneeded code is only fetched when required.",
+    "explanation": "This is especially useful for large web applications where certain features might not be used by all users immediately.",
+    "options": [
+      "It loads libraries asynchronously at compile time.",
+      "It allows you to modify core Dart libraries.",
+      "Deferred library loading allows you to load parts of your application on demand (lazily). Its benefit is reducing the initial download size and startup time of web applications, as the unneeded code is only fetched when required.",
+      "It automatically optimizes all library imports."
+    ]
+  },
+  {
+    "questionText": "Explain the concept of `Callable Classes` and provide a concrete example where it simplifies code.",
+    "correctAnswer": "A callable class is a class that can be invoked like a function. This is achieved by implementing the `call()` method. It simplifies code by allowing an object to directly represent a specific operation, improving expressiveness and potentially reducing boilerplate for simple function-like objects.",
+    "explanation": "Example: A class that filters a list based on a rule, where `filterInstance(myList)` directly performs the filtering.",
+    "options": [
+      "A callable class is a class with only static methods.",
+      "A callable class is used for asynchronous callbacks only.",
+      "A callable class is a class that can be invoked like a function. This is achieved by implementing the `call()` method. It simplifies code by allowing an object to directly represent a specific operation, improving expressiveness and potentially reducing boilerplate for simple function-like objects.",
+      "It's a way to implement multiple inheritance."
+    ]
+  },
+  {
+    "questionText": "How does Dart's `const` keyword provide deep immutability, and what are the implications?",
+    "correctAnswer": "`const` ensures that not only the variable itself is immutable, but also its value and all its transitive state are immutable at compile time. Implications include performance benefits (Dart can cache and reuse identical const instances) and inherent thread safety for const objects.",
+    "explanation": "If a `const` object contains mutable fields (e.g., a `List` that is not `const`), it will result in a compile-time error. This strictness guarantees deep immutability.",
+    "options": [
+      "`const` only makes the variable immutable, not its content.",
+      "`const` objects can be modified at runtime.",
+      "`const` ensures that not only the variable itself is immutable, but also its value and all its transitive state are immutable at compile time. Implications include performance benefits (Dart can cache and reuse identical const instances) and inherent thread safety for const objects.",
+      "`const` is only for primitive data types."
+    ]
+  },
+  {
+    "questionText": "What is the distinction between `late final` and `final` when dealing with non-nullable variables?",
+    "correctAnswer": "`final` requires initialization at the point of declaration or in the constructor's initializer list. `late final` allows initialization to be deferred (assigned once before first use) but still ensures it's non-nullable. This is useful when the value depends on something only available after construction.",
+    "explanation": "If a `late final` variable is read before it's assigned, a runtime error occurs. `final` forces immediate assignment.",
+    "options": [
+      "`late final` can be reassigned, `final` cannot.",
+      "`final` is for asynchronous code, `late final` for synchronous.",
+      "`final` requires initialization at the point of declaration or in the constructor's initializer list. `late final` allows initialization to be deferred (assigned once before first use) but still ensures it's non-nullable. This is useful when the value depends on something only available after construction.",
+      "There is no practical difference."
+    ]
+  },
+  {
+    "questionText": "Describe a scenario where `Stream.fromIterable()` is more appropriate than `Stream.value()` or `Stream.just()` (if they existed in Dart like Rx).",
+    "correctAnswer": "`Stream.fromIterable()` is appropriate when you have an existing collection of elements (`Iterable`) and you want to emit each element as a distinct event in a `Stream`, allowing for asynchronous processing of the collection over time.",
+    "explanation": "`Stream.value()` (or `Stream.just()`) would emit a single event, which would be the entire iterable itself, not its individual elements.",
+    "options": [
+      "When you only have one element to emit.",
+      "When you need to emit events synchronously.",
+      "`Stream.fromIterable()` is appropriate when you have an existing collection of elements (`Iterable`) and you want to emit each element as a distinct event in a `Stream`, allowing for asynchronous processing of the collection over time.",
+      "When you want to create a broadcast stream."
+    ]
+  },
+  {
+    "questionText": "What is the `expando` class in `dart:core` used for, and what problem does it solve?",
+    "correctAnswer": "`Expando` allows you to add custom, 'expando' properties to objects without modifying their original class. It solves the problem of associating data with objects that you don't own or control (e.g., objects from external libraries) without altering their structure.",
+    "explanation": "The properties added via `Expando` are not part of the object's memory layout and are typically used for attaching 'metadata' or 'side data' to existing objects.",
+    "options": [
+      "To expand a list dynamically.",
+      "To compress data for storage.",
+      "`Expando` allows you to add custom, 'expando' properties to objects without modifying their original class. It solves the problem of associating data with objects that you don't own or control (e.g., objects from external libraries) without altering their structure.",
+      "To create dynamic proxies for objects."
+    ]
+  },
+  {
+    "questionText": "How does Dart's `assert` statement behave differently in debug mode vs. release mode, and why is this significant?",
+    "correctAnswer": "`assert` statements are executed only in debug mode (development). In release mode (production builds), they are ignored completely. This is significant because `assert` should only be used for validating assumptions and detecting programming errors, not for essential runtime validation or error handling, as it won't affect release performance.",
+    "explanation": "Relying on `assert` for critical logic in production would lead to unexpected behavior or crashes.",
+    "options": [
+      "`assert` statements run in both modes but are logged differently.",
+      "`assert` statements throw exceptions in release mode.",
+      "`assert` statements are executed only in debug mode (development). In release mode (production builds), they are ignored completely. This is significant because `assert` should only be used for validating assumptions and detecting programming errors, not for essential runtime validation or error handling, as it won't affect release performance.",
+      "`assert` statements automatically fix errors in release mode."
+    ]
+  },
+  {
+    "questionText": "When might `ZoneSpecification` be used in advanced `Zone` management?",
+    "correctAnswer": "`ZoneSpecification` is used to customize the behavior of a `Zone` by providing overrides for its various operations (e.g., `handleUncaughtError`, `runBinary`, `scheduleMicrotask`). This allows for fine-grained control over how code executes within a zone.",
+    "explanation": "It's a powerful feature for debugging, testing, or building custom execution environments, such as those used by framework authors.",
+    "options": [
+      "To define the memory limit for a zone.",
+      "To specify the types of objects allowed in a zone.",
+      "`ZoneSpecification` is used to customize the behavior of a `Zone` by providing overrides for its various operations (e.g., `handleUncaughtError`, `runBinary`, `scheduleMicrotask`). This allows for fine-grained control over how code executes within a zone.",
+      "To disable error handling within a zone."
+    ]
+  },
+  {
+    "questionText": "Describe the use case for `external` methods combined with Dart's FFI (Foreign Function Interface).",
+    "correctAnswer": "`external` methods declare that their implementation will be provided by native code (e.g., C/C++). FFI allows Dart code to directly call functions and access data in native libraries without going through a platform channel, enabling high-performance interop with existing native codebases.",
+    "explanation": "This is crucial for performance-critical tasks or integrating with system-level APIs not available in pure Dart.",
+    "options": [
+      "FFI is used for communicating between Isolates.",
+      "`external` methods are for abstract classes only.",
+      "`external` methods declare that their implementation will be provided by native code (e.g., C/C++). FFI allows Dart code to directly call functions and access data in native libraries without going through a platform channel, enabling high-performance interop with existing native codebases.",
+      "FFI is a build optimization for web applications."
+    ]
+  },
+  {
+    "questionText": "What is the purpose of `WeakReference` and `Finalizer` (Dart 2.17+) and how do they differ from regular references?",
+    "correctAnswer": "`WeakReference` allows you to hold a reference to an object without preventing it from being garbage collected. `Finalizer` allows you to register a callback that runs when an object becomes unreachable (eligible for GC). They differ because regular references prevent GC, while these allow for cleanup or observation of objects without keeping them alive.",
+    "explanation": "This is useful for implementing caches or cleaning up native resources associated with Dart objects when they are no longer in use.",
+    "options": [
+      "Both `WeakReference` and `Finalizer` automatically delete objects.",
+      "`WeakReference` makes an object mutable, `Finalizer` makes it immutable.",
+      "`WeakReference` allows you to hold a reference to an object without preventing it from being garbage collected. `Finalizer` allows you to register a callback that runs when an object becomes unreachable (eligible for GC). They differ because regular references prevent GC, while these allow for cleanup or observation of objects without keeping them alive.",
+      "They are used for concurrent programming."
+    ]
+  },
+  {
+    "questionText": "In the context of `Stream`, what is the functional difference between `Stream.map()` and `Stream.transform(StreamTransformer)`?",
+    "correctAnswer": "`Stream.map()` is a convenience method for a simple one-to-one transformation of each event. `Stream.transform(StreamTransformer)` provides a more powerful and reusable way to apply complex transformations, potentially changing the number of events, buffering, or handling errors, using a dedicated transformer object.",
+    "explanation": "`map` is a specific type of transformation, while `transform` is a generic mechanism for any type of stream transformation.",
+    "options": [
+      "They are identical in functionality.",
+      "`map()` is for asynchronous events, `transform()` for synchronous.",
+      "`Stream.map()` is a convenience method for a simple one-to-one transformation of each event. `Stream.transform(StreamTransformer)` provides a more powerful and reusable way to apply complex transformations, potentially changing the number of events, buffering, or handling errors, using a dedicated transformer object.",
+      "`transform()` always operates on a broadcast stream."
+    ]
+  },
+  {
+    "questionText": "How do you achieve compile-time reflection in Dart (if at all), and what are its limitations compared to runtime reflection in other languages?",
+    "correctAnswer": "Dart does not support full runtime reflection (like `java.lang.reflect`). Limited compile-time reflection is possible using code generation (e.g., `build_runner` with packages like `json_serializable`, `freezed`). This approach shifts reflection to build time, maintaining smaller executable sizes and AOT compatibility.",
+    "explanation": "Full runtime reflection is generally incompatible with AOT compilation and tree shaking, which are key to Dart's performance and small binary size.",
+    "options": [
+      "Dart has full runtime reflection capabilities built-in.",
+      "Reflection is achieved by using the `dynamic` keyword.",
+      "Dart does not support full runtime reflection (like `java.lang.reflect`). Limited compile-time reflection is possible using code generation (e.g., `build_runner` with packages like `json_serializable`, `freezed`). This approach shifts reflection to build time, maintaining smaller executable sizes and AOT compatibility.",
+      "Reflection is entirely impossible in Dart."
+    ]
+  },
+  {
+    "questionText": "When designing a public API, what are the considerations for using `typedef` with generic type parameters for a callback function?",
+    "correctAnswer": "Using `typedef` for a generic callback function improves readability for complex signatures, provides a clear semantic name for the callback type, and allows for consistent type hinting in documentation and IDEs, making the API easier to understand and use.",
+    "explanation": "Example: `typedef ValueChanged<T> = void Function(T value);` is much clearer than `void Function(T value)`. This is especially beneficial when the callback is a parameter in other functions.",
+    "options": [
+      "`typedef` should be avoided for generic callback functions.",
+      "It makes the API less type-safe.",
+      "Using `typedef` for a generic callback function improves readability for complex signatures, provides a clear semantic name for the callback type, and allows for consistent type hinting in documentation and IDEs, making the API easier to understand and use.",
+      "It limits the number of parameters the callback can have."
+    ]
+  },
+  {
+    "questionText": "What is `static analysis` in Dart, and how does it contribute to code quality?",
+    "correctAnswer": "Static analysis is the process of analyzing code without executing it, performed by tools like the Dart Analyzer. It contributes to code quality by identifying potential errors (e.g., type mismatches, unused code, null safety violations), enforcing coding conventions (lints), and providing suggestions for improvement early in the development cycle.",
+    "explanation": "This catches many bugs before runtime, improving developer productivity and software reliability.",
+    "options": [
+      "Static analysis is only for performance profiling.",
+      "Static analysis runs code in a simulated environment.",
+      "Static analysis is the process of analyzing code without executing it, performed by tools like the Dart Analyzer. It contributes to code quality by identifying potential errors (e.g., type mismatches, unused code, null safety violations), enforcing coding conventions (lints), and providing suggestions for improvement early in the development cycle.",
+      "It automatically fixes all coding errors."
+    ]
+  },
+  {
+    "questionText": "Discuss the implications of using `dynamic` aggressively in a null-safe Dart project.",
+    "correctAnswer": "Aggressive use of `dynamic` undermines the benefits of null safety by opting out of static type checks and nullability guarantees for variables typed as `dynamic`. This can reintroduce runtime errors related to null dereferences and type mismatches, making debugging harder and reducing code reliability.",
+    "explanation": "While `dynamic` has its uses (e.g., interacting with JSON), over-reliance negates the compile-time safety that Dart's sound null safety provides.",
+    "options": [
+      "Using `dynamic` improves performance significantly.",
+      "It makes null safety more strict.",
+      "Aggressive use of `dynamic` undermines the benefits of null safety by opting out of static type checks and nullability guarantees for variables typed as `dynamic`. This can reintroduce runtime errors related to null dereferences and type mismatches, making debugging harder and reducing code reliability.",
+      "It automatically converts null values to non-null."
+    ]
+  },
+  {
+    "questionText": "How can you implement a `Singleton` pattern in Dart while adhering to best practices and null safety?",
+    "correctAnswer": "Use a `factory` constructor to return a single, static instance of the class, often combined with `late final` for the instance variable to ensure non-nullability and lazy initialization.",
+    "explanation": "Example: `class MySingleton { static late final MySingleton _instance = MySingleton._internal(); factory MySingleton() => _instance; MySingleton._internal(); }`",
+    "options": [
+      "By using an `abstract` class.",
+      "By making all methods static.",
+      "Use a `factory` constructor to return a single, static instance of the class, often combined with `late final` for the instance variable to ensure non-nullability and lazy initialization.",
+      "By using the `external` keyword."
+    ]
+  },
+  {
+    "questionText": "When is `Future.sync()` useful, and how does it differ from a regular `Future.value()` or `async` function?",
+    "correctAnswer": "`Future.sync()` creates a `Future` that runs its computation synchronously *before* the Future is returned, but the result is still delivered asynchronously via the microtask queue. It's useful for cases where a value might be immediately available but you still want the uniformity of a `Future` return type, ensuring microtask ordering.",
+    "explanation": "`Future.value()` puts the completion on the microtask queue *after* the value is known. A regular `async` function generally also uses the event loop or microtask queue, but `Future.sync` guarantees synchronous execution of the initial body.",
+    "options": [
+      "`Future.sync()` executes code on a separate isolate.",
+      "`Future.sync()` immediately returns the value, without any microtask scheduling.",
+      "`Future.sync()` creates a `Future` that runs its computation synchronously *before* the Future is returned, but the result is still delivered asynchronously via the microtask queue. It's useful for cases where a value might be immediately available but you still want the uniformity of a `Future` return type, ensuring microtask ordering.",
+      "It is a deprecated method."
+    ]
+  },
+  {
+    "questionText": "Explain the concept of 'variance' in generic types and how Dart handles it.",
+    "correctAnswer": "Variance describes how subtyping between complex types (like generics) relates to subtyping of their component types. Dart's generic types are generally invariant by default, meaning `List<int>` is not a subtype of `List<num>`. The `covariant` keyword can be used to explicitly introduce covariance for method parameters.",
+    "explanation": "Invariance prevents runtime errors where a `List<num>` that holds integers is then asked to hold a string, which would break type safety.",
+    "options": [
+      "Variance only applies to non-generic types.",
+      "Dart generics are always covariant by default.",
+      "Variance describes how subtyping between complex types (like generics) relates to subtyping of their component types. Dart's generic types are generally invariant by default, meaning `List<int>` is not a subtype of `List<num>`. The `covariant` keyword can be used to explicitly introduce covariance for method parameters.",
+      "Dart does not support any form of variance."
+    ]
+  },
+  {
+    "questionText": "What are 'extension types' (Dart 3.0+) and what problem do they solve?",
+    "correctAnswer": "Extension types allow you to wrap an existing type and add new methods, operators, or even change how it's represented internally, without runtime overhead. They solve the problem of adding functionality to types you don't control, or providing 'zero-cost abstractions' for primitive types, enhancing type safety and readability without performance penalties.",
+    "explanation": "Unlike extension methods, extension types can have fields and constructors, providing more encapsulation and allowing for different underlying representations.",
+    "options": [
+      "Extension types are a replacement for mixins.",
+      "Extension types are used for asynchronous programming only.",
+      "Extension types allow you to wrap an existing type and add new methods, operators, or even change how it's represented internally, without runtime overhead. They solve the problem of adding functionality to types you don't control, or providing 'zero-cost abstractions' for primitive types, enhancing type safety and readability without performance penalties.",
+      "They are only for abstract classes."
+    ]
+  },
+  {
+    "questionText": "Describe Dart's `switch` expression (Dart 3.0+) and how it differs from a `switch` statement.",
+    "correctAnswer": "A `switch` expression is an expression that evaluates to a value, allowing pattern matching and destructuring directly within the cases. Unlike a `switch` statement, it must cover all possible cases (be exhaustive) and can be used in contexts where an expression is expected.",
+    "explanation": "It's more concise and functional, promoting immutability and exhaustive pattern matching.",
+    "options": [
+      "`switch` expressions don't support pattern matching.",
+      "`switch` expressions can only be used with enums.",
+      "A `switch` expression is an expression that evaluates to a value, allowing pattern matching and destructuring directly within the cases. Unlike a `switch` statement, it must cover all possible cases (be exhaustive) and can be used in contexts where an expression is expected.",
+      "There is no functional difference between them."
+    ]
+  },
+  {
+    "questionText": "What are `records` (Dart 3.0+) and when are they particularly useful?",
+    "correctAnswer": "Records are anonymous, immutable, fixed-size aggregate types that allow grouping multiple values into a single object. They are particularly useful for returning multiple values from a function, for lightweight data structures without defining a full class, or for temporary data grouping.",
+    "explanation": "Example: `(int, String) result = (42, 'hello');` or returning `('success', 200)` from a function.",
+    "options": [
+      "Records are mutable data structures.",
+      "Records are a way to define database tables.",
+      "Records are anonymous, immutable, fixed-size aggregate types that allow grouping multiple values into a single object. They are particularly useful for returning multiple values from a function, for lightweight data structures without defining a full class, or for temporary data grouping.",
+      "Records are only for storing primitive types."
+    ]
+  },
+  {
+    "questionText": "Explain the concept of `patterns` (Dart 3.0+) and their role in code structure.",
+    "correctAnswer": "Patterns are a set of new language features that allow matching and destructuring values. They include destructuring patterns (for records, lists, maps), object patterns, and `if-case`, `switch` expressions/statements. They improve code readability, conciseness, and expressiveness for conditional logic and data extraction.",
+    "explanation": "Patterns provide a more powerful and safer alternative to multiple `if-else if` statements and manual data extraction.",
+    "options": [
+      "Patterns are only for regular expressions.",
+      "Patterns are a way to define new classes.",
+      "Patterns are a set of new language features that allow matching and destructuring values. They include destructuring patterns (for records, lists, maps), object patterns, and `if-case`, `switch` expressions/statements. They improve code readability, conciseness, and expressiveness for conditional logic and data extraction.",
+      "Patterns replace loops in Dart."
+    ]
+  },
+  {
+    "questionText": "What is the `sealed` modifier (Dart 3.0+) used for, and how does it enhance `switch` statements?",
+    "correctAnswer": "The `sealed` modifier on a class or mixin prevents it from being extended or implemented outside of its own library. It enhances `switch` statements by enabling exhaustive checking: the compiler can guarantee that all possible subclasses/implementations are covered, preventing runtime errors for unhandled cases.",
+    "explanation": "This is extremely valuable for creating robust algebraic data types (ADTs) and ensuring that all cases are explicitly handled.",
+    "options": [
+      "The `sealed` modifier makes a class immutable.",
+      "It allows any class to extend it.",
+      "The `sealed` modifier on a class or mixin prevents it from being extended or implemented outside of its own library. It enhances `switch` statements by enabling exhaustive checking: the compiler can guarantee that all possible subclasses/implementations are covered, preventing runtime errors for unhandled cases.",
+      "It's used for network security."
+    ]
+  },
+  {
+    "questionText": "Discuss the trade-offs between using a `Stream` vs. a `Future` for a network request that returns a single object.",
+    "correctAnswer": "For a single object, a `Future` is simpler and more idiomatic. A `Stream` introduces unnecessary complexity (managing subscriptions, `onDone` events) and overhead for a one-time result. While a `Stream` *could* be used (emitting one event and then completing), it's not the correct abstraction for a single eventual result.",
+    "explanation": "Choosing the right abstraction improves clarity, maintainability, and often performance.",
+    "options": [
+      "A `Stream` is always more performant for network requests.",
+      "A `Future` cannot handle network errors.",
+      "For a single object, a `Future` is simpler and more idiomatic. A `Stream` introduces unnecessary complexity (managing subscriptions, `onDone` events) and overhead for a one-time result. While a `Stream` *could* be used (emitting one event and then completing), it's not the correct abstraction for a single eventual result.",
+      "There is no trade-off; both are equally suitable."
+    ]
+  },
+  {
+    "questionText": "How do Dart's `type inference` capabilities interact with `null safety`?",
+    "correctAnswer": "Dart's type inference is null-aware; it infers nullability based on the initial assignment. If initialized with a non-null value, it infers a non-nullable type. If initialized with `null` or not initialized, it infers a nullable type. This minimizes verbose type annotations while maintaining null safety guarantees.",
+    "explanation": "Example: `var name = 'Alice';` infers `String`. `var age;` infers `dynamic` if not initialized, `int?` if assigned `null` later (or `int?` if explicitly annotated).",
+    "options": [
+      "Type inference overrides null safety.",
+      "Null safety disables type inference.",
+      "Dart's type inference is null-aware; it infers nullability based on the initial assignment. If initialized with a non-null value, it infers a non-nullable type. If initialized with `null` or not initialized, it infers a nullable type. This minimizes verbose type annotations while maintaining null safety guarantees.",
+      "Type inference only works for `dynamic` types."
+    ]
+  },
+  {
+    "questionText": "What is `Stack trace collapsing` in Dart debugging, and why is it useful?",
+    "correctAnswer": "Stack trace collapsing (or 'stack trace cleaning') hides irrelevant frames from the stack trace (e.g., internal framework code), presenting only the frames relevant to your application code. It's useful because it makes debugging easier by focusing on the actual problem areas in your code, reducing noise.",
+    "explanation": "This feature helps developers quickly pinpoint where an error originated in their own code rather than sifting through deep framework calls.",
+    "options": [
+      "It concatenates multiple stack traces into one.",
+      "It encrypts the stack trace for security.",
+      "Stack trace collapsing (or 'stack trace cleaning') hides irrelevant frames from the stack trace (e.g., internal framework code), presenting only the frames relevant to your application code. It's useful because it makes debugging easier by focusing on the actual problem areas in your code, reducing noise.",
+      "It automatically fixes errors indicated by the stack trace."
+    ]
+  },
+  {
+    "questionText": "Describe a complex scenario where Dart's `Zone` API (beyond `runZonedGuarded`) would be beneficial.",
+    "correctAnswer": "A complex scenario is creating a custom testing framework that intercepts all `print` statements, handles all `Future` completions, and logs all unhandled errors for specific test cases without modifying the tested code. A `Zone` allows providing a custom `print` handler, a custom `scheduleMicrotask` (for Future callbacks), and a `handleUncaughtError` that applies only to code run within that zone.",
+    "explanation": "Zones provide a powerful mechanism for contextualizing asynchronous operations and their side effects.",
+    "options": [
+      "Zones are only for global error handling.",
+      "Zones are primarily for UI rendering performance.",
+      "A complex scenario is creating a custom testing framework that intercepts all `print` statements, handles all `Future` completions, and logs all unhandled errors for specific test cases without modifying the tested code. A `Zone` allows providing a custom `print` handler, a custom `scheduleMicrotask` (for Future callbacks), and a `handleUncaughtError` that applies only to code run within that zone.",
+      "Zones are a deprecated feature in Dart."
+    ]
+  },
+  {
+    "questionText": "What is the `Type` object in Dart, and how is it used?",
+    "correctAnswer": "The `Type` object represents the runtime type of an object. It can be obtained using `.runtimeType` and is primarily used for debugging, logging, or for internal framework mechanisms where runtime type information is necessary (though it should be used sparingly for logic, favoring generics).",
+    "explanation": "Example: `print(myObject.runtimeType);`",
+    "options": [
+      "The `Type` object is used for compile-time type checking.",
+      "It's a way to define new data types.",
+      "The `Type` object represents the runtime type of an object. It can be obtained using `.runtimeType` and is primarily used for debugging, logging, or for internal framework mechanisms where runtime type information is necessary (though it should be used sparingly for logic, favoring generics).",
+      "It's a class for creating custom exceptions."
+    ]
+  },
+  {
+    "questionText": "When might `Iterable.expand()` be more useful than `Iterable.map()`?",
+    "correctAnswer": "`Iterable.expand()` is more useful when each input element can be transformed into zero, one, or multiple output elements (i.e., you want to flatten a nested iterable). `Iterable.map()` always produces exactly one output element for each input element.",
+    "explanation": "Example: flattening a list of lists: `[[1,2], [3]].expand((x) => x)` results in `[1,2,3]`.",
+    "options": [
+      "When you need to remove elements from an iterable.",
+      "When you are only working with primitive types.",
+      "`Iterable.expand()` is more useful when each input element can be transformed into zero, one, or multiple output elements (i.e., you want to flatten a nested iterable). `Iterable.map()` always produces exactly one output element for each input element.",
+      "When the order of elements is not important."
+    ]
+  },
+  {
+    "questionText": "How does Dart's `async*` (`Stream` generator) handle backpressure, and why is it important?",
+    "correctAnswer": "`async*` functions inherently handle backpressure by yielding events only when the listener is ready to consume them. This is important because it prevents the producer from generating events faster than the consumer can process them, which could lead to memory issues or dropped events.",
+    "explanation": "When a `Stream` listener pauses, the `async*` generator also pauses its execution until the listener requests more data, effectively managing the flow of events.",
+    "options": [
+      "`async*` functions do not handle backpressure.",
+      "Backpressure is handled by buffering all events indefinitely.",
+      "`async*` functions inherently handle backpressure by yielding events only when the listener is ready to consume them. This is important because it prevents the producer from generating events faster than the consumer can process them, which could lead to memory issues or dropped events.",
+      "Backpressure is only relevant for synchronous code."
+    ]
+  },
+  {
+    "questionText": "What is the distinction between a `factory` constructor and a `static` method that returns an instance of the class?",
+    "correctAnswer": "A `factory` constructor can return an instance of the class or a subclass, or an existing instance (e.g., from a cache), and is part of the class's constructor system. A `static` method simply returns an instance but isn't part of the constructor chain; it's a regular static utility method.",
+    "explanation": "Factory constructors integrate better with inheritance and the `new` keyword's implicit behavior.",
+    "options": [
+      "There is no practical distinction; they are interchangeable.",
+      "A `static` method can return a `Future`, a `factory` constructor cannot.",
+      "A `factory` constructor can return an instance of the class or a subclass, or an existing instance (e.g., from a cache), and is part of the class's constructor system. A `static` method simply returns an instance but isn't part of the constructor chain; it's a regular static utility method.",
+      "A `factory` constructor can only be private."
+    ]
+  },
+  {
+    "questionText": "Explain the concept of `Object.hashAll()` and its utility when overriding `hashCode`.",
+    "correctAnswer": "`Object.hashAll()` is a utility function in `dart:core` that computes a hash code for a list of objects, effectively combining their hash codes. It's highly useful when overriding `hashCode` for a custom class, as it ensures that objects considered equal (via `==`) also produce the same hash code by combining the hash codes of their constituent fields.",
+    "explanation": "This simplifies implementing the `hashCode` contract, which is crucial for correct behavior in hash-based collections like `Set` and `Map`.",
+    "options": [
+      "`Object.hashAll()` is used for encrypting object data.",
+      "It checks for equality of all elements in a list.",
+      "`Object.hashAll()` is a utility function in `dart:core` that computes a hash code for a list of objects, effectively combining their hash codes. It's highly useful when overriding `hashCode` for a custom class, as it ensures that objects considered equal (via `==`) also produce the same hash code by combining the hash codes of their constituent fields.",
+      "It generates random hash codes."
+    ]
+  },
+  {
+    "questionText": "What is `const` in Dart 3.0+ `pattern matching` and how does it relate to previous `const` usage?",
+    "correctAnswer": "In Dart 3.0+ pattern matching, `const` is used to match against constant values or to ensure that a matched object is a compile-time constant. It extends the existing `const` concept of compile-time immutability, allowing patterns to enforce that the matched structure or value is also constant.",
+    "explanation": "Example: `case const [1, 2]:` matches only constant lists containing `[1, 2]`.",
+    "options": [
+      "`const` in patterns makes the matched value mutable.",
+      "It is used for runtime constant checks.",
+      "`const` in Dart 3.0+ pattern matching is used to match against constant values or to ensure that a matched object is a compile-time constant. It extends the existing `const` concept of compile-time immutability, allowing patterns to enforce that the matched structure or value is also constant.",
+      "It only works with numbers."
+    ]
+  },
+  {
+    "questionText": "How does Dart's `garbage collection` work, and why is it generally not a concern for developers?",
+    "correctAnswer": "Dart uses a generational garbage collector, which automatically reclaims memory occupied by objects that are no longer reachable. It's generally not a concern because the process is highly optimized and happens automatically in the background, freeing developers from manual memory management and preventing memory leaks.",
+    "explanation": "Generational GC is efficient because most objects die young, so it spends less time on long-lived objects.",
+    "options": [
+      "Developers must manually free memory in Dart.",
+      "Dart uses reference counting for garbage collection.",
+      "Dart uses a generational garbage collector, which automatically reclaims memory occupied by objects that are no longer reachable. It's generally not a concern because the process is highly optimized and happens automatically in the background, freeing developers from manual memory management and preventing memory leaks.",
+      "Garbage collection only runs when the application closes."
+    ]
+  },
+  {
+    "questionText": "What is the primary motivation for introducing `extension types` in Dart 3.0+?",
+    "correctAnswer": "The primary motivation is to provide 'zero-cost' wrappers or aliases for existing types, allowing for enhanced type safety and adding methods without incurring any runtime overhead or affecting the underlying memory representation, improving code expressiveness and domain modeling.",
+    "explanation": "This is extremely valuable for creating strong types around primitives (e.g., `UserId` wrapping `String`) or for optimizing performance by avoiding unnecessary object allocations.",
+    "options": [
+      "To enable full runtime reflection.",
+      "To replace the `mixin` keyword.",
+      "The primary motivation is to provide 'zero-cost' wrappers or aliases for existing types, allowing for enhanced type safety and adding methods without incurring any runtime overhead or affecting the underlying memory representation, improving code expressiveness and domain modeling.",
+      "To allow mutable extensions to core types."
+    ]
+  },
+  {
+    "questionText": "Explain the concept of `liveness analysis` in Dart's garbage collection.",
+    "correctAnswer": "`Liveness analysis` is a part of garbage collection where the collector determines which objects are 'live' (reachable from root objects like local variables, static fields, and active isolates). Any object not deemed live is considered garbage and can be collected.",
+    "explanation": "This ensures that only truly unused memory is reclaimed, preventing premature deallocation of objects still needed by the program.",
+    "options": [
+      "Liveness analysis predicts future object usage.",
+      "It's a technique for preventing memory leaks by manually deleting objects.",
+      "`Liveness analysis` is a part of garbage collection where the collector determines which objects are 'live' (reachable from root objects like local variables, static fields, and active isolates). Any object not deemed live is considered garbage and can be collected.",
+      "Liveness analysis only applies to static variables."
+    ]
+  },
+  {
+    "questionText": "How does Dart's `package` system (pub) handle version constraints and transitive dependencies?",
+    "correctAnswer": "`pub` uses semantic versioning to resolve dependencies. It follows version constraints (e.g., `^1.0.0`) specified in `pubspec.yaml` and resolves transitive dependencies (dependencies of your dependencies) to find a compatible set of versions for the entire dependency graph, ensuring stability.",
+    "explanation": "The `pubspec.lock` file locks the exact versions of all dependencies, ensuring reproducible builds.",
+    "options": [
+      "`pub` only supports exact version matching.",
+      "Transitive dependencies are ignored by `pub`.",
+      "`pub` uses semantic versioning to resolve dependencies. It follows version constraints (e.g., `^1.0.0`) specified in `pubspec.yaml` and resolves transitive dependencies (dependencies of your dependencies) to find a compatible set of versions for the entire dependency graph, ensuring stability.",
+      "Developers must manually resolve all dependency conflicts."
+    ]
+  },
+  {
+    "questionText": "What is the purpose of `Utf8Decoder` and `Utf8Encoder` in `dart:convert`, and when are they used?",
+    "correctAnswer": "`Utf8Decoder` decodes sequences of UTF-8 bytes into Dart strings. `Utf8Encoder` encodes Dart strings into sequences of UTF-8 bytes. They are used when working with text data that needs to be transmitted over networks or stored in files where UTF-8 encoding is expected or required.",
+    "explanation": "This ensures correct handling of various characters beyond ASCII.",
+    "options": [
+      "They are used for compressing data.",
+      "They convert strings to integers.",
+      "`Utf8Decoder` decodes sequences of UTF-8 bytes into Dart strings. `Utf8Encoder` encodes Dart strings into sequences of UTF-8 bytes. They are used when working with text data that needs to be transmitted over networks or stored in files where UTF-8 encoding is expected or required.",
+      "They are for encrypting string data."
+    ]
+  },
+  {
+    "questionText": "Describe a scenario where `Stream.cast()` is necessary.",
+    "correctAnswer": "`Stream.cast()` is necessary when you have a `Stream` of a supertype or `dynamic` (e.g., `Stream<Object>`) but you know at runtime that all emitted events will be of a more specific subtype (e.g., `String`). It allows you to obtain a `Stream<String>` without explicit type errors, with runtime checks.",
+    "explanation": "It's a way to 'downcast' a stream, often useful when interacting with older APIs or deserialized data.",
+    "options": [
+      "To convert a `Stream` to a `Future`.",
+      "To make a `Stream` a broadcast stream.",
+      "`Stream.cast()` is necessary when you have a `Stream` of a supertype or `dynamic` (e.g., `Stream<Object>`) but you know at runtime that all emitted events will be of a more specific subtype (e.g., `String`). It allows you to obtain a `Stream<String>` without explicit type errors, with runtime checks.",
+      "To filter events from a Stream."
+    ]
+  },
+  {
+    "questionText": "What is the `Never` type (bottom type) in Dart's type system, and when is it used?",
+    "correctAnswer": "The `Never` type is the bottom type, meaning it's a subtype of all other types. It indicates that a function will never return normally (e.g., it always throws an exception or enters an infinite loop). It's used for type safety to signal to the compiler that a code path is unreachable.",
+    "explanation": "Example: `void crash() => throw 'Error';` has an inferred return type of `Never`.",
+    "options": [
+      "The `Never` type is a synonym for `void`.",
+      "It indicates a nullable type.",
+      "The `Never` type is the bottom type, meaning it's a subtype of all other types. It indicates that a function will never return normally (e.g., it always throws an exception or enters an infinite loop). It's used for type safety to signal to the compiler that a code path is unreachable.",
+      "It is used for generic type constraints."
+    ]
+  },
+  {
+    "questionText": "How do you implement a custom `Iterable` in Dart?",
+    "correctAnswer": "You implement a custom `Iterable` by extending the `Iterable` abstract class and overriding its `iterator` getter to return a custom `Iterator` that implements the `moveNext()` and `current` methods.",
+    "explanation": "This allows you to define a sequence of elements that can be iterated over using `for-in` loops, but without needing to store all elements in memory at once (lazy evaluation).",
+    "options": [
+      "By creating a `List` and making it immutable.",
+      "By using an `async*` function to return a `Stream`.",
+      "You implement a custom `Iterable` by extending the `Iterable` abstract class and overriding its `iterator` getter to return a custom `Iterator` that implements the `moveNext()` and `current` methods.",
+      "Dart does not allow custom `Iterable` implementations."
+    ]
+  },
+  {
+    "questionText": "What is the purpose of `typedef` for aliasing record types (Dart 3.0+)?",
+    "correctAnswer": "To provide a meaningful, reusable name for a specific record shape, improving code readability and making it easier to pass and return complex record types.",
+    "explanation": "Instead of `(String name, int age)` everywhere, you can use `typedef UserProfile = (String name, int age);`.",
+    "options": [
+      "To make records mutable.",
+      "To convert records into classes.",
+      "To provide a meaningful, reusable name for a specific record shape, improving code readability and making it easier to pass and return complex record types.",
+      "To restrict the types within a record."
+    ]
+  },
+  {
+    "questionText": "Discuss the potential performance implications of excessive use of `dynamic`.",
+    "correctAnswer": "Excessive `dynamic` usage can lead to performance overhead because Dart's runtime has to perform more type checks and method lookups at runtime, rather than being able to rely on efficient compile-time optimizations due to static typing.",
+    "explanation": "While Dart's VM is optimized, static typing allows for much more aggressive optimizations at compilation time.",
+    "options": [
+      "Using `dynamic` always improves performance.",
+      "`dynamic` has no performance implications.",
+      "Excessive `dynamic` usage can lead to performance overhead because Dart's runtime has to perform more type checks and method lookups at runtime, rather than being able to rely on efficient compile-time optimizations due to static typing.",
+      "`dynamic` only affects memory usage, not speed."
+    ]
+  },
+  {
+    "questionText": "When would you prefer a `Queue` over a `List` or `Set` in Dart's `dart:collection`?",
+    "correctAnswer": "You would prefer a `Queue` when you need efficient addition and removal of elements from both ends (first-in, first-out or last-in, first-out behavior). `List` is efficient at adding/removing from the end but slow from the beginning, and `Set` does not maintain order.",
+    "explanation": "A `Queue` is specifically optimized for operations at both the head and tail, making it ideal for message queues or breadth-first search algorithms.",
+    "options": [
+      "When you need random access to elements by index.",
+      "When you need to store unique elements only.",
+      "You would prefer a `Queue` when you need efficient addition and removal of elements from both ends (first-in, first-out or last-in, first-out behavior). `List` is efficient at adding/removing from the end but slow from the beginning, and `Set` does not maintain order.",
+      "A `Queue` is always slower than a `List`."
+    ]
+  },
+  {
+    "questionText": "Explain the concept of `tear-offs` in Dart and their utility.",
+    "correctAnswer": "`Tear-offs` are a concise syntax to create a function object (a 'closure') that refers to an existing method or function. They are useful for passing methods as callbacks without needing to wrap them in an explicit anonymous function.",
+    "explanation": "Example: `myList.forEach(print);` where `print` is a method tear-off of the global `print` function.",
+    "options": [
+      "`Tear-offs` are used for throwing exceptions.",
+      "`Tear-offs` are a way to define new classes.",
+      "`Tear-offs` are a concise syntax to create a function object (a 'closure') that refers to an existing method or function. They are useful for passing methods as callbacks without needing to wrap them in an explicit anonymous function.",
+      "They are only for asynchronous functions."
+    ]
+  },
+  {
+    "questionText": "How can you consume a `Stream` of `Futures` and await all their results in order?",
+    "correctAnswer": "You can use `await for` to iterate over the `Stream`'s `Futures`, then `await` each `Future` individually within the loop. Alternatively, use `Stream.asyncMap()` or `Stream.map().asyncExpand()` followed by `toList()` if you need all results as a list.",
+    "explanation": "`await for` handles the stream subscription and cancellation automatically, making it the most straightforward approach.",
+    "options": [
+      "By using `Future.wait()` directly on the Stream.",
+      "You cannot await results from a Stream of Futures.",
+      "You can use `await for` to iterate over the `Stream`'s `Futures`, then `await` each `Future` individually within the loop. Alternatively, use `Stream.asyncMap()` or `Stream.map().asyncExpand()` followed by `toList()` if you need all results as a list.",
+      "By converting the Stream to an `Iterable` first."
+    ]
+  },
+  {
+    "questionText": "What is the `Channel` concept in the context of Dart `Isolates`, and how is it used for communication?",
+    "correctAnswer": "While Dart's primary communication mechanism is `SendPort` and `ReceivePort`, the term 'Channel' often refers to the logical communication pathway established between two Isolates using these ports. One Isolate sends messages via a `SendPort`, and the other listens for them on a `ReceivePort`, forming a bidirectional channel if both share ports.",
+    "explanation": "This message-passing architecture is fundamental to keeping Isolates truly isolated in memory.",
+    "options": [
+      "A `Channel` is a shared memory region between Isolates.",
+      "Channels are used for synchronous communication only.",
+      "While Dart's primary communication mechanism is `SendPort` and `ReceivePort`, the term 'Channel' often refers to the logical communication pathway established between two Isolates using these ports. One Isolate sends messages via a `SendPort`, and the other listens for them on a `ReceivePort`, forming a bidirectional channel if both share ports.",
+      "Channels are a deprecated feature."
+    ]
+  },
+  {
+    "questionText": "How do `extension types` differ from `mixins` in their primary purpose and application?",
+    "correctAnswer": "`Extension types` primarily offer a 'zero-cost' way to wrap or alias existing types to provide additional type safety, new methods, or different representations without runtime overhead. `Mixins` are primarily for code reuse by sharing implementations across class hierarchies via composition, directly affecting the class's members and behavior.",
+    "explanation": "Extension types are about how a type is *perceived* and *used* at compile time, potentially simplifying its runtime representation. Mixins are about *adding capabilities* and *behavior* to a class's definition.",
+    "options": [
+      "Extension types can have constructors, mixins cannot.",
+      "Mixins offer compile-time checks, extension types do not.",
+      "`Extension types` primarily offer a 'zero-cost' way to wrap or alias existing types to provide additional type safety, new methods, or different representations without runtime overhead. `Mixins` are primarily for code reuse by sharing implementations across class hierarchies via composition, directly affecting the class's members and behavior.",
+      "Extension types are for web, mixins are for mobile."
+    ]
+  },
+  {
+    "questionText": "What is the purpose of the `Comparable` interface in Dart, and when would you implement it?",
+    "correctAnswer": "The `Comparable` interface (with its `compareTo` method) defines a natural ordering for objects of a class. You implement it when you want instances of your class to have a default sorting behavior, allowing them to be sorted directly by methods like `List.sort()` without providing a custom comparator every time.",
+    "explanation": "The `compareTo` method returns a negative integer if the current object is less than the other, zero if equal, and a positive integer if greater.",
+    "options": [
+      "To make objects immutable.",
+      "To check for object equality.",
+      "The `Comparable` interface (with its `compareTo` method) defines a natural ordering for objects of a class. You implement it when you want instances of your class to have a default sorting behavior, allowing them to be sorted directly by methods like `List.sort()` without providing a custom comparator every time.",
+      "To convert an object to a string."
+    ]
+  },
+  {
+    "questionText": "How do you achieve memoization (caching function results) for a Dart function that returns a `Future`?",
+    "correctAnswer": "You can achieve memoization for a `Future`-returning function by storing the `Future` object itself in a cache (e.g., a `Map`) keyed by the function's arguments. If a request for the same arguments comes again, return the existing `Future` instead of re-executing the asynchronous operation.",
+    "explanation": "This prevents redundant asynchronous calls and ensures consistency if the same result is requested multiple times.",
+    "options": [
+      "You cannot memoize `Future`-returning functions.",
+      "By making the function `synchronous`.",
+      "You can achieve memoization for a `Future`-returning function by storing the `Future` object itself in a cache (e.g., a `Map`) keyed by the function's arguments. If a request for the same arguments comes again, return the existing `Future` instead of re-executing the asynchronous operation.",
+      "By using the `late` keyword on the function's return type."
+    ]
+  },
+  {
+    "questionText": "What is a `canonicalized` object in Dart, and when does it apply?",
+    "correctAnswer": "A `canonicalized` object is an instance that is guaranteed to be unique for a given value, meaning there's only one instance of that value in memory. This applies primarily to `const` objects and `String` literals, which Dart's compiler/VM can optimize by reusing existing identical instances.",
+    "explanation": "This reduces memory consumption and allows for faster equality checks for `const` objects.",
+    "options": [
+      "A `canonicalized` object is one that can be modified at runtime.",
+      "It refers to objects stored in a database.",
+      "A `canonicalized` object is an instance that is guaranteed to be unique for a given value, meaning there's only one instance of that value in memory. This applies primarily to `const` objects and `String` literals, which Dart's compiler/VM can optimize by reusing existing identical instances.",
+      "It's a debugging term for object states."
+    ]
+  },
+  {
+    "questionText": "Explain the concept of `Pattern matching` with `object patterns` (Dart 3.0+).",
+    "correctAnswer": "`Object patterns` allow you to match a value against an object's type and simultaneously destructure its fields (properties). This enables concise and powerful conditional logic based on both the type and the internal state of an object.",
+    "explanation": "Example: `case MyClass(value: 42, name: 'test'):` allows you to match `MyClass` instances with specific field values.",
+    "options": [
+      "`Object patterns` are only for comparing two objects for equality.",
+      "They replace traditional class constructors.",
+      "`Object patterns` allow you to match a value against an object's type and simultaneously destructure its fields (properties). This enables concise and powerful conditional logic based on both the type and the internal state of an object.",
+      "Object patterns are exclusively for error handling."
+    ]
+  },
+  {
+    "questionText": "What are the advantages of using `mixins` over `inheritance` for code reuse in certain scenarios?",
+    "correctAnswer": "`Mixins` allow code reuse across disparate class hierarchies, avoid the diamond problem of multiple inheritance, and promote a 'has-a' relationship (composition) over a 'is-a' relationship (inheritance), leading to more flexible and modular designs.",
+    "explanation": "If a class needs certain behaviors (e.g., `Logger`, `Disposable`) but doesn't share a fundamental 'is-a' relationship with another class, mixins are a better fit.",
+    "options": [
+      "`Mixins` always execute faster than inherited methods.",
+      "Inheritance is always the preferred method for code reuse.",
+      "`Mixins` allow code reuse across disparate class hierarchies, avoid the diamond problem of multiple inheritance, and promote a 'has-a' relationship (composition) over a 'is-a' relationship (inheritance), leading to more flexible and modular designs.",
+      "`Mixins` can only be applied to abstract classes."
+    ]
+  },
+  {
+    "questionText": "How does Dart's `async*` (`Stream` generator) handle errors that occur within its body?",
+    "correctAnswer": "Errors thrown inside an `async*` function are delivered to the `Stream`'s listeners as error events. The `yield` or `yield*` statements can be wrapped in `try-catch` blocks within the `async*` function to handle errors locally before they are emitted to the stream.",
+    "explanation": "This allows for robust error handling specific to the stream's production logic.",
+    "options": [
+      "Errors in `async*` functions are always silently ignored.",
+      "Errors stop the entire program immediately.",
+      "Errors thrown inside an `async*` function are delivered to the `Stream`'s listeners as error events. The `yield` or `yield*` statements can be wrapped in `try-catch` blocks within the `async*` function to handle errors locally before they are emitted to the stream.",
+      "Errors are automatically converted to null values."
+    ]
+  },
+  {
+    "questionText": "What is the primary role of `package:meta` and its annotations (e.g., `@protected`, `@visibleForTesting`)?",
+    "correctAnswer": "The `package:meta` provides annotations that are used by Dart's static analyzer to give warnings or errors about common coding pitfalls, improve code quality, and communicate developer intent. They influence the analyzer's behavior but do not affect runtime behavior.",
+    "explanation": "Examples: `@protected` warns if a protected member is accessed outside a subclass, `@visibleForTesting` flags usage outside test files.",
+    "options": [
+      "To generate documentation automatically.",
+      "To enable runtime reflection.",
+      "The `package:meta` provides annotations that are used by Dart's static analyzer to give warnings or errors about common coding pitfalls, improve code quality, and communicate developer intent. They influence the analyzer's behavior but do not affect runtime behavior.",
+      "To define database schemas."
+    ]
+  },
+  {
+    "questionText": "How does Dart's type system handle `variance` for `List<T>` types?",
+    "correctAnswer": "Dart's `List<T>` is generally invariant. This means that `List<int>` is NOT a subtype of `List<num>`, and assigning a `List<int>` to `List<num>` is a compile-time error. This ensures type safety by preventing runtime errors if a `num` List containing integers later attempts to store a double or other non-integer `num`.",
+    "explanation": "This strictness prevents scenarios where a list of one specific type is implicitly treated as a list of a more general type, which could lead to adding incompatible elements.",
+    "options": [
+      "`List<T>` is always covariant.",
+      "`List<T>` is always contravariant.",
+      "Dart's `List<T>` is generally invariant. This means that `List<int>` is NOT a subtype of `List<num>`, and assigning a `List<int>` to `List<num>` is a compile-time error. This ensures type safety by preventing runtime errors if a `num` List containing integers later attempts to store a double or other non-integer `num`.",
+      "Dart does not have a concept of variance for `List<T>`."
+    ]
+  },
+  {
+    "questionText": "What is `code generation` in Dart and when is it typically employed?",
+    "correctAnswer": "`Code generation` involves programs (generators) that analyze existing Dart code and automatically produce new Dart code. It's typically employed to eliminate boilerplate, handle repetitive tasks (like JSON serialization, immutable data classes, dependency injection setup), or provide functionalities that require compile-time analysis (like reflection-like capabilities).",
+    "explanation": "Commonly used with `build_runner` and packages like `json_serializable`, `freezed`, `injectable`.",
+    "options": [
+      "Code generation is a runtime feature for dynamic code loading.",
+      "It's a process of manual code refactoring.",
+      "`Code generation` involves programs (generators) that analyze existing Dart code and automatically produce new Dart code. It's typically employed to eliminate boilerplate, handle repetitive tasks (like JSON serialization, immutable data classes, dependency injection setup), or provide functionalities that require compile-time analysis (like reflection-like capabilities).",
+      "Code generation is only for testing purposes."
+    ]
+  },
+  {
+    "questionText": "How do `extension types` in Dart 3.0+ relate to `type aliases` and `mixins`?",
+    "correctAnswer": "`Extension types` are more powerful than `type aliases` because they can add methods, operators, and even change the underlying representation, whereas type aliases just provide a new name. `Extension types` are different from `mixins` because they wrap an existing type without altering the original class's hierarchy, while mixins inject code into a class's hierarchy.",
+    "explanation": "Extension types provide a 'zero-cost' abstraction, whereas mixins affect the inheritance chain.",
+    "options": [
+      "Extension types combine the features of both type aliases and mixins seamlessly.",
+      "Extension types can only be used with mixins.",
+      "`Extension types` are more powerful than `type aliases` because they can add methods, operators, and even change the underlying representation, whereas type aliases just provide a new name. `Extension types` are different from `mixins` because they wrap an existing type without altering the original class's hierarchy, while mixins inject code into a class's hierarchy.",
+      "Type aliases are a special kind of extension type."
+    ]
+  },
+  {
+    "questionText": "What is the purpose of `StreamSubscription.pause()` and `StreamSubscription.resume()`?",
+    "correctAnswer": "`StreamSubscription.pause()` temporarily stops a listener from receiving events from a `Stream`, allowing it to catch up or process existing events. `StreamSubscription.resume()` restarts the flow of events to the listener. They are used for managing backpressure manually or controlling event flow based on application state.",
+    "explanation": "This gives fine-grained control over how a consumer processes events from a potentially fast-producing stream.",
+    "options": [
+      "They are used to terminate a Stream immediately.",
+      "They only work on broadcast streams.",
+      "`StreamSubscription.pause()` temporarily stops a listener from receiving events from a `Stream`, allowing it to catch up or process existing events. `StreamSubscription.resume()` restarts the flow of events to the listener. They are used for managing backpressure manually or controlling event flow based on application state.",
+      "They are for error handling within a Stream."
+    ]
+  },
+  {
+    "questionText": "Describe a scenario where `sealed` classes with `pattern matching` significantly improve robustness.",
+    "correctAnswer": "A scenario is defining different states for a UI component (e.g., `Loading`, `Loaded(data)`, `Error(message)`). By making the base `State` class `sealed` and using a `switch` expression or `if-case` with `pattern matching`, the compiler can guarantee that all possible states are handled. If a new state is added, the compiler will flag unhandled cases, improving robustness and preventing runtime exceptions.",
+    "explanation": "This provides compile-time exhaustiveness checking, a powerful safety net for state management.",
+    "options": [
+      "`sealed` classes only improve performance, not robustness.",
+      "Pattern matching is not supported with `sealed` classes.",
+      "A scenario is defining different states for a UI component (e.g., `Loading`, `Loaded(data)`, `Error(message)`). By making the base `State` class `sealed` and using a `switch` expression or `if-case` with `pattern matching`, the compiler can guarantee that all possible states are handled. If a new state is added, the compiler will flag unhandled cases, improving robustness and preventing runtime exceptions.",
+      "It only applies to database models."
+    ]
+  },
+  {
+    "questionText": "What is the `Symbol` class in Dart, and when would you encounter or use it?",
+    "correctAnswer": "The `Symbol` class represents an operator or identifier from a Dart library, primarily used in `noSuchMethod` for reflective programming or sometimes with `Mirrors` (though `Mirrors` are not available in Flutter/AOT). You might encounter it when debugging `noSuchMethod` calls or implementing dynamic proxies.",
+    "explanation": "`Symbol` objects are used to refer to library-level names without exposing string literals which could be subject to tree shaking.",
+    "options": [
+      "`Symbol` is used for creating unique IDs.",
+      "`Symbol` is a deprecated class.",
+      "The `Symbol` class represents an operator or identifier from a Dart library, primarily used in `noSuchMethod` for reflective programming or sometimes with `Mirrors` (though `Mirrors` are not available in Flutter/AOT). You might encounter it when debugging `noSuchMethod` calls or implementing dynamic proxies.",
+      "It's used for defining global constants."
+    ]
+  },
+  {
+    "questionText": "How does Dart's `const` keyword affect `tree shaking` and application size?",
+    "correctAnswer": "`const` enables more aggressive `tree shaking` because the compiler knows that constant objects are immutable and their usage can be analyzed entirely at compile time. This allows the compiler to remove more unused code, leading to smaller application sizes.",
+    "explanation": "If a constant object is never referenced, it can be entirely removed from the compiled output.",
+    "options": [
+      "`const` increases application size due to more metadata.",
+      "`const` has no impact on tree shaking.",
+      "`const` enables more aggressive `tree shaking` because the compiler knows that constant objects are immutable and their usage can be analyzed entirely at compile time. This allows the compiler to remove more unused code, leading to smaller application sizes.",
+      "`const` is only relevant for runtime performance."
+    ]
+  },
+  {
+    "questionText": "When writing an `async*` generator, what is the impact of `yield` vs. `yield*`?",
+    "correctAnswer": "`yield` emits a single event to the stream. `yield*` (yield-each) consumes another `Stream` or `Iterable` and re-emits all of its events to the current stream. `yield*` is useful for combining or delegating to other event sources.",
+    "explanation": "`yield*` effectively splices one stream into another.",
+    "options": [
+      "`yield` is for synchronous operations, `yield*` for asynchronous.",
+      "They are interchangeable.",
+      "`yield` emits a single event to the stream. `yield*` (yield-each) consumes another `Stream` or `Iterable` and re-emits all of its events to the current stream. `yield*` is useful for combining or delegating to other event sources.",
+      "`yield*` always throws an error if the source stream is empty."
+    ]
+  } ,
+  {
+    "questionText": "Discuss the trade-offs between using a `Stream` vs. a `Future` for a network request that returns a single object.",
+    "correctAnswer": "For a single object, a `Future` is simpler and more idiomatic. A `Stream` introduces unnecessary complexity (managing subscriptions, `onDone` events) and overhead for a one-time result. While a `Stream` *could* be used (emitting one event and then completing), it's not the correct abstraction for a single eventual result.",
+    "explanation": "Choosing the right abstraction improves clarity, maintainability, and often performance.",
+    "options": [
+      "A `Stream` is always more performant for network requests.",
+      "A `Future` cannot handle network errors.",
+      "For a single object, a `Future` is simpler and more idiomatic. A `Stream` introduces unnecessary complexity (managing subscriptions, `onDone` events) and overhead for a one-time result. While a `Stream` *could* be used (emitting one event and then completing), it's not the correct abstraction for a single eventual result.",
+      "There is no trade-off; both are equally suitable."
+    ]
+  }
+]

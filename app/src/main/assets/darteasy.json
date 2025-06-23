@@ -1,0 +1,1432 @@
+[
+  {
+    "questionText": "Which company developed Dart?",
+    "correctAnswer": "Google",
+    "explanation": "Dart was developed by Google for building web, mobile, and desktop applications.",
+    "options": [
+      "Microsoft",
+      "Apple",
+      "Google",
+      "Facebook"
+    ]
+  },
+  {
+    "questionText": "Is Dart an object-oriented language?",
+    "correctAnswer": "Yes",
+    "explanation": "Dart is a true object-oriented language, meaning everything is an object.",
+    "options": [
+      "No",
+      "Partially",
+      "Yes",
+      "Depends on usage"
+    ]
+  },
+  {
+    "questionText": "What is the file extension for Dart source code files?",
+    "correctAnswer": ".dart",
+    "explanation": "Dart source code files are saved with the '.dart' extension.",
+    "options": [
+      ".drt",
+      ".darts",
+      ".dart",
+      ".dt"
+    ]
+  },
+  {
+    "questionText": "Which keyword is used to declare a variable in Dart?",
+    "correctAnswer": "var",
+    "explanation": "The 'var' keyword is commonly used for variable declaration in Dart.",
+    "options": [
+      "int",
+      "string",
+      "variable",
+      "var"
+    ]
+  },
+  {
+    "questionText": "Which function is the entry point of a Dart program?",
+    "correctAnswer": "main()",
+    "explanation": "Similar to C/C++/Java, the 'main()' function is where program execution begins.",
+    "options": [
+      "start()",
+      "begin()",
+      "run()",
+      "main()"
+    ]
+  },
+  {
+    "questionText": "How do you print something to the console in Dart?",
+    "correctAnswer": "print()",
+    "explanation": "The 'print()' function is used for outputting to the console.",
+    "options": [
+      "console.log()",
+      "display()",
+      "log()",
+      "print()"
+    ]
+  },
+  {
+    "questionText": "Which of these is a valid way to define a single-line comment in Dart?",
+    "correctAnswer": "// This is a comment",
+    "explanation": "Single-line comments in Dart start with '//'.",
+    "options": [
+      "",
+      "# This is a comment",
+      "/* This is a comment */",
+      "// This is a comment"
+    ]
+  },
+  {
+    "questionText": "What is the data type for whole numbers in Dart?",
+    "correctAnswer": "int",
+    "explanation": "'int' is used for integer (whole number) values.",
+    "options": [
+      "integer",
+      "num",
+      "int",
+      "double"
+    ]
+  },
+  {
+    "questionText": "What is the data type for decimal numbers in Dart?",
+    "correctAnswer": "double",
+    "explanation": "'double' is used for floating-point (decimal) values.",
+    "options": [
+      "float",
+      "decimal",
+      "num",
+      "double"
+    ]
+  },
+  {
+    "questionText": "Which keyword is used to declare a constant in Dart?",
+    "correctAnswer": "const",
+    "explanation": "The 'const' keyword is used for compile-time constants.",
+    "options": [
+      "final",
+      "static",
+      "constant",
+      "const"
+    ]
+  },
+  {
+    "questionText": "Which keyword is used for immutable variables whose value is known only at runtime?",
+    "correctAnswer": "final",
+    "explanation": "'final' variables can only be assigned once, at runtime.",
+    "options": [
+      "const",
+      "static",
+      "immutable",
+      "final"
+    ]
+  },
+  {
+    "questionText": "What is the default value of an uninitialized variable in Dart?",
+    "correctAnswer": "null",
+    "explanation": "Uninitialized variables in Dart automatically get a 'null' value.",
+    "options": [
+      "0",
+      "undefined",
+      "null",
+      "'' (empty string)"
+    ]
+  },
+  {
+    "questionText": "Which operator is used for addition in Dart?",
+    "correctAnswer": "+",
+    "explanation": "The '+' operator performs addition.",
+    "options": [
+      "-",
+      "*",
+      "/",
+      "+"
+    ]
+  },
+  {
+    "questionText": "Which operator is used for multiplication in Dart?",
+    "correctAnswer": "*",
+    "explanation": "The '*' operator performs multiplication.",
+    "options": [
+      "+",
+      "-",
+      "/",
+      "*"
+    ]
+  },
+  {
+    "questionText": "How do you check for equality in Dart?",
+    "correctAnswer": "==",
+    "explanation": "The '==' operator checks if two values are equal.",
+    "options": [
+      "=",
+      "===",
+      "!=",
+      "=="
+    ]
+  },
+  {
+    "questionText": "Which control flow statement is used for conditional execution?",
+    "correctAnswer": "if",
+    "explanation": "The 'if' statement is used to execute code blocks based on a condition.",
+    "options": [
+      "while",
+      "for",
+      "switch",
+      "if"
+    ]
+  },
+  {
+    "questionText": "Which loop executes a block of code a specific number of times?",
+    "correctAnswer": "for loop",
+    "explanation": "The 'for' loop is ideal for iterating a known number of times.",
+    "options": [
+      "while loop",
+      "do-while loop",
+      "for loop",
+      "forEach loop"
+    ]
+  },
+  {
+    "questionText": "Which loop executes a block of code as long as a condition is true?",
+    "correctAnswer": "while loop",
+    "explanation": "The 'while' loop continues execution as long as its condition remains true.",
+    "options": [
+      "for loop",
+      "do-while loop",
+      "while loop",
+      "until loop"
+    ]
+  },
+  {
+    "questionText": "How do you define a function in Dart?",
+    "correctAnswer": "returnType functionName(parameters) { ... }",
+    "explanation": "Functions are defined with a return type, name, and parameters.",
+    "options": [
+      "function functionName(parameters) { ... }",
+      "def functionName(parameters): ...",
+      "func functionName(parameters) { ... }",
+      "returnType functionName(parameters) { ... }"
+    ]
+  },
+  {
+    "questionText": "What is a named parameter in Dart?",
+    "correctAnswer": "A parameter specified by its name when calling the function.",
+    "explanation": "Named parameters improve readability and make function calls more flexible.",
+    "options": [
+      "A parameter that must be specified",
+      "A parameter with a default value",
+      "A parameter specified by its name when calling the function.",
+      "A parameter that is optional"
+    ]
+  },
+  {
+    "questionText": "How do you make a parameter optional and named in Dart?",
+    "correctAnswer": "{parameterName: defaultValue}",
+    "explanation": "Named parameters enclosed in curly braces can be optional and have default values.",
+    "options": [
+      "[parameterName]",
+      "(parameterName)",
+      "{parameterName: defaultValue}",
+      "optional parameterName"
+    ]
+  },
+  {
+    "questionText": "What is the purpose of the '=>' (fat arrow) syntax in Dart?",
+    "correctAnswer": "Shorthand for a function that returns a single expression.",
+    "explanation": "The fat arrow syntax is used for concise function definitions that return a single expression.",
+    "options": [
+      "To define an anonymous function",
+      "To declare a generator function",
+      "To perform an asynchronous operation",
+      "Shorthand for a function that returns a single expression."
+    ]
+  },
+  {
+    "questionText": "What is a class in Dart?",
+    "correctAnswer": "A blueprint for creating objects.",
+    "explanation": "A class defines the properties and behaviors that objects of that class will have.",
+    "options": [
+      "A function that returns an object",
+      "An instance of an object",
+      "A data type",
+      "A blueprint for creating objects."
+    ]
+  },
+  {
+    "questionText": "How do you create an object (instance) of a class in Dart?",
+    "correctAnswer": "ClassName objectName = ClassName();",
+    "explanation": "Objects are created using the 'new' keyword (optional) or directly by calling the constructor.",
+    "options": [
+      "new ClassName;",
+      "ClassName objectName;",
+      "ClassName objectName = ClassName();",
+      "create ClassName;"
+    ]
+  },
+  {
+    "questionText": "What is a constructor in Dart?",
+    "correctAnswer": "A special method used to initialize objects of a class.",
+    "explanation": "Constructors are invoked when an object is created to set its initial state.",
+    "options": [
+      "A method that builds a class",
+      "A method that destroys an object",
+      "A special method used to initialize objects of a class.",
+      "A static method"
+    ]
+  },
+  {
+    "questionText": "What is inheritance in Dart?",
+    "correctAnswer": "A mechanism where one class can inherit properties and methods from another class.",
+    "explanation": "Inheritance allows code reusability and establishing 'is-a' relationships.",
+    "options": [
+      "The ability to have multiple classes in a single file",
+      "The process of converting one data type to another",
+      "A mechanism where one class can inherit properties and methods from another class.",
+      "A way to hide data from other classes"
+    ]
+  },
+  {
+    "questionText": "Which keyword is used for inheritance in Dart?",
+    "correctAnswer": "extends",
+    "explanation": "The 'extends' keyword is used to indicate that a class inherits from another.",
+    "options": [
+      "implements",
+      "inherits",
+      "uses",
+      "extends"
+    ]
+  },
+  {
+    "questionText": "What is an abstract class in Dart?",
+    "correctAnswer": "A class that cannot be instantiated directly and may contain abstract methods.",
+    "explanation": "Abstract classes serve as blueprints for other classes and can have unimplemented methods.",
+    "options": [
+      "A class with no methods",
+      "A class that can only be extended",
+      "A class that cannot be instantiated directly and may contain abstract methods.",
+      "A class with only static methods"
+    ]
+  },
+  {
+    "questionText": "What is an interface in Dart?",
+    "correctAnswer": "A contract that a class must adhere to, providing method signatures.",
+    "explanation": "In Dart, every class implicitly defines an interface. You use 'implements' to adhere to it.",
+    "options": [
+      "A special type of class",
+      "A file that contains only function definitions",
+      "A contract that a class must adhere to, providing method signatures.",
+      "A way to define constants"
+    ]
+  },
+  {
+    "questionText": "Which keyword is used to implement an interface in Dart?",
+    "correctAnswer": "implements",
+    "explanation": "The 'implements' keyword is used to indicate that a class implements an interface.",
+    "options": [
+      "extends",
+      "uses",
+      "inherits",
+      "implements"
+    ]
+  },
+  {
+    "questionText": "What is polymorphism in Dart?",
+    "correctAnswer": "The ability of an object to take on many forms.",
+    "explanation": "Polymorphism allows objects of different classes to be treated as objects of a common type.",
+    "options": [
+      "The ability to define multiple constructors",
+      "The ability to inherit from multiple classes",
+      "The ability of an object to take on many forms.",
+      "The ability to hide implementation details"
+    ]
+  },
+  {
+    "questionText": "What is a 'List' in Dart?",
+    "correctAnswer": "An ordered collection of objects.",
+    "explanation": "Lists are similar to arrays in other languages, allowing ordered storage of elements.",
+    "options": [
+      "An unordered collection of unique objects",
+      "A key-value pair collection",
+      "An ordered collection of objects.",
+      "A fixed-size collection"
+    ]
+  },
+  {
+    "questionText": "How do you declare an empty List of integers in Dart?",
+    "correctAnswer": "List<int> myList = [];",
+    "explanation": "You specify the type argument '<int>' and initialize with empty square brackets.",
+    "options": [
+      "List myList = new List();",
+      "List<int> myList;",
+      "List<int> myList = [];",
+      "var myList = List<int>();"
+    ]
+  },
+  {
+    "questionText": "What is a 'Map' in Dart?",
+    "correctAnswer": "A collection of key-value pairs.",
+    "explanation": "Maps are used for storing data in key-value pairs, similar to dictionaries or hash tables.",
+    "options": [
+      "An ordered collection of objects",
+      "A fixed-size collection",
+      "A collection of unique objects",
+      "A collection of key-value pairs."
+    ]
+  },
+  {
+    "questionText": "How do you declare an empty Map with String keys and dynamic values in Dart?",
+    "correctAnswer": "Map<String, dynamic> myMap = {};",
+    "explanation": "You specify the key and value type arguments and initialize with empty curly braces.",
+    "options": [
+      "Map myMap = new Map();",
+      "Map<String, dynamic> myMap;",
+      "Map<String, dynamic> myMap = {};",
+      "var myMap = Map<String, dynamic>();"
+    ]
+  },
+  {
+    "questionText": "What is a 'Set' in Dart?",
+    "correctAnswer": "An unordered collection of unique items.",
+    "explanation": "Sets only store distinct elements, preventing duplicates.",
+    "options": [
+      "An ordered collection of objects",
+      "A collection of key-value pairs",
+      "A fixed-size collection",
+      "An unordered collection of unique items."
+    ]
+  },
+  {
+    "questionText": "How do you add an element to a List in Dart?",
+    "correctAnswer": "myList.add(element);",
+    "explanation": "The 'add()' method is used to append an element to a list.",
+    "options": [
+      "myList.insert(element);",
+      "myList.put(element);",
+      "myList += element;",
+      "myList.add(element);"
+    ]
+  },
+  {
+    "questionText": "What is the purpose of the 'async' keyword in Dart?",
+    "correctAnswer": "Marks a function as asynchronous, allowing it to use 'await'.",
+    "explanation": "'async' functions can perform operations without blocking the main thread.",
+    "options": [
+      "To make a function run faster",
+      "To declare a generator function",
+      "Marks a function as asynchronous, allowing it to use 'await'.",
+      "To define a synchronous function"
+    ]
+  },
+  {
+    "questionText": "What is the purpose of the 'await' keyword in Dart?",
+    "correctAnswer": "Pauses execution until an asynchronous operation completes.",
+    "explanation": "'await' is used inside 'async' functions to wait for a Future to complete.",
+    "options": [
+      "To immediately execute a function",
+      "To stop the program execution",
+      "To make a function run in the background",
+      "Pauses execution until an asynchronous operation completes."
+    ]
+  },
+  {
+    "questionText": "What is a 'Future' in Dart?",
+    "correctAnswer": "An object representing a potential value or error that will be available at some time in the future.",
+    "explanation": "Futures are used for asynchronous programming to handle results that may not be available immediately.",
+    "options": [
+      "A promise that a function will execute",
+      "A data type for storing dates",
+      "A loop that runs indefinitely",
+      "An object representing a potential value or error that will be available at some time in the future."
+    ]
+  },
+  {
+    "questionText": "How do you handle errors in asynchronous operations in Dart?",
+    "correctAnswer": "Using .catchError() or try-catch with await.",
+    "explanation": "Both 'catchError()' on a Future and a 'try-catch' block with 'await' can handle errors.",
+    "options": [
+      "Using an if-else statement",
+      "Ignoring the error",
+      "Using .catchError() or try-catch with await.",
+      "Restarting the program"
+    ]
+  },
+  {
+    "questionText": "What is the Dart SDK?",
+    "correctAnswer": "A collection of tools and libraries for developing Dart applications.",
+    "explanation": "The SDK includes the Dart VM, compilers, and core libraries.",
+    "options": [
+      "A programming language",
+      "An IDE for Dart development",
+      "A collection of tools and libraries for developing Dart applications.",
+      "A framework for building mobile apps"
+    ]
+  },
+  {
+    "questionText": "Which command is used to run a Dart file from the terminal?",
+    "correctAnswer": "dart filename.dart",
+    "explanation": "The 'dart' command followed by the filename executes the Dart script.",
+    "options": [
+      "run filename.dart",
+      "execute filename.dart",
+      "dart filename.dart",
+      "start filename.dart"
+    ]
+  },
+  {
+    "questionText": "What is 'pub' in Dart?",
+    "correctAnswer": "Dart's package manager.",
+    "explanation": "'pub' is used for managing dependencies and packages in Dart projects.",
+    "options": [
+      "A Dart framework",
+      "A testing tool for Dart",
+      "Dart's package manager.",
+      "A debugger for Dart"
+    ]
+  },
+  {
+    "questionText": "What is the 'pubspec.yaml' file used for?",
+    "correctAnswer": "To declare project dependencies and metadata.",
+    "explanation": "This file specifies the project's name, description, dependencies, and other configurations.",
+    "options": [
+      "To store user data",
+      "To write Dart code",
+      "To declare project dependencies and metadata.",
+      "To configure the Dart VM"
+    ]
+  },
+  {
+    "questionText": "Which command is used to get the dependencies declared in 'pubspec.yaml'?",
+    "correctAnswer": "pub get",
+    "explanation": "'pub get' downloads and installs the listed packages.",
+    "options": [
+      "pub install",
+      "pub update",
+      "pub add",
+      "pub get"
+    ]
+  },
+  {
+    "questionText": "What is Flutter?",
+    "correctAnswer": "A UI toolkit for building natively compiled applications for mobile, web, and desktop from a single codebase.",
+    "explanation": "Flutter is Google's UI framework built with Dart.",
+    "options": [
+      "A database for Dart applications",
+      "A server-side framework for Dart",
+      "A UI toolkit for building natively compiled applications for mobile, web, and desktop from a single codebase.",
+      "A testing framework for Dart"
+    ]
+  },
+  {
+    "questionText": "Does Dart support null safety?",
+    "correctAnswer": "Yes",
+    "explanation": "Dart 2.12 introduced sound null safety, which helps prevent null pointer exceptions.",
+    "options": [
+      "No",
+      "Partially",
+      "Yes",
+      "Only for specific data types"
+    ]
+  },
+  {
+    "questionText": "What is the purpose of the '?' operator in Dart's null safety?",
+    "correctAnswer": "To indicate that a variable can be null.",
+    "explanation": "The '?' makes a type nullable, allowing it to hold a null value.",
+    "options": [
+      "To check if a variable is null",
+      "To assign a default value",
+      "To indicate that a variable can be null.",
+      "To perform a null-aware operation"
+    ]
+  },
+  {
+    "questionText": "What is the purpose of the '!' operator (null assertion operator) in Dart?",
+    "correctAnswer": "To assert that a nullable expression is not null.",
+    "explanation": "The '!' tells the compiler you are sure a nullable expression won't be null at runtime, but can lead to a runtime error if it is.",
+    "options": [
+      "To make a variable nullable",
+      "To assign a null value",
+      "To assert that a nullable expression is not null.",
+      "To check for null"
+    ]
+  },
+  {
+    "questionText": "What is type inference in Dart?",
+    "correctAnswer": "The compiler automatically determines the data type of a variable.",
+    "explanation": "Dart can infer the type of a variable based on its initial value.",
+    "options": [
+      "Manually specifying the data type",
+      "Converting one data type to another",
+      "The compiler automatically determines the data type of a variable.",
+      "Ignoring data types altogether"
+    ]
+  },
+  {
+    "questionText": "Which keyword is used to import libraries in Dart?",
+    "correctAnswer": "import",
+    "explanation": "The 'import' keyword is used to bring external libraries or files into scope.",
+    "options": [
+      "include",
+      "require",
+      "use",
+      "import"
+    ]
+  },
+  {
+    "questionText": "What is the 'dart:core' library?",
+    "correctAnswer": "The fundamental library for Dart programming, containing built-in types, functions, and classes.",
+    "explanation": "It's automatically imported and provides essential functionalities.",
+    "options": [
+      "A library for web development",
+      "A library for mobile app development",
+      "The fundamental library for Dart programming, containing built-in types, functions, and classes.",
+      "A library for database operations"
+    ]
+  },
+  {
+    "questionText": "What is a named constructor in Dart?",
+    "correctAnswer": "A constructor with a specific name, allowing multiple constructors for a single class.",
+    "explanation": "Named constructors provide more flexibility in object creation.",
+    "options": [
+      "A constructor that takes no arguments",
+      "A constructor that is automatically generated",
+      "A constructor with a specific name, allowing multiple constructors for a single class.",
+      "A private constructor"
+    ]
+  },
+  {
+    "questionText": "What is a factory constructor in Dart?",
+    "correctAnswer": "A constructor that can return an existing instance or an instance of a subclass.",
+    "explanation": "Factory constructors are useful when the constructor itself doesn't always create a new instance.",
+    "options": [
+      "A constructor used for creating factories",
+      "A constructor that is always private",
+      "A constructor that can return an existing instance or an instance of a subclass.",
+      "A constructor that only takes named parameters"
+    ]
+  },
+  {
+    "questionText": "What is an extension method in Dart?",
+    "correctAnswer": "A way to add new functionality to existing classes without modifying them.",
+    "explanation": "Extension methods allow you to add methods to classes you don't own.",
+    "options": [
+      "A method that extends a class",
+      "A method that overrides an existing method",
+      "A way to add new functionality to existing classes without modifying them.",
+      "A static method"
+    ]
+  },
+  {
+    "questionText": "What is a mixin in Dart?",
+    "correctAnswer": "A way to reuse a class's code in multiple class hierarchies.",
+    "explanation": "Mixins allow code sharing without traditional inheritance, promoting composition over inheritance.",
+    "options": [
+      "A type of abstract class",
+      "A special kind of interface",
+      "A way to reuse a class's code in multiple class hierarchies.",
+      "A data type"
+    ]
+  },
+  {
+    "questionText": "Which keyword is used to apply a mixin to a class?",
+    "correctAnswer": "with",
+    "explanation": "The 'with' keyword is used to include mixins in a class.",
+    "options": [
+      "uses",
+      "implements",
+      "extends",
+      "with"
+    ]
+  },
+  {
+    "questionText": "What is 'typedef' in Dart?",
+    "correctAnswer": "Used to create an alias for a function type.",
+    "explanation": "Typedefs improve code readability and allow functions to be treated as types.",
+    "options": [
+      "To define a new data type",
+      "To create a type alias for any data type",
+      "Used to create an alias for a function type.",
+      "To define a generic type"
+    ]
+  },
+  {
+    "questionText": "What is the 'dynamic' keyword in Dart?",
+    "correctAnswer": "A type that can hold any type of value, and type checking is performed at runtime.",
+    "explanation": "'dynamic' sacrifices compile-time type safety for flexibility.",
+    "options": [
+      "A fixed data type",
+      "A type that can only hold numbers",
+      "A type that can hold any type of value, and type checking is performed at runtime.",
+      "A compile-time constant"
+    ]
+  },
+  {
+    "questionText": "What is a 'Stream' in Dart?",
+    "correctAnswer": "A sequence of asynchronous events.",
+    "explanation": "Streams are used for handling sequences of data that arrive over time, like user input or network data.",
+    "options": [
+      "A type of data structure",
+      "A synchronous function",
+      "A sequence of asynchronous events.",
+      "A single value that will be available in the future"
+    ]
+  },
+  {
+    "questionText": "How do you listen to events from a Stream?",
+    "correctAnswer": "Using the .listen() method.",
+    "explanation": "The 'listen()' method registers callbacks for data, errors, and completion events.",
+    "options": [
+      "Using the .get() method",
+      "Using the .await() method",
+      "Using the .read() method",
+      "Using the .listen() method."
+    ]
+  },
+  {
+    "questionText": "What is the purpose of the 'yield' keyword in Dart?",
+    "correctAnswer": "Used in generator functions to produce a sequence of values lazily.",
+    "explanation": "'yield' is used in 'async*' and 'sync*' functions to return values one by one.",
+    "options": [
+      "To return a single value from a function",
+      "To stop the execution of a function",
+      "Used in generator functions to produce a sequence of values lazily.",
+      "To throw an exception"
+    ]
+  },
+  {
+    "questionText": "What is a 'generator function' in Dart?",
+    "correctAnswer": "A function that produces a sequence of values on demand using 'yield'.",
+    "explanation": "Generator functions are efficient for creating sequences of values without generating all of them at once.",
+    "options": [
+      "A function that generates random numbers",
+      "A function that returns a single value",
+      "A function that produces a sequence of values on demand using 'yield'.",
+      "A function that is always asynchronous"
+    ]
+  },
+  {
+    "questionText": "What is the difference between 'final' and 'const'?",
+    "correctAnswer": "'final' is runtime constant, 'const' is compile-time constant.",
+    "explanation": "'const' values are known at compile time, while 'final' values are known at runtime but assigned only once.",
+    "options": [
+      "'final' can be changed, 'const' cannot",
+      "'final' is for variables, 'const' is for functions",
+      "'final' is runtime constant, 'const' is compile-time constant.",
+      "No difference, they are interchangeable"
+    ]
+  },
+  {
+    "questionText": "What is the purpose of the 'assert' keyword in Dart?",
+    "correctAnswer": "To check conditions during development and throw an error if false.",
+    "explanation": "'assert' is used for debugging and validating assumptions; it's ignored in production mode.",
+    "options": [
+      "To define a new data type",
+      "To declare a constant",
+      "To check conditions during development and throw an error if false.",
+      "To handle exceptions"
+    ]
+  },
+  {
+    "questionText": "How do you handle exceptions in Dart?",
+    "correctAnswer": "Using try-catch blocks.",
+    "explanation": "The 'try-catch' block is used to gracefully handle errors that occur during program execution.",
+    "options": [
+      "Using if-else statements",
+      "Ignoring the error",
+      "Using try-catch blocks.",
+      "Restarting the program"
+    ]
+  },
+  {
+    "questionText": "What is the 'on' keyword used for in try-catch blocks?",
+    "correctAnswer": "To catch specific types of exceptions.",
+    "explanation": "'on' allows you to handle different exception types with separate catch blocks.",
+    "options": [
+      "To define a new function",
+      "To specify a condition",
+      "To catch specific types of exceptions.",
+      "To throw an exception"
+    ]
+  },
+  {
+    "questionText": "What is the 'finally' block in Dart's exception handling?",
+    "correctAnswer": "A block of code that is always executed, regardless of whether an exception occurred.",
+    "explanation": "'finally' is useful for cleanup operations.",
+    "options": [
+      "A block of code that is only executed if an exception occurs",
+      "A block of code that is never executed",
+      "A block of code that is always executed, regardless of whether an exception occurred.",
+      "A block of code that is executed before the try block"
+    ]
+  },
+  {
+    "questionText": "What is an enum in Dart?",
+    "correctAnswer": "A way to define a fixed set of named constant values.",
+    "explanation": "Enums provide a type-safe way to represent a set of discrete values.",
+    "options": [
+      "A dynamic data type",
+      "A type of function",
+      "A way to define a fixed set of named constant values.",
+      "A collection that can store any type of data"
+    ]
+  },
+  {
+    "questionText": "What is a 'cascade notation' (..) in Dart?",
+    "correctAnswer": "Allows you to perform a sequence of operations on the same object.",
+    "explanation": "Cascade notation makes code more concise and readable by chaining method calls on a single object.",
+    "options": [
+      "Used for commenting out multiple lines",
+      "A way to define a new class",
+      "Allows you to perform a sequence of operations on the same object.",
+      "To declare a variable"
+    ]
+  },
+  {
+    "questionText": "What is a 'null-aware operator' (??) in Dart?",
+    "correctAnswer": "Returns the left-hand side if it's not null, otherwise returns the right-hand side.",
+    "explanation": "The null-aware operator provides a concise way to handle potential null values.",
+    "options": [
+      "Checks if a variable is not null",
+      "Assigns a null value",
+      "Returns the left-hand side if it's not null, otherwise returns the right-hand side.",
+      "Throws an error if the variable is null"
+    ]
+  },
+  {
+    "questionText": "What is the 'null-aware access operator' (?.) in Dart?",
+    "correctAnswer": "Accesses a property or method only if the object is not null.",
+    "explanation": "Prevents null pointer exceptions by safely accessing members of potentially null objects.",
+    "options": [
+      "Accesses a property regardless of nullability",
+      "Assigns a null value to a property",
+      "Accesses a property or method only if the object is not null.",
+      "Checks if a property is null"
+    ]
+  },
+  {
+    "questionText": "What is the 'type test operator' (is) in Dart?",
+    "correctAnswer": "Used to check if an object is of a specific type.",
+    "explanation": "The 'is' operator is useful for type checking and conditional casting.",
+    "options": [
+      "To assign a data type",
+      "To convert one data type to another",
+      "Used to check if an object is of a specific type.",
+      "To declare a new type"
+    ]
+  },
+  {
+    "questionText": "What is the 'type cast operator' (as) in Dart?",
+    "correctAnswer": "Used to cast an object to a specific type.",
+    "explanation": "The 'as' operator attempts to cast an object; it throws an error if the cast is invalid.",
+    "options": [
+      "To check the type of an object",
+      "To define a new type",
+      "Used to cast an object to a specific type.",
+      "To convert a string to an integer"
+    ]
+  },
+  {
+    "questionText": "What is 'covariant' keyword in Dart?",
+    "correctAnswer": "Allows a subclass method to accept a superclass type for a parameter that is a subtype in the superclass.",
+    "explanation": "It relaxes type checking for method parameters in overridden methods.",
+    "options": [
+      "Used for creating constant variables",
+      "Used for asynchronous operations",
+      "Allows a subclass method to accept a superclass type for a parameter that is a subtype in the superclass.",
+      "A keyword for defining interfaces"
+    ]
+  },
+  {
+    "questionText": "What is the purpose of the 'static' keyword in Dart?",
+    "correctAnswer": "Declares a member that belongs to the class itself, not to instances of the class.",
+    "explanation": "Static members can be accessed directly using the class name.",
+    "options": [
+      "To make a variable immutable",
+      "To define a constant",
+      "Declares a member that belongs to the class itself, not to instances of the class.",
+      "To make a method asynchronous"
+    ]
+  },
+  {
+    "questionText": "What is 'this' keyword in Dart?",
+    "correctAnswer": "Refers to the current instance of the class.",
+    "explanation": "'this' is used to disambiguate between instance variables and local variables/parameters with the same name.",
+    "options": [
+      "Refers to the superclass",
+      "Refers to a static member",
+      "Refers to the current instance of the class.",
+      "Refers to a global variable"
+    ]
+  },
+  {
+    "questionText": "What is 'super' keyword in Dart?",
+    "correctAnswer": "Refers to the superclass (parent class).",
+    "explanation": "'super' is used to call constructors or methods of the parent class.",
+    "options": [
+      "Refers to the current instance of the class",
+      "Refers to a static member",
+      "Refers to the superclass (parent class).",
+      "Refers to a global variable"
+    ]
+  },
+  {
+    "questionText": "What is the purpose of 'override' annotation in Dart?",
+    "correctAnswer": "Indicates that a method is intended to override a method from its superclass.",
+    "explanation": "It helps prevent errors caused by unintentional method name mismatches.",
+    "options": [
+      "To make a method private",
+      "To define a new method",
+      "Indicates that a method is intended to override a method from its superclass.",
+      "To make a method static"
+    ]
+  },
+  {
+    "questionText": "Can a Dart class have multiple constructors?",
+    "correctAnswer": "Yes, using named constructors.",
+    "explanation": "Dart supports multiple constructors by giving them distinct names.",
+    "options": [
+      "No",
+      "Only if they have different numbers of parameters",
+      "Yes, using named constructors.",
+      "Only if they are static"
+    ]
+  },
+  {
+    "questionText": "What is a getter in Dart?",
+    "correctAnswer": "A special method that allows you to read the value of a property.",
+    "explanation": "Getters provide controlled access to private instance variables.",
+    "options": [
+      "A method that sets a value",
+      "A function that returns nothing",
+      "A special method that allows you to read the value of a property.",
+      "A method that takes no arguments"
+    ]
+  },
+  {
+    "questionText": "What is a setter in Dart?",
+    "correctAnswer": "A special method that allows you to write the value of a property.",
+    "explanation": "Setters provide controlled modification of private instance variables.",
+    "options": [
+      "A method that reads a value",
+      "A function that returns a value",
+      "A special method that allows you to write the value of a property.",
+      "A method that takes multiple arguments"
+    ]
+  },
+  {
+    "questionText": "What is the purpose of 'typedef' with function types?",
+    "correctAnswer": "To create a reusable type alias for a function signature.",
+    "explanation": "It improves code readability and maintainability when dealing with complex function types.",
+    "options": [
+      "To define a new class",
+      "To create a constant function",
+      "To create a reusable type alias for a function signature.",
+      "To make a function asynchronous"
+    ]
+  },
+  {
+    "questionText": "Which data structure is best for storing a collection of unique items?",
+    "correctAnswer": "Set",
+    "explanation": "Sets inherently do not allow duplicate elements.",
+    "options": [
+      "List",
+      "Map",
+      "Set",
+      "Queue"
+    ]
+  },
+  {
+    "questionText": "Which data structure is best for storing key-value pairs?",
+    "correctAnswer": "Map",
+    "explanation": "Maps are designed for efficient lookup based on keys.",
+    "options": [
+      "List",
+      "Set",
+      "Map",
+      "Array"
+    ]
+  },
+  {
+    "questionText": "What is string interpolation in Dart?",
+    "correctAnswer": "Embedding expressions inside string literals using '$' or '${}'.",
+    "explanation": "It provides a concise way to build strings with dynamic content.",
+    "options": [
+      "Concatenating strings with the '+' operator",
+      "Splitting a string into multiple parts",
+      "Embedding expressions inside string literals using '$' or '${}'.",
+      "Converting a string to a number"
+    ]
+  },
+  {
+    "questionText": "Which operator is used for integer division in Dart?",
+    "correctAnswer": "~/",
+    "explanation": "The '~/' operator performs division and returns an integer result.",
+    "options": [
+      "/",
+      "%",
+      "//",
+      "~/"
+    ]
+  },
+  {
+    "questionText": "What is the remainder operator in Dart?",
+    "correctAnswer": "%",
+    "explanation": "The '%' operator returns the remainder of a division.",
+    "options": [
+      "/",
+      "//",
+      "*",
+      "%"
+    ]
+  },
+  {
+    "questionText": "What is a 'typedef' used for?",
+    "correctAnswer": "To create an alias for a function type.",
+    "explanation": "Typedefs enhance code readability and type safety when dealing with functions as parameters or return types.",
+    "options": [
+      "To define a new class",
+      "To declare a constant variable",
+      "To create an alias for a function type.",
+      "To make a variable dynamic"
+    ]
+  },
+  {
+    "questionText": "What is the purpose of the 'rethrow' keyword in Dart?",
+    "correctAnswer": "To rethrow an caught exception after some processing.",
+    "explanation": "'rethrow' allows you to handle an exception and then propagate it further up the call stack.",
+    "options": [
+      "To stop the program",
+      "To ignore an exception",
+      "To throw a new exception",
+      "To rethrow an caught exception after some processing."
+    ]
+  },
+  {
+    "questionText": "What is the 'throw' keyword used for in Dart?",
+    "correctAnswer": "To explicitly throw an exception.",
+    "explanation": "'throw' is used to signal an error or exceptional condition.",
+    "options": [
+      "To catch an exception",
+      "To handle a successful operation",
+      "To explicitly throw an exception.",
+      "To define a new function"
+    ]
+  },
+  {
+    "questionText": "What is a 'closure' in Dart?",
+    "correctAnswer": "A function object that has access to the lexical scope of its parent function, even after the parent function has completed.",
+    "explanation": "Closures allow functions to 'remember' their surrounding environment.",
+    "options": [
+      "A function that takes no arguments",
+      "A function that returns a boolean value",
+      "A function object that has access to the lexical scope of its parent function, even after the parent function has completed.",
+      "A private function"
+    ]
+  },
+  {
+    "questionText": "What is the main goal of Dart's null safety?",
+    "correctAnswer": "To eliminate null pointer exceptions.",
+    "explanation": "By making nullability explicit, Dart helps developers write more robust and error-free code.",
+    "options": [
+      "To make code run faster",
+      "To reduce memory usage",
+      "To eliminate null pointer exceptions.",
+      "To simplify syntax"
+    ]
+  },
+  {
+    "questionText": "What is the 'late' keyword used for in Dart?",
+    "correctAnswer": "Declares a non-nullable variable that will be initialized later.",
+    "explanation": "'late' allows you to declare a non-nullable variable without initializing it immediately, as long as you guarantee it will be initialized before use.",
+    "options": [
+      "To make a variable optional",
+      "To declare a constant",
+      "Declares a non-nullable variable that will be initialized later.",
+      "To make a variable dynamic"
+    ]
+  },
+  {
+    "questionText": "What is the purpose of the 'part' and 'part of' keywords?",
+    "correctAnswer": "To split a single library into multiple Dart files.",
+    "explanation": "They help organize large libraries into smaller, more manageable files.",
+    "options": [
+      "To define a new class",
+      "To import external packages",
+      "To split a single library into multiple Dart files.",
+      "To create a new project"
+    ]
+  },
+  {
+    "questionText": "Which type of comments are ignored by the Dart compiler?",
+    "correctAnswer": "All types of comments (single-line, multi-line, documentation).",
+    "explanation": "Comments are for human readers and are not processed by the compiler.",
+    "options": [
+      "Single-line comments only",
+      "Multi-line comments only",
+      "Documentation comments only",
+      "All types of comments (single-line, multi-line, documentation)."
+    ]
+  },
+  {
+    "questionText": "What is the purpose of the 'show' keyword in an import statement?",
+    "correctAnswer": "To import only specific parts of a library.",
+    "explanation": "'show' allows you to selectively import identifiers from a library.",
+    "options": [
+      "To hide specific parts of a library",
+      "To import the entire library",
+      "To import only specific parts of a library.",
+      "To rename imported elements"
+    ]
+  },
+  {
+    "questionText": "What is the purpose of the 'hide' keyword in an import statement?",
+    "correctAnswer": "To import a library but exclude specific parts.",
+    "explanation": "'hide' allows you to exclude specific identifiers from being imported.",
+    "options": [
+      "To import only specific parts of a library",
+      "To import the entire library",
+      "To hide the entire library",
+      "To import a library but exclude specific parts."
+    ]
+  },
+  {
+    "questionText": "What is the purpose of the 'as' keyword in an import statement?",
+    "correctAnswer": "To create an alias for a library prefix.",
+    "explanation": "It helps avoid name clashes when importing multiple libraries with similar identifiers.",
+    "options": [
+      "To import the entire library",
+      "To hide specific parts of a library",
+      "To create an alias for a library prefix.",
+      "To rename specific elements"
+    ]
+  },
+  {
+    "questionText": "What is the main advantage of using Dart for web development?",
+    "correctAnswer": "Can compile to highly optimized JavaScript.",
+    "explanation": "Dart can be compiled to JavaScript, allowing it to run in web browsers.",
+    "options": [
+      "Better performance than C++",
+      "Native compilation to machine code",
+      "Can compile to highly optimized JavaScript.",
+      "Easier to learn than HTML"
+    ]
+  },
+  {
+    "questionText": "What is the Dart VM?",
+    "correctAnswer": "The virtual machine that executes Dart code.",
+    "explanation": "The Dart VM is used for running Dart code directly, especially during development.",
+    "options": [
+      "A web server for Dart applications",
+      "A tool for compiling Dart to JavaScript",
+      "The virtual machine that executes Dart code.",
+      "An integrated development environment"
+    ]
+  },
+  {
+    "questionText": "What is JIT compilation in Dart?",
+    "correctAnswer": "Just-in-time compilation, used for fast development cycles.",
+    "explanation": "JIT compilation allows for hot reload and hot restart in Flutter, speeding up development.",
+    "options": [
+      "Ahead-of-time compilation for production",
+      "Compiling to assembly code",
+      "Just-in-time compilation, used for fast development cycles.",
+      "Compiling to a different programming language"
+    ]
+  },
+  {
+    "questionText": "What is AOT compilation in Dart?",
+    "correctAnswer": "Ahead-of-time compilation, used for optimized production builds.",
+    "explanation": "AOT compilation produces highly optimized native code for deployment.",
+    "options": [
+      "Just-in-time compilation for development",
+      "Compiling to an intermediate language",
+      "Ahead-of-time compilation, used for optimized production builds.",
+      "Compiling to JavaScript"
+    ]
+  },
+  {
+    "questionText": "Which compilation mode is preferred for Flutter development for faster iteration?",
+    "correctAnswer": "JIT (Just-in-Time)",
+    "explanation": "JIT's hot reload/restart makes development very efficient.",
+    "options": [
+      "AOT (Ahead-of-Time)",
+      "Hybrid",
+      "JIT (Just-in-Time)",
+      "Interpreter"
+    ]
+  },
+  {
+    "questionText": "Which compilation mode is preferred for deploying Flutter apps to app stores?",
+    "correctAnswer": "AOT (Ahead-of-Time)",
+    "explanation": "AOT compilation produces optimized native code for release builds.",
+    "options": [
+      "JIT (Just-in-Time)",
+      "Hybrid",
+      "AOT (Ahead-of-Time)",
+      "Interpreter"
+    ]
+  },
+  {
+    "questionText": "What is the purpose of the 'covariant' keyword?",
+    "correctAnswer": "To relax type checking for overridden method parameters.",
+    "explanation": "It allows an overridden method to accept a supertype of the parameter type from the superclass, as long as it's a subtype in the subclass.",
+    "options": [
+      "To define a constant",
+      "To create a static method",
+      "To relax type checking for overridden method parameters.",
+      "To make a variable nullable"
+    ]
+  },
+  {
+    "questionText": "What is the 'runes' property of a String in Dart?",
+    "correctAnswer": "Provides access to the Unicode code points of the string.",
+    "explanation": "Runes allow you to work with strings at the Unicode character level.",
+    "options": [
+      "Returns the length of the string",
+      "Converts the string to uppercase",
+      "Provides access to the Unicode code points of the string.",
+      "Splits the string into a list of characters"
+    ]
+  },
+  {
+    "questionText": "What is the primary purpose of 'typedef' with generic types?",
+    "correctAnswer": "To create a type alias for a generic function signature.",
+    "explanation": "It helps define clear and concise type signatures for functions that work with generic types.",
+    "options": [
+      "To define a new generic class",
+      "To constrain generic types",
+      "To create a type alias for a generic function signature.",
+      "To implement generic interfaces"
+    ]
+  },
+  {
+    "questionText": "Which of these is NOT a core built-in type in Dart?",
+    "correctAnswer": "Array",
+    "explanation": "Dart uses 'List' for ordered collections, not 'Array'.",
+    "options": [
+      "int",
+      "String",
+      "bool",
+      "Array"
+    ]
+  },
+  {
+    "questionText": "What is the default constructor in Dart?",
+    "correctAnswer": "A constructor that is automatically generated if no other constructors are defined.",
+    "explanation": "It's an unnamed, no-argument constructor.",
+    "options": [
+      "A constructor that takes all arguments",
+      "A constructor with a specific name",
+      "A constructor that is automatically generated if no other constructors are defined.",
+      "A private constructor"
+    ]
+  },
+  {
+    "questionText": "What is a 'callable class' in Dart?",
+    "correctAnswer": "A class that can be called like a function by implementing the 'call' method.",
+    "explanation": "This allows instances of the class to be invoked directly.",
+    "options": [
+      "A class that can be extended",
+      "A class that contains only static methods",
+      "A class that can be called like a function by implementing the 'call' method.",
+      "A class that cannot be instantiated"
+    ]
+  },
+  {
+    "questionText": "What is the purpose of the 'typedef' keyword with a class?",
+    "correctAnswer": "It's not used with classes directly for aliasing types; it's primarily for function types.",
+    "explanation": "While 'typedef' is powerful for function type aliases, for class aliases, you typically use 'class MyNewType = OriginalType;' for type aliases or just extend/implement.",
+    "options": [
+      "To create an alias for a class name",
+      "To define a new class type",
+      "To make a class abstract",
+      "It's not used with classes directly for aliasing types; it's primarily for function types."
+    ]
+  },
+  {
+    "questionText": "What is a 'synchronous generator' function in Dart?",
+    "correctAnswer": "A function that returns an 'Iterable' using 'yield'.",
+    "explanation": "'sync*' functions return Iterables and produce values one by one without blocking.",
+    "options": [
+      "A function that returns a Future",
+      "A function that performs asynchronous operations",
+      "A function that returns an 'Iterable' using 'yield'.",
+      "A function that blocks the main thread"
+    ]
+  },
+  {
+    "questionText": "What is an 'asynchronous generator' function in Dart?",
+    "correctAnswer": "A function that returns a 'Stream' using 'yield'.",
+    "explanation": "'async*' functions return Streams and produce events asynchronously.",
+    "options": [
+      "A function that returns a List",
+      "A function that runs synchronously",
+      "A function that returns a 'Stream' using 'yield'.",
+      "A function that always returns null"
+    ]
+  },
+  {
+    "questionText": "What is the purpose of the 'library' keyword in Dart?",
+    "correctAnswer": "To declare a library and organize its parts.",
+    "explanation": "The 'library' keyword is used to group related Dart files into a single logical unit.",
+    "options": [
+      "To import external packages",
+      "To define a new class",
+      "To declare a library and organize its parts.",
+      "To specify the main entry point"
+    ]
+  },
+  {
+    "questionText": "What is the purpose of the 'export' keyword in Dart?",
+    "correctAnswer": "To make parts of a library visible to other libraries.",
+    "explanation": "'export' allows you to re-export elements from other files within your library.",
+    "options": [
+      "To import external packages",
+      "To hide specific parts of a library",
+      "To make parts of a library visible to other libraries.",
+      "To define a new class"
+    ]
+  },
+  {
+    "questionText": "What does the 'covariant' keyword apply to?",
+    "correctAnswer": "Method parameters in overridden methods.",
+    "explanation": "It's specifically used to relax type constraints on parameters when overriding methods.",
+    "options": [
+      "Return types of functions",
+      "Class declarations",
+      "Method parameters in overridden methods.",
+      "Global variables"
+    ]
+  },
+  {
+    "questionText": "What is the purpose of the 'sealed' keyword (upcoming feature)?",
+    "correctAnswer": "To restrict which classes can extend a given class.",
+    "explanation": "A 'sealed' class can only be extended within the same library, making exhaustiveness checking possible.",
+    "options": [
+      "To make a class immutable",
+      "To hide a class from other files",
+      "To restrict which classes can extend a given class.",
+      "To make a class abstract"
+    ]
+  },
+  {
+    "questionText": "What is a 'record' in Dart (upcoming feature)?",
+    "correctAnswer": "A new lightweight syntax for creating anonymous, immutable, fixed-size, heterogeneous data structures.",
+    "explanation": "Records provide a convenient way to group data without defining a full class.",
+    "options": [
+      "A type of database",
+      "A way to store audio files",
+      "A new lightweight syntax for creating anonymous, immutable, fixed-size, heterogeneous data structures.",
+      "A method to log errors"
+    ]
+  },
+  {
+    "questionText": "What is 'pattern matching' in Dart (upcoming feature)?",
+    "correctAnswer": "A feature that allows destructuring and conditional logic based on the shape of data.",
+    "explanation": "Pattern matching simplifies extracting data from complex structures and writing concise conditional code.",
+    "options": [
+      "A way to define new classes",
+      "A graphical user interface design tool",
+      "A feature that allows destructuring and conditional logic based on the shape of data.",
+      "A method for sorting data"
+    ]
+  },
+  {
+    "questionText": "What is the purpose of the 'external' keyword in Dart?",
+    "correctAnswer": "Declares a function or variable whose implementation is provided elsewhere (e.g., in native code).",
+    "explanation": "'external' is used for FFI (Foreign Function Interface) to interact with C/C++ code.",
+    "options": [
+      "To import an external library",
+      "To export a function to another file",
+      "Declares a function or variable whose implementation is provided elsewhere (e.g., in native code).",
+      "To make a function private"
+    ]
+  },
+  {
+    "questionText": "What is the 'Future.value()' constructor used for?",
+    "correctAnswer": "To create a Future that completes immediately with a given value.",
+    "explanation": "Useful for returning an already resolved Future.",
+    "options": [
+      "To create a Future that will never complete",
+      "To create a Future that completes with an error",
+      "To create a Future that completes immediately with a given value.",
+      "To create a Future that waits for a delay"
+    ]
+  },
+  {
+    "questionText": "What is the 'Future.error()' constructor used for?",
+    "correctAnswer": "To create a Future that completes immediately with an error.",
+    "explanation": "Useful for returning an already failed Future.",
+    "options": [
+      "To create a Future that completes successfully",
+      "To create a Future that never completes",
+      "To create a Future that completes immediately with an error.",
+      "To create a Future that waits for a value"
+    ]
+  },
+  {
+    "questionText": "What does the 'sync*' keyword denote?",
+    "correctAnswer": "A synchronous generator function.",
+    "explanation": "Functions marked with 'sync*' return an Iterable.",
+    "options": [
+      "An asynchronous function",
+      "A synchronous function that returns a single value",
+      "A synchronous generator function.",
+      "An error-handling function"
+    ]
+  },
+  {
+    "questionText": "What does the 'async*' keyword denote?",
+    "correctAnswer": "An asynchronous generator function.",
+    "explanation": "Functions marked with 'async*' return a Stream.",
+    "options": [
+      "A synchronous function",
+      "An asynchronous function that returns a single value",
+      "An asynchronous generator function.",
+      "A function that throws an error"
+    ]
+  },
+  {
+    "questionText": "Which statement is true about Dart's type system?",
+    "correctAnswer": "It is soundly null-safe.",
+    "explanation": "Dart 2.12 introduced sound null safety, meaning that null-related errors are caught at compile-time.",
+    "options": [
+      "It is purely dynamic",
+      "It uses duck typing",
+      "It is soundly null-safe.",
+      "It is optionally typed"
+    ]
+  },
+  {
+    "questionText": "What is a 'named argument' in Dart functions?",
+    "correctAnswer": "An optional argument specified by its name when calling the function.",
+    "explanation": "Named arguments improve readability and are enclosed in curly braces in the function definition.",
+    "options": [
+      "A mandatory argument",
+      "An argument with no default value",
+      "An optional argument specified by its name when calling the function.",
+      "An argument that must be the first parameter"
+    ]
+  },
+  {
+    "questionText": "What is a 'positional argument' in Dart functions?",
+    "correctAnswer": "An argument whose position determines its meaning in the function call.",
+    "explanation": "Positional arguments are the standard way to pass arguments and are defined in the function signature without special delimiters.",
+    "options": [
+      "An optional argument",
+      "An argument with a default value",
+      "An argument whose position determines its meaning in the function call.",
+      "An argument that can be passed in any order"
+    ]
+  },
+  {
+    "questionText": "What is the purpose of the 'typedef' for a function?",
+    "correctAnswer": "To create a reusable type alias for a function signature.",
+    "explanation": "It makes function types more readable and allows them to be used as types themselves.",
+    "options": [
+      "To define a new function",
+      "To declare a constant function",
+      "To create a reusable type alias for a function signature.",
+      "To make a function asynchronous"
+    ]
+  }
+]
