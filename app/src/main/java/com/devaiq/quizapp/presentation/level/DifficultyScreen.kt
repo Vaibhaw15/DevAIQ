@@ -68,7 +68,7 @@ fun DifficultyScreen(
             }
 
             Text(
-                text = "Choose Difficulty",
+                text = "Choose Category",
                 color = Color.White,
                 fontSize = 20.sp,
                 modifier = Modifier
