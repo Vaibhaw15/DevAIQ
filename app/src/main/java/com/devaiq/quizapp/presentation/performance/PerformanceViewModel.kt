@@ -14,6 +14,7 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.tasks.await
 import java.util.Date
 import javax.inject.Inject
+import kotlin.text.get
 
 @HiltViewModel
 class PerformanceViewModel @Inject constructor() : ViewModel() {
@@ -28,9 +29,8 @@ class PerformanceViewModel @Inject constructor() : ViewModel() {
         viewModelScope.launch {
             isLoading = true
             val subjects = fetchSubjects(userId)
-            val difficulties = listOf("Easy", "Medium", "Hard")
-
-            val results = fetchLatestPerformance(userId, subjects, difficulties)
+            //val difficulties = listOf("Easy", "Medium", "Hard")
+            val results = fetchLatestPerformance(userId, subjects)
             performanceList = results
             isLoading = false
         }
@@ -48,15 +48,28 @@ class PerformanceViewModel @Inject constructor() : ViewModel() {
         return subjectSnapshots.documents.map { it.id }
     }
 
+    suspend fun fetchSubjectLevels(userId: String, subjectId: String): List<String> {
+        val firestore = Firebase.firestore
+
+        val subjectDoc = firestore
+            .collection("subjects")
+            .document(subjectId)
+            .collection("levels")
+            .get()
+            .await()
+
+        return subjectDoc.documents.map { it.id }
+    }
+
     suspend fun fetchLatestPerformance(
         userId: String,
         subjects: List<String>,
-        difficulties: List<String>
     ): List<PerformanceModel> {
         val firestore = Firebase.firestore
         val resultList = mutableListOf<PerformanceModel>()
 
         for (subjectId in subjects) {
+            val difficulties = fetchSubjectLevels(userId, subjectId)
             for (difficulty in difficulties) {
                 val latestDoc = firestore
                     .collection("users")

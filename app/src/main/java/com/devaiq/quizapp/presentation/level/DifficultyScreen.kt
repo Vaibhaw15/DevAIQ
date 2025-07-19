@@ -100,7 +100,7 @@ fun DifficultyScreen(
                 horizontalArrangement = Arrangement.SpaceBetween,
                 verticalAlignment = Alignment.CenterVertically
             ) {
-                Text(text = level.level, color = Color.White, fontSize = 16.sp)
+                Text(text = level.level.replaceFirstChar { it.uppercase() }, color = Color.White, fontSize = 16.sp)
                 Icon(
                     imageVector = Icons.Default.ArrowForward,
                     contentDescription = null,
